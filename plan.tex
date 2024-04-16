@@ -66,6 +66,8 @@
 
 
 \section{Hypotheses}
+A high level description of how you plan to answer the research
+questions, along with a list of hypotheses.
 
 
 
@@ -81,48 +83,68 @@ in turn will answer the research questions.
 \subsection{Permissions Misuse Experiment}
 
 
-State some hypothesis for the experiment. Note which hypothesis and
-research question(s) it is designed to address.
+    State some hypothesis for the experiment. Note which hypothesis and
+    research question(s) it is designed to address.
 
-\subsubsection{Experimental Setup}
-Describe {\em how} you are going to test the hypothesis. That is, what
-techniques/tools you are planning to use. Go into as much detail as
-possible. Be realistic in what you can achieve in the given time frame.
+    This experiment tests whether apps use all the permissions they request, whether dangerous permission combinations are used, and whether users are prompted and give consent to every permission used.
 
-\subsubsection{Expected Results}
+    \subsubsection{Experimental Setup}
+    Describe {\em how} you are going to test the hypothesis. That is, what
+    techniques/tools you are planning to use. Go into as much detail as
+    possible. Be realistic in what you can achieve in the given time frame.
 
-Describe the specific measurements and metrics you plan to use. Describe
-what constitutes success (i.e., what you expect to achieve).
+    We will scrape the MediaStore documentation for what permissions are associated with what constants (eg. CAMERA permission with ACTION_IMAGE_CAPTURE). After populating this dictionary, we will check to make sure that for every permission there is a corresponding constant found in the code, indicating that the permission has been used with MediaStore.
+
+    We will use simple string searches in the Manifest to look for the permission combinations. 
+
+    We will check for lines with .requestPermissions and then the name of each permission, to verify that requests are happening for each permission.
+
+
+    \subsubsection{Expected Results}
+
+    Describe the specific measurements and metrics you plan to use. Describe
+    what constitutes success (i.e., what you expect to achieve).
+
+    Criteria for success include:
+    a MediaStore API call exists for all permissions requested, 
+    no dangerous combinations are found, and
+    a requestPermissions call exists for every permission.
+
+    False positives would be encountered if 
+    a dangerous combination is used, but there is no misuse of data, and both/all permissions in the combination are necessary to the app’s core functionality, or 
+    non-MediaStore APIs are used with proper permissions.
 
 \subsection{Name of Experiment 2}
 
-State some hypothesis for the experiment. Note which hypothesis and
-research question(s) it is designed to address.
+    State some hypothesis for the experiment. Note which hypothesis and
+    research question(s) it is designed to address.
 
-\subsubsection{Experimental Setup}
-Describe {\em how} you are going to test the hypothesis. That is, what
-techniques/tools you are planning to use. Go into as much detail as
-possible. Be realistic in what you can achieve in the given time frame.
+    \subsubsection{Experimental Setup}
+    Describe {\em how} you are going to test the hypothesis. That is, what
+    techniques/tools you are planning to use. Go into as much detail as
+    possible. Be realistic in what you can achieve in the given time frame.
 
-\subsubsection{Expected Results}
+    
 
-Describe the specific measurements and metrics you plan to use. Describe
-what constitutes success (i.e., what you expect to achieve).
+    \subsubsection{Expected Results}
+
+    Describe the specific measurements and metrics you plan to use. Describe
+    what constitutes success (i.e., what you expect to achieve).
 
 \subsection{Name of Experiment 3}
 
-State some hypothesis for the experiment. Note which hypothesis and
-research question(s) it is designed to address.
+    State some hypothesis for the experiment. Note which hypothesis and
+    research question(s) it is designed to address.
 
-\subsubsection{Experimental Setup}
-Describe {\em how} you are going to test the hypothesis. That is, what
-techniques/tools you are planning to use. Go into as much detail as
-possible. Be realistic in what you can achieve in the given time frame.
+    \subsubsection{Experimental Setup}
+    Describe {\em how} you are going to test the hypothesis. That is, what
+    techniques/tools you are planning to use. Go into as much detail as
+    possible. Be realistic in what you can achieve in the given time frame.
 
-\subsubsection{Expected Results}
+    \subsubsection{Expected Results}
 
-Describe the specific measurements and metrics you plan to use. Describe
-what constitutes success (i.e., what you expect to achieve).
+    Describe the specific measurements and metrics you plan to use. Describe
+    what constitutes success (i.e., what you expect to achieve).
 
 \bibliographystyle{abbrv}
 \bibliography{papers}

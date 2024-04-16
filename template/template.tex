@@ -1,0 +1,117 @@
+\documentclass[10pt,twocolumn,pdftex]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[pdftex,colorlinks=true,citecolor=black,filecolor=black,%
+            linkcolor=black,urlcolor=black]{hyperref}
+\usepackage{times}
+%\usepackage{listings}
+%\usepackage{fancyvrb}
+%\usepackage{amsmath}
+%\usepackage{amsthm}
+%\usepackage{amssymb}
+
+%\lstset{ % for our code environment
+%    language={},
+%    basicstyle=\ttfamily}
+%\let\code\lstinline
+
+\title{CSCI 420-03: Analysis Plan}
+\author{Student Name, Student Name \\
+\url{{student.name, student.name}@email.wm.edu}}
+\date{}
+
+% Simple macro to help with research questions
+\newcounter{rqcounter}
+\setcounter{rqcounter}{0}
+% Usage: \newrq{label}{question}
+\newcommand{\newrq}[2]{\noindent\refstepcounter{rqcounter}\textbf{RQ\arabic{rqcounter}:} {\em #2}\label{#1}}
+% Usage: \rqref{label}
+\newcommand{\rqref}[1]{\textbf{RQ\ref{#1}}}
+
+
+\begin{document}
+
+\maketitle
+\section{Research Questions}
+
+A list of at least {\sf 9} (more desired) research questions (i.e., {\sf
+3} per analysis goal).
+
+\newrq{rq:what}{What are your research questions?}
+
+\newrq{rq:three}{There should be at least nine, three per goal, but more
+would be better. Do you have nine questions?}
+
+\newrq{rq:specific}{Make sure the questions are specific, concrete, and
+unambiguous. Are they?} 
+
+Your analysis should answer all the research questions,
+i.e.,~\rqref{rq:what}$\rightarrow$\rqref{rq:specific}.
+
+\section{Hypotheses}
+
+A high level description of how you plan to answer the research
+questions, along with a list of hypotheses.
+
+\section{Evaluation Plan}
+
+A description of how you plan to answer the research questions. The
+experiments  may mirror the research questions, or multiple research
+questions (e.g., \rqref{rq:what} and \rqref{rq:three}) may be answered
+by a single experiment. A simple approach for designing the evaluation
+plan would be to design an experiment for testing each hypothesis, which
+in turn will answer the research questions.
+
+\subsection{Name of Experiment 1}
+
+State some hypothesis for the experiment. Note which hypothesis and
+research question(s) it is designed to address.
+
+\subsubsection{Experimental Setup}
+Describe {\em how} you are going to test the hypothesis. That is, what
+techniques/tools you are planning to use. Go into as much detail as
+possible. Be realistic in what you can achieve in the given time frame.
+
+\subsubsection{Expected Results}
+
+Describe the specific measurements and metrics you plan to use. Describe
+what constitutes success (i.e., what you expect to achieve).
+
+\subsection{Name of Experiment 2}
+
+State some hypothesis for the experiment. Note which hypothesis and
+research question(s) it is designed to address.
+
+\subsubsection{Experimental Setup}
+Describe {\em how} you are going to test the hypothesis. That is, what
+techniques/tools you are planning to use. Go into as much detail as
+possible. Be realistic in what you can achieve in the given time frame.
+
+\subsubsection{Expected Results}
+
+Describe the specific measurements and metrics you plan to use. Describe
+what constitutes success (i.e., what you expect to achieve).
+
+\subsection{Name of Experiment 3}
+
+State some hypothesis for the experiment. Note which hypothesis and
+research question(s) it is designed to address.
+
+\subsubsection{Experimental Setup}
+Describe {\em how} you are going to test the hypothesis. That is, what
+techniques/tools you are planning to use. Go into as much detail as
+possible. Be realistic in what you can achieve in the given time frame.
+
+\subsubsection{Expected Results}
+
+Describe the specific measurements and metrics you plan to use. Describe
+what constitutes success (i.e., what you expect to achieve).
+
+\bibliographystyle{abbrv}
+\bibliography{papers}
+
+\end{document}
+
+
