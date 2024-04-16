@@ -102,9 +102,9 @@
     Will parse class files to see if trust manager or error handler methods are overridden, and then what is contained within the newly defined method. 
 
     \subsubsection{Expected Results}
-    The experiment will succeed if the app contains overridden trust manager or error handler methods when using SSL APIs, or app’s overridden trust manager or error handler incorrectly handles certificates.
+    The experiment will succeed if the app contains no overridden trust manager or error handler methods when using SSL APIs, or app’s overridden trust manager or error handler correctly handles certificates.
 
-    We will see some false positives if there are overridden methods that correctly handle certificates.
+    We will see some false positives if there are overridden methods that incorrectly handle certificates (such as simply proceeding rather than doing checks).
 
 
 \subsection{addJavascriptInterface Experiment}
