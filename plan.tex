@@ -122,27 +122,27 @@ This experiment tests whether or not the application is being exposed to potenti
 
 
 \subsection{Mixed use SSL Experiment}
-This experiment tests whether an app uses SSL on and off. Ex: Switching between HTTP and HTTPS.
-
+    This experiment tests whether an app contains mixed SSL use, using both HTTP and HTTPS. 
+    
     \subsubsection{Experimental Setup}
-    For this test, will parse through the class files to see instances of using libraries such as “HttpURLConnection” and check to make sure all are configured to use https consistently.
-
+    For this test, we will parse through the class files to see instances of using libraries such as “HttpURLConnection” and check to make sure all are configured to use https consistently. This will involve conducting string searches for "http://", as well as "https://" to see whether the app is only using HTTP or if it is truly mixed use. 
+    
     \subsubsection{Expected Results}
-    The app will succeed if it consistently (all cases) uses SSL when it communicates with http (uses https).
-
-    There may be false positives if an app makes an http request (not https) to a local server within a secure and controlled environment. While best practice is to use https, due to the nature of where this request was made, we can say that it is not a violation.
-
-
+    The experiment will succeed if the app is found to consistently (all cases) use SSL when it communicates with http. In other words, it will only use https and libraries such as "HttpURLConnection" and the string "http://" will not be found. 
+    
+    There may be false positives if an app makes an http request (not https) to a local server within a secure and controlled environment. While best practice is to use https, due to the nature of where this request was made, we can say that it is not a violation, and thus a false positive.
+    
+    
 \subsection{AllowAllHostnameVerifier Experiment}
-This experiment is to test whether an app uses the string AllowAllHostnameVerifier to allow all hostnames.
-
+    This experiment tests whether an app implements the AllowAllHostnameVerifier class, which allows all hostnames to be accepted for a certificate.
+    
     \subsubsection{Experimental Setup}
-    Will parse class files to see if this line is used.
-
+    For this experiment, we will parse class files and perform a string search for "AllowAllHostnameVerifier" to see if this class is implemented.
+    
     \subsubsection{Expected Results}
-    The experiment will succeed if the app contains no use of AllowAllHostnameVerifier. 
-
-    There will be no false positives unless this exact string is used randomly in the program.
+    The experiment will succeed if the string is not found and the app does not make use of the AllowAllHostnameVerifier class.
+    
+    There may be false positives if this string is included in a section of the code that is not actually used for anything (dead code).
 
 \bibliographystyle{abbrv}
 \bibliography{papers}
