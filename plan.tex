@@ -110,15 +110,14 @@
 
 
 \subsection{addJavascriptInterface Experiment}
-This experiment tests whether or not the application is being exposed to potentially dangerous outside sources depending on if the application uses a webview.
+This experiment tests whether or not the application is being exposed to potentially dangerous outside sources if the application is using a WebView. This interface is dangerous because it can create a bridge between a malicious actor and one's operating system where the actor is able to inject JavaScript into the WebView.
 
     \subsubsection{Experimental Setup}
-    Source code will be parsed for the use of addJavascriptInterface(), and if successfully found, the use of the @JavascriptInterface annotation.
+        Using keyword searches, source code will be parsed for the use of addJavascriptInterface(), and if successfully found, the use of the @JavascriptInterface annotation.
 
     \subsubsection{Expected Results}
-    The experiment will succeed if the app contains no use of addJavascriptInterface, and if it uses addJavascriptInterface to only allow methods marked with it to be accessed by Javascript.
-
-    There will be false positives if the app includes addJavascriptInterface without any @JavascriptInterface annotations, however it is being used in a safe manner.
+        The experiment will succeed if the app contains addJavascriptInterface as well as the @JavascriptInterface annotation. This confirms that the developer is only using the interface where necessary. If the app does not contain addJavascriptInterface, this also counts as a success. \\
+        There will be false positives if the app includes addJavascriptInterface without any @JavascriptInterface annotations, however it is being used in a safe manner.
 
 
 \subsection{Mixed use SSL Experiment}
