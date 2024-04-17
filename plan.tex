@@ -34,40 +34,45 @@
 \begin{document}
 \maketitle
 
+
+Tue 4/16/2024 8:56 PM
 \section{Research Questions}
 
-    \newrq{rq:req_perm}{Do apps use all of the permissions they request?}
+   \newrq{rq:req_perm}{Do apps use all of the permissions they request?}
 
-    \newrq{rq:combo_perm}{Are any of the following dangerous permission combinations included? 
+   \newrq{rq:combo_perm}{Are any of the following dangerous permission combinations used in the apps? 
 
-        \texttt{RECORD\_AUDIO \& INTERNET} (eavesdropping), 
+       \texttt{RECORD\_AUDIO \& INTERNET} (eavesdropping), 
 
-        \texttt{ACCESS\_FINE\_LOCATION \& RECEIVE\_BOOT\_COMPLETED} (tracking), 
+       \texttt{ACCESS\_FINE\_LOCATION \& RECEIVE\_BOOT\_COMPLETED} (tracking), 
 
-        \texttt{CAMERA \& INTERNET} (stalking),
+       \texttt{CAMERA \& INTERNET} (stalking),
 
-        \texttt{SEND\_SMS \& WRITE\_SMS} (use phone as spam bot)
+       \texttt{SEND\_SMS \& WRITE\_SMS} (use phone as spam bot)
 
-    }
+   }
 
-    \newrq{rq:cert_ssl}{Do apps verify certifications incorrectly (Incorrect overrides of trust managers or error handlers methods)?} 
+   \newrq{rq:cert_ssl}{Do apps verify certifications properly? Do they override trust manager or error handler methods so that they accept all certificates?}
 
-    \newrq{rq:host_ssl}{Do apps use improper Hostname verification?}
+   \newrq{rq:host_ssl}{Do apps implement improper hostname verification? Do they implement classes or methods that allow all hostnames to be accepted?}
 
-    \newrq{rq:deprecated_ssl}{Are apps using deprecated or vulnerable SSL protocols?}
+   \newrq{rq:deprecated_ssl}{Are apps using deprecated or vulnerable SSL protocols?}
 
-    \newrq{rq:strip_ssl}{Do apps have mixed SSL use/are vulnerable to SSL Stripping attacks?}
+   \newrq{rq:strip_ssl}{Do apps implement mixed SSL use, making them vulnerable to SSL Stripping attacks?}
 
-    \newrq{rq:intents_interf}{Are sensitive data or mutable objects used in any implicit intents?}
+   \newrq{rq:intents_interf}{Are sensitive data or mutable objects used in any implicit intents?}
 
-    \newrq{rq:webview_interf}{Is trusted content loaded within any webviews? If displaying user-provided content, is data loaded into webviews sanitized?}
+   \newrq{rq:webview_interf}{Is trusted content loaded within any webviews? If displaying user-provided content, is data loaded into webviews sanitized?}
 
-    \newrq{rq:js_interf}{Are applications that use webviews and \texttt{addJavascriptInterface()} correctly using the \texttt{@JavascriptInterface} annotation?}
+   \newrq{rq:js_interf}{Are applications that use webviews and \texttt{addJavascriptInterface()} correctly using the \texttt{@JavascriptInterface} annotation?}
 
 
 \section{Hypotheses}
 
-    In order to detect instances of permission misuse, SSL API misuse, and interface vulnerabilities, we will use static code analysis through scripting to identify these common developer oversights that put apps at risk.
+\section{Hypotheses}
+
+
+   In order to detect instances of permission misuse, SSL API misuse, and interface vulnerabilities, we will use static code analysis through scripting to identify these common issues and oversights that put apps at risk. Based on class lectures and readings, we expect to find these types of security vulnerabilities and malicious behaviors in a significant number of apps. We also expect to find false positives due to the nature of our experiments. 
 
 \section{Evaluation Plan}
 
@@ -146,6 +151,8 @@ This experiment tests whether or not the application is being exposed to potenti
 
 \bibliographystyle{abbrv}
 \bibliography{papers}
+[1]“WebView addJavascriptInterface Remote Code Execution,” labs.withsecure.com. https://labs.withsecure.com/publications/webview-addjavascriptinterface-remote-code-execution (accessed Apr. 17, 2024).
+‌
 
 \end{document}
 
