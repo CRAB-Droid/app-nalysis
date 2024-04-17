@@ -74,37 +74,39 @@
 
 \subsection{Permissions Misuse Experiment}
 
-    This experiment tests whether apps use all the permissions they request, whether dangerous permission combinations are used, and whether users are prompted and give consent to every permission used.
+    This experiment tests whether apps utilize all of the permissions they request, whether different dangerous permission combinations are implemented, and whether users are prompted and explicitly give their consent to every permission used.
 
     \subsubsection{Experimental Setup}
     We will scrape the MediaStore documentation for what permissions are associated with what constants (eg. CAMERA permission with ACTION\_IMAGE\_CAPTURE). After populating this dictionary, we will check to make sure that for every permission there is a corresponding constant found in the code, indicating that the permission has been used with MediaStore.
 
-    We will use simple string searches in the Manifest to look for the permission combinations. 
+    We will use simple string searches in the Manifest to look for these permission combinations. 
 
-    We will check for lines with .requestPermissions and then the name of each permission, to verify that requests are happening for each permission.
+    We will check for lines with .requestPermissions and then the name of each permission, to verify that the correct requests are being made for each permission.
 
     \subsubsection{Expected Results}
 
     Criteria for success include:
     a MediaStore API call exists for all permissions requested, 
-    no dangerous combinations are found, and
-    a requestPermissions call exists for every permission.
+    no dangerous combinations of permissions are found, and
+    a requestPermissions call exists for every permission used within the application.
 
-    False positives would be encountered if 
-    a dangerous combination is used, but there is no misuse of data, and both/all permissions in the combination are necessary to the app’s core functionality, or 
+    False positives would be encountered if
+    a dangerous combination is used, but there is no misuse of data, and if both/all permissions in the combination are necessary to the app’s core functionality, or 
     non-MediaStore APIs are used with proper permissions.
 
 
 \subsection{Trust Managers and Error Handlers Experiment}
-    This experiment is to test whether an app overrides a built in trust manager or error handler to forgo correct verification of certificates. 
+    This experiment is to test whether an app overrides a built in trust manager or error handler to forgo either method's intended purposes of correct verification of certificates. 
 
     \subsubsection{Experimental Setup}
-    Will parse class files to see if trust manager or error handler methods are overridden, and then what is contained within the newly defined method. 
+    Will do simple string searches by parsing class files to see if trust manager or error handler methods are overridden.
+    
+    Will then view what is contained within the newly defined method. 
 
     \subsubsection{Expected Results}
-    The experiment will succeed if the app contains no overridden trust manager or error handler methods when using SSL APIs, or app’s overridden trust manager or error handler correctly handles certificates.
+    The experiment will succeed if the app contains no overridden trust manager or error handler methods when using SSL APIs, or if the application's overridden trust manager or error handler correctly handles certificates.
 
-    We will see some false positives if there are overridden methods that incorrectly handle certificates (such as simply proceeding rather than doing checks).
+    We will see some false positives if there are overridden methods that incorrectly handle certificates (eg. such as simply proceeding rather than doing checks).
 
 
 \subsection{addJavascriptInterface Experiment}
