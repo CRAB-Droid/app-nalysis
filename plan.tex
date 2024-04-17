@@ -68,75 +68,48 @@
 
 
 \section{Hypotheses}
-
-
-   In order to detect instances of permission misuse, SSL API misuse, and interface vulnerabilities, we will use static code analysis through scripting to identify these common issues and oversights that put apps at risk. Based on class lectures and readings, we expect to find these types of security vulnerabilities and malicious behaviors in a significant number of apps. We also expect to find false positives due to the nature of our experiments. 
+In order to detect instances of permission misuse, SSL API misuse, and interface vulnerabilities, we will use static code analysis through scripting to identify these common issues and oversights that put apps at risk. Based on class lectures and readings, we expect to find these types of security vulnerabilities and malicious behaviors in a significant number of apps. We also expect to find false positives due to the nature of our experiments. 
 
 \section{Evaluation Plan}
 
 
 \subsection{Permissions Misuse Experiment}
-
-    This experiment tests whether apps utilize all of the permissions they request, whether different dangerous permission combinations are implemented, and whether users are prompted and explicitly give their consent to every permission used.
+This experiment tests whether apps utilize all of the permissions they request (\rqref{rq:req_perm}), whether different dangerous permission combinations are implemented (\rqref{rq:combo_perm}), and whether users are prompted and explicitly give their consent to every permission used.
 
     \subsubsection{Experimental Setup}
-    We will scrape the MediaStore documentation for what permissions are associated with what constants (eg. CAMERA permission with ACTION\_IMAGE\_CAPTURE). After populating this dictionary, we will check to make sure that for every permission there is a corresponding constant found in the code, indicating that the permission has been used with MediaStore.
+    We will scrape the MediaStore documentation for what permissions are associated with what constants (eg. \texttt{CAMERA} permission with \texttt{ACTION\_IMAGE\_CAPTURE}). After populating this dictionary, we will check to make sure that for every permission there is a corresponding usage of a related API call found in the code, indicating that the permission has been used with MediaStore.
 
-    We will use simple string searches in the Manifest to look for these permission combinations. 
+    We will use simple string searches in the Manifest to look for the dangerous permission combinations in the manifest. 
 
-    We will check for lines with .requestPermissions and then the name of each permission, to verify that the correct requests are being made for each permission.
+    We will check for lines with \texttt{.requestPermissions} and then the name of each permission, to verify that the correct requests are being made for each permission.
 
     \subsubsection{Expected Results}
-
     Criteria for success include:
     a MediaStore API call exists for all permissions requested, 
     no dangerous combinations of permissions are found, and
     a requestPermissions call exists for every permission used within the application.
 
     False positives would be encountered if
-    a dangerous combination is used, but there is no misuse of data, and if both/all permissions in the combination are necessary to the app’s core functionality, or 
-    non-MediaStore APIs are used with proper permissions.
+    a dangerous combination is used, but there is no misuse of data, and if both/all permissions in the combination are necessary to the app’s core functionality.
+    They would also be encountered if non-MediaStore APIs are used, with proper permissions, since we're only looking at MediaStore APIs, a small subset of all permission-using functions.
 
 
 \subsection{Trust Managers and Error Handlers Experiment}
-    This experiment is to test whether an app overrides a built in trust manager or error handler to forgo either method's intended purposes of correct verification of certificates. 
+This experiment is to test whether an app overrides a built-in trust manager or error handler to forgo either method's intended purpose of correctly verifying certificates. (\rqref{rq:cert_ssl})
 
     \subsubsection{Experimental Setup}
-    Will do simple string searches by parsing class files to see if trust manager or error handler methods are overridden.
-    
-    Will then view what is contained within the newly defined method. 
+    We will do simple string searches by parsing class files to see if the trust manager or error handler methods are overridden.
+
+    If so, we'll do some string matching to make sense of what is contained within the newly defined method. 
 
     \subsubsection{Expected Results}
     The experiment will succeed if the app contains no overridden trust manager or error handler methods when using SSL APIs, or if the application's overridden trust manager or error handler correctly handles certificates.
 
-    We will see some false positives if there are overridden methods that incorrectly handle certificates (eg. such as simply proceeding rather than doing checks).
+    We will see some false positives if our string matching doesn't cover all cases. For example, one of these handlers may be overridden in a safe way, with proper handling done in the custom code. Since we're limited by time and scale considerations to static analysis, we may not string-match that code as safe, and it will be marked as a (false) positive.
 
 
-\subsection{addJavascriptInterface Experiment}
-This experiment tests whether or not the application is being exposed to potentially dangerous outside sources if the application is using a WebView. This interface is dangerous because it can create a bridge between a malicious actor and one's operating system where the actor is able to inject JavaScript into the WebView.
-
-    \subsubsection{Experimental Setup}
-        Using keyword searches, source code will be parsed for the use of addJavascriptInterface(), and if successfully found, the use of the @JavascriptInterface annotation.
-
-    \subsubsection{Expected Results}
-        The experiment will succeed if the app contains addJavascriptInterface as well as the @JavascriptInterface annotation. This confirms that the developer is only using the interface where necessary. If the app does not contain addJavascriptInterface, this also counts as a success. \\
-        There will be false positives if the app includes addJavascriptInterface without any @JavascriptInterface annotations, however it is being used in a safe manner.
-
-
-\subsection{Mixed use SSL Experiment}
-    This experiment tests whether an app contains mixed SSL use, using both HTTP and HTTPS. 
-    
-    \subsubsection{Experimental Setup}
-    For this test, we will parse through the class files to see instances of using libraries such as “HttpURLConnection” and check to make sure all are configured to use https consistently. This will involve conducting string searches for "http://", as well as "https://" to see whether the app is only using HTTP or if it is truly mixed use. 
-    
-    \subsubsection{Expected Results}
-    The experiment will succeed if the app is found to consistently (all cases) use SSL when it communicates with http. In other words, it will only use https and libraries such as "HttpURLConnection" and the string "http://" will not be found. 
-    
-    There may be false positives if an app makes an http request (not https) to a local server within a secure and controlled environment. While best practice is to use https, due to the nature of where this request was made, we can say that it is not a violation, and thus a false positive.
-    
-    
 \subsection{AllowAllHostnameVerifier Experiment}
-    This experiment tests whether an app implements the AllowAllHostnameVerifier class, which allows all hostnames to be accepted for a certificate.
+This experiment tests whether an app implements the AllowAllHostnameVerifier class, which allows all hostnames to be accepted for a certificate. (\rqref{rq:host_ssl})
     
     \subsubsection{Experimental Setup}
     For this experiment, we will parse class files and perform a string search for "AllowAllHostnameVerifier" to see if this class is implemented.
@@ -146,6 +119,31 @@ This experiment tests whether or not the application is being exposed to potenti
     
     There may be false positives if this string is included in a section of the code that is not actually used for anything (dead code).
 
+
+\subsection{Mixed use SSL Experiment}
+This experiment tests whether an app contains mixed SSL use, using both HTTP and HTTPS. (\rqref{rq:deprecated_ssl}, \rqref{rq:strip_ssl})
+    
+    \subsubsection{Experimental Setup}
+    For this test, we will parse through the class files to see instances of using libraries such as “HttpURLConnection” and check to make sure all are configured to use https consistently. This will involve conducting string searches for "http://", as well as "https://" to see whether the app is only using HTTP or if it is truly mixed use. 
+    
+    \subsubsection{Expected Results}
+    The experiment will succeed if the app is found to consistently (all cases) use SSL when it communicates with http. In other words, it will only use https and libraries such as "HttpURLConnection" and the string "http://" will not be found. 
+    
+    There may be false positives if an app makes an http request (not https) to a local server within a secure and controlled environment. While best practice is to use https, due to the nature of where this request was made, we can say that it is not a violation, and thus a false positive.
+    
+
+\subsection{addJavascriptInterface Experiment}
+This experiment tests whether or not the application is being exposed to potentially dangerous outside sources if the application is using a WebView. This interface can create a bridge between a malicious actor and an operating system where the actor is able to inject JavaScript into the WebView. (\rqref{rq:intents_interf}, \rqref{rq:webview_interf}, \rqref{rq:js_interf})
+
+    \subsubsection{Experimental Setup}
+    Using keyword searches, source code will be parsed for the use of addJavascriptInterface(), and if successfully found, the use of the @JavascriptInterface annotation.
+
+    \subsubsection{Expected Results}
+    The experiment will succeed if the app contains addJavascriptInterface as well as the @JavascriptInterface annotation. This confirms that the developer is only using the interface where necessary. If the app does not contain addJavascriptInterface, this also counts as a success.
+
+    There will be false positives if the app includes addJavascriptInterface without any @JavascriptInterface annotations, however it is being used in a safe manner.
+    
+    
 \bibliographystyle{abbrv}
 \bibliography{papers}
 \cite{10.1145/2382196.2382205}
