@@ -27,6 +27,25 @@ import os
 def perms_misuse(a, d, dx):
     print("Experiment 1: Permissions Misuse")
 
+    # list of permissions in apk
+    perms = a.get_permissions()
+    dec_perms = a.get_declared_permissions()
+    dec_perms_det = a.get_declared_permissions_details()
+    perms_det = a.get_details_permissions()
+
+    print("\nPermissions")
+    for perm in perms: 
+        print("    "+str(perm))
+    print("\nDeclared Permissions")
+    for perm in dec_perms:
+        print("    " + str(perm))
+    print("\nDeclared Permissions DETAILS")
+    for k, v in dec_perms_det.items():
+        print("    " + str(k) + ": " + str(v))
+    print("\nPermissions DETAILS")
+    for k, v in perms_det.items():
+        print("    " + str(k) + ": " + str(v))
+
 
 # Experiment 2
 def trust_managers_error_handlers(a, d, dx):

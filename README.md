@@ -20,3 +20,14 @@ python experiments.py > output.txt
 ```
 
 Make sure not to commit the output file to the repository. If you give it a `.txt` extension it will be ignored.
+
+## Notes
+I'm deviating a little bit from our plan for experiment 1.
+The original approach was generating a list of all mediastore API, and checking that each requested permission corresponds to a mediastore API that uses it.
+This would have so many false positives though, because MediaStore isn't the only library with permission-protected APIs.
+Instead, in order to find unused permissions, I'm doing the following:
+* Getting a set of the permissions
+* Getting a set of all permissions used in files
+    * Not including ones with an empty block after `== ... PERMISSION_GRANTED`
+    * Not including ones with an empty else block after `!= ... PERMISSION_GRANTED`
+* Compare the two lists: if there's a declared permission that isn't used, to do anything, output that positive.
