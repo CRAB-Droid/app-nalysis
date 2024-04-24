@@ -3,6 +3,9 @@ __pycache__
 .DS_Store
 Arnold-Berthoud-Cresent-Rigsby-Plan.pdf
 
+# don't commit output files
+*.txt
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

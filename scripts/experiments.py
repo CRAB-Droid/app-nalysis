@@ -23,6 +23,31 @@ from androguard.misc import AnalyzeAPK
 import os
 
 
+# Experiment 1
+def perms_misuse(a, d, dx):
+    print("Experiment 1: Permissions Misuse")
+
+
+# Experiment 2
+def trust_managers_error_handlers(a, d, dx):
+    print("Experiment 2: Trust Managers and Error Handlers")
+
+
+# Experiment 3
+def allow_all_hnv(a, d, dx):
+    print("Experiment 3: AllowAllHostnameVerifier")
+
+
+# Experiment 4
+def mixed_use_ssl(a, d, dx):
+    print("Experiment 4: Mixed use SSL")
+
+
+# Experiment 5
+def javascript_interface(a, d, dx):
+    print("Experiment 5: addJavaInterface")
+
+
 def main():
     apks = []
     d = "../apks"
@@ -34,7 +59,13 @@ def main():
         # a = APK obj
         # d = array of DalvikVMFormat obj
         # dx = analysis obj
-        print(a.get_permissions())
+
+        perms_misuse(a, d, dx)
+        trust_managers_error_handlers(a, d, dx)
+        allow_all_hnv(a, d, dx)
+        mixed_use_ssl(a, d, dx)
+        javascript_interface(a, d, dx)
+
     
 if __name__ == "__main__":
     main()
