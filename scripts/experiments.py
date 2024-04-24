@@ -20,11 +20,21 @@ import argparse
 '''
 from androguard.misc import AnalyzeAPK
 
+import os
 
 
-a, d, dx = AnalyzeAPK("../apks/GCash.apk")
-# a = APK obj
-# d = array of DalvikVMFormat obj
-# dx = analysis obj
-
-print(a.get_permissions())
+def main():
+    apks = []
+    d = "../apks"
+    for f in os.listdir(d):
+        apks.append(f)
+    
+    for apk in apks:
+        a, d, dx = AnalyzeAPK("../apks/" + apk)
+        # a = APK obj
+        # d = array of DalvikVMFormat obj
+        # dx = analysis obj
+        print(a.get_permissions())
+    
+if __name__ == "__main__":
+    main()
