@@ -47,6 +47,13 @@ def mixed_use_ssl(a, d, dx):
 def javascript_interface(a, d, dx):
     print("Experiment 5: addJavaInterface")
 
+    for _, meth in dx.strings['addJavascriptInterface'].get_xref_from():
+        print("In class: {}".format(meth.class_name))
+        #print("Used in: {} -- {}".format(meth.class_name, meth.name))
+
+        if meth.get_access_flags_string() == "@JavascriptInterface":
+            print("Method {} is annotated with '@JavascriptInterface'.".format(meth.name))
+
 
 def main():
     apks = []
@@ -60,10 +67,10 @@ def main():
         # d = array of DalvikVMFormat obj
         # dx = analysis obj
 
-        perms_misuse(a, d, dx)
-        trust_managers_error_handlers(a, d, dx)
-        allow_all_hnv(a, d, dx)
-        mixed_use_ssl(a, d, dx)
+        # perms_misuse(a, d, dx)
+        # trust_managers_error_handlers(a, d, dx)
+        # allow_all_hnv(a, d, dx)
+        # mixed_use_ssl(a, d, dx)
         javascript_interface(a, d, dx)
 
     
