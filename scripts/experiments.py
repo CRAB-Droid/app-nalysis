@@ -21,6 +21,19 @@ import argparse
 from androguard.misc import AnalyzeAPK
 
 import os
+import logging
+
+
+def update_used_perms(source_code, used_perms, not_yet_used):
+    for perm in not_yet_used:
+        if perm not in source_code:
+            continue
+        # make sure it's actually used, not just written and unused
+        # ie double check there's no empty block below it
+
+        used_perms.append(perm)
+        # remove perms from not_yet_used once they're found in one method
+        not_yet_used.pop(perm)
 
 
 # Experiment 1
@@ -30,8 +43,25 @@ def perms_misuse(a, d, dx):
     # list of permissions in apk
     perms = a.get_permissions()
     dec_perms = a.get_declared_permissions()
-    dec_perms_det = a.get_declared_permissions_details()
-    perms_det = a.get_details_permissions()
+
+    used_perms = []
+    not_yet_used = a.get_permissions()
+
+    for _class in dx.get_classes():
+        if _class.is_external():
+            # ignore classes the developer didn't write
+            continue
+        # java_code = _class.get_class().get_source()
+        # used_perms += get_used_perms(java_code, perms)
+
+        m_analysis_list = _class.get_methods()
+        for m in m_analysis_list:
+            if m.is_external():
+                # ignore methods the developer didn't write
+                continue
+            m_source_code = m.get_method().source()
+
+            update_used_perms(m_source_code, not_yet_used, used_perms)
 
     print("\nPermissions")
     for perm in perms: 
@@ -39,12 +69,12 @@ def perms_misuse(a, d, dx):
     print("\nDeclared Permissions")
     for perm in dec_perms:
         print("    " + str(perm))
-    print("\nDeclared Permissions DETAILS")
-    for k, v in dec_perms_det.items():
-        print("    " + str(k) + ": " + str(v))
-    print("\nPermissions DETAILS")
-    for k, v in perms_det.items():
-        print("    " + str(k) + ": " + str(v))
+    print("\nUsed Permissions")
+    for perm in used_perms: 
+        print("    "+str(perm))
+    print("\nUnused Permissions")
+    for perm in not_yet_used: 
+        print("    "+str(perm))
 
 
 # Experiment 2
@@ -68,6 +98,9 @@ def javascript_interface(a, d, dx):
 
 
 def main():
+    # suppress androguard Debug messages
+    logging.basicConfig(level=logging.INFO)
+
     apks = []
     d = "../apks"
     for f in os.listdir(d):

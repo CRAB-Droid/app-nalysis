@@ -31,3 +31,8 @@ Instead, in order to find unused permissions, I'm doing the following:
     * Not including ones with an empty block after `== ... PERMISSION_GRANTED`
     * Not including ones with an empty else block after `!= ... PERMISSION_GRANTED`
 * Compare the two lists: if there's a declared permission that isn't used, to do anything, output that positive.
+
+
+**30-4-24**
+
+* I don't know why `a.get_permissions` and `dx.get_permissions` are returning different things.

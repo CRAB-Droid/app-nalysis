@@ -1,4 +1,6 @@
 # Other
+*.swp
+*ipynb*
 __pycache__
 .DS_Store
 Arnold-Berthoud-Cresent-Rigsby-Plan.pdf
