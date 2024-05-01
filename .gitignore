@@ -1,6 +1,14 @@
-# Other
+# vim
+*.swp
+
+# Python, jupyter notebook
+*ipynb
 __pycache__
+
+# Mac finder
 .DS_Store
+
+# pdf
 Arnold-Berthoud-Cresent-Rigsby-Plan.pdf
 
 # don't commit output files
