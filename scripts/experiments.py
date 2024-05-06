@@ -50,21 +50,24 @@ def javascript_interface(a, d, dx):
 
 def main():
     apks = []
-    d = "../apks"
+    d = "./apks"
     for f in os.listdir(d):
         apks.append(f)
     
     for apk in apks:
-        a, d, dx = AnalyzeAPK("../apks/" + apk)
+        a, d, dx = AnalyzeAPK("./apks/" + apk)
         # a = APK obj
         # d = array of DalvikVMFormat obj
         # dx = analysis obj
 
-        perms_misuse(a, d, dx)
-        trust_managers_error_handlers(a, d, dx)
-        allow_all_hnv(a, d, dx)
-        mixed_use_ssl(a, d, dx)
-        javascript_interface(a, d, dx)
+        if 'android.permission.INTERNET' in a.get_permissions():
+            perms_misuse(a, d, dx)
+            trust_managers_error_handlers(a, d, dx)
+            allow_all_hnv(a, d, dx)
+            mixed_use_ssl(a, d, dx)
+            javascript_interface(a, d, dx)
+        else:
+            print("No INTERNET permission found in " + apk + "finishing. . .")
 
     
 if __name__ == "__main__":
