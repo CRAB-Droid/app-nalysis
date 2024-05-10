@@ -24,7 +24,6 @@ from androguard.misc import AnalyzeAPK
 from androguard.core.api_specific_resources import load_permission_mappings
 
 import os
-import logging
 
 
 def update_used_perms(source_code, used_perms, not_yet_used):
@@ -277,12 +276,13 @@ def main():
         apks.append(f)
 
     for apk in apks:
-        if apk != "Arnold-Berthoud-Cresent-Rigsby.apk":
+        if apk != "Zuum.apk":
             continue
+
         _a, _vm, _vmx = AnalyzeAPK("../apks/" + apk)
-        # a = APK obj
-        # d = array of DalvikVMFormat obj
-        # dx = analysis obj
+        # _a = APK obj
+        # _vm = array of DalvikVMFormat obj
+        # _vmx = analysis obj
         # _result = _check_all(_a, _vm, _vmx)
         _result = _check_all(_vm, _vmx)
         _print_result(_result)
