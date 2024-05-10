@@ -33,7 +33,6 @@ import pprint
 import datetime
 import argparse
 
-
 def _get_java_code(_class, _vmx):
     try:
         _ms = DvClass(_class, _vmx)
@@ -106,18 +105,13 @@ def _instantiates_get_insecure_socket_factory(_method):
     return False
 
 def _get_javab64_xref(_class, _vmx):
-    
     _java_b64 = base64.b64encode(_get_java_code(_class, _vmx).encode())
     _xref = None
-
     try:
-        _class_analysis = _vmx.get_class_analysis(_class.get_name())
-        _xref = _class_analysis.get_xref_from()
+        _xref = _class.XREFfrom
         if _xref:
-            _xref = [_m[0] for _m in _xref.items()]
+            _xref = [_m[0] for _m in _xref.items]
     except AttributeError:
-        print("catch")
-        exit(0)
         pass
     return _java_b64, _xref
 
@@ -225,14 +219,11 @@ def _print_result(_result, _java=True):
             print("\tCustom TrustManager is implemented in class {:s}".format(_translate_class_name(_class_name)))
             if _tm['empty']:
                 print("\tImplements naive certificate check. This TrustManager breaks certificate validation!")
-            #for _ref in _tm['xref']:
-            #    print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
+            for _ref in _tm['xref']:
+                print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _java:
                 print("\t\tJavaSource code:")
-                # Decode the base64 string and convert it to UTF-8
-                _decoded_string = base64.b64decode(_tm['java_b64']).decode('utf-8')
-                # Print the decoded string
-                print("{:s}".format(_decoded_string))
+                print("{:s}".format(base64.b64decode(_tm['java_b64'])))
 
     if len(_result['insecuresocketfactory']) > 0:
         if len(_result['insecuresocketfactory']) == 1:
@@ -245,10 +236,7 @@ def _print_result(_result, _java=True):
             print("\tInsecure SSLSocketFactory is instantiated in {:s}->{:s}".format(_class_name, _is['method'].get_name()))
             if _java:
                 print("\t\tJavaSource code:")
-                # Decode the base64 string and convert it to UTF-8
-                _decoded_string = base64.b64decode(_is['java_b64']).decode('utf-8')
-                # Print the decoded string
-                print("{:s}".format(_decoded_string))
+                print("{:s}".format(base64.b64decode(_is['java_b64'])))
 
     if len(_result['customhostnameverifier']) > 0:
         if len(_result['customhostnameverifier']) == 1:
@@ -261,14 +249,11 @@ def _print_result(_result, _java=True):
             print("\tCustom HostnameVerifiers is implemented in class {:s}".format(_translate_class_name(_class_name)))
             if _hv['empty']:
                 print("\tImplements naive hostname verification. This HostnameVerifier breaks certificate validation!")
-            #for _ref in _tm['xref']:
-            #    print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
+            for _ref in _tm['xref']:
+                print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _java:
                 print("\t\tJavaSource code:")
-                # Decode the base64 string and convert it to UTF-8
-                _decoded_string = base64.b64decode(_hv['java_b64']).decode('utf-8')
-                # Print the decoded string
-                print("{:s}".format(_decoded_string))
+                print("{:s}".format(base64.b64decode(_hv['java_b64'])))
 
     if len(_result['allowallhostnameverifier']) > 0:
         if len(_result['allowallhostnameverifier']) == 1:
@@ -279,12 +264,9 @@ def _print_result(_result, _java=True):
         for _aa in _result['allowallhostnameverifier']:
             _class_name = _translate_class_name(_aa['class'].get_name())
             print("\tAllowAllHostnameVerifier is instantiated in {:s}->{:s}".format(_class_name, _aa['method'].get_name()))
-            if _java:
-                print("\t\tJavaSource code:")
-                # Decode the base64 string and convert it to UTF-8
-                _decoded_string = base64.b64decode(_aa['java_b64']).decode('utf-8')
-                # Print the decoded string
-                print("{:s}".format(_decoded_string))
+        if _java:
+            print("\t\tJavaSource code:")
+            print("{:s}".format(base64.b64decode(_aa['java_b64'])))
 
     results = list(_result.items())
     new_results = results[2:]
@@ -292,7 +274,7 @@ def _print_result(_result, _java=True):
     for _, result in _result.items():
         for _custom in result:
             _class_name = _translate_class_name(_custom['class'].get_name())
-            if 'xref' in _custom.keys() and _custom['xref'] != None:
+            if _custom['xref'] != None:
                 for _ref in _aa['xref']:
                     print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _custom['java_b64']:
@@ -429,7 +411,6 @@ def main():
     _args = _parseargs()
 
     _a, _vm, _vmx = AnalyzeAPK(_args.file)
-    _vm = _vm[0]
     print("Analyse file: {:s}".format(_args.file))
     print("Package name: {:s}".format(_a.get_package()))
 
