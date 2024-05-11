@@ -4,6 +4,8 @@ from androguard.core.analysis.analysis import Analysis
 from androguard.misc import AnalyzeAPK
 from androguard.core.apk import APK
 from androguard.decompiler.decompile import DvClass
+from androguard.core.dex import (
+        TypeMapItem)
 
 import sys
 import os
@@ -96,7 +98,7 @@ for class_analysis in dx.get_classes():
         _return = meth.get_information().get('return', None)
         _params = [_p[1] for _p in meth.get_information().get('params', [])]
         _access_flags = meth.get_access_flags_string()
-      
+    
 
         instruct_2_list = []
         instruct_2  = meth.get_instructions()
@@ -128,7 +130,7 @@ for class_analysis in dx.get_classes():
         print(f"instructions our way: {instruct_2}")
         print(f"instruct_2_list: {instruct_2_list}")
         # print(f"instruct_2_list show: {[inst.show() for inst in instruct_2_list]}")
-      
+    
 
         for i in instruct_2_list:
             i_name = i.get_name()
@@ -139,7 +141,7 @@ for class_analysis in dx.get_classes():
                 allow_all_hosts.append([method_analysis.class_name, _name, i_name])
             elif i_name == "sget-object" and 'Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER' in i_output:
                 allow_all_hosts.append([method_analysis.class_name, _name, i_name])
-      
+    
         print()
 
 
@@ -147,7 +149,7 @@ for class_analysis in dx.get_classes():
         _check_server_trusted = {'access_flags' : 'public', 'return' : 'void', 'name' : 'checkServerTrusted', 'params' : ['java.security.cert.X509Certificate[]', 'java.lang.String']}
         _trustmanager_interfaces = ['Ljavax/net/ssl/TrustManager;', 'Ljavax/net/ssl/X509TrustManager;']
         _custom_trust_manager = []
-        
+      
         _on_received_ssl_error = {'access_flags' : 'public', 'return' : 'void', 'name' : 'onReceivedSslError', 'params' : ['android.webkit.WebView', 'android.webkit.SslErrorHandler', 'android.net.http.SslError']}
         _webviewclient_classes = ['Landroid/webkit/WebViewClient;']
         _custom_on_received_ssl_error = []
@@ -156,25 +158,25 @@ for class_analysis in dx.get_classes():
                 and (_name == _check_server_trusted['name']) \
                 and (_return == _check_server_trusted['return']) \
                 and (_params == _check_server_trusted['params']):
-            
+          
             imps = class_analysis.implements
             for imp in imps:
                 if imp in _trustmanager_interfaces:
                     # BAD
                     custom_trust_managers.append([method_analysis.class_name, _name, imp])
-        
+      
         if (_access_flags == _on_received_ssl_error['access_flags']) \
                 and (_name == _on_received_ssl_error['name']) \
                 and (_return == _on_received_ssl_error['return']) \
                 and (_params == _on_received_ssl_error['params']):
-            
+          
             custom_error_handlers.append([method_analysis.class_name, _name])
 
 
 print(f"The following groups reimplement trust managers!")
 for violation in custom_trust_managers:
     print(violation)
-    
+  
 print(f"The following groups reimplement error handlers!")
 for violation in custom_error_handlers:
     print(violation)
@@ -223,6 +225,7 @@ else:
     print("No URLs used.")
 
 # Experiment 5: add js interface
+caller_classes = []
 print("\n Add Javascript Interface Experiment")
 for class_analysis in dx.get_classes():
     for method_analysis in class_analysis.get_methods():
@@ -237,26 +240,69 @@ for class_analysis in dx.get_classes():
         # method_analysis.show()
         callers = method_analysis.get_xref_from()
         for caller in callers:
-            cls = caller[0]
-            meth = caller[1]
-            if cls.is_external():
+            caller_class = caller[0]
+            caller_meth = caller[1]
+            if caller_class.is_external():
                 continue
-            print(f"{meth}")
             # meth.show()
+            caller_class = caller_meth.class_name
+            if caller_class not in caller_classes:
+                caller_classes.append(caller_class)
         print()
 
-# attempt at annotation-related stuff
+
+# https://github.com/androguard/androguard/issues/949
+annot_classes = []
+print("\nChecking for annotations:\n")
 for dvm in d:
-    for cls in dvm.get_classes():
-        for field in cls.get_fields():
-            annot = dvm.get_class_manager().get_annotation_item(field.get_field_idx())
-            if annot:
-                print(f"annotations for field {field.get_name()}: {annot}")
-    # for i in range(1,1000):
-    #     try:
-    #         print(f"i = {i}: {d.get_class_manager().get_annotation_item(i).get_annotation()}")
-    #     except:
-    #         pass
+    for adi in dvm.map_list.get_item_type(TypeMapItem.ANNOTATIONS_DIRECTORY_ITEM):
+        if adi.get_method_annotations() == []:
+            continue
+
+        # Each annotations_directory_item contains many method_annotation
+        for mi in adi.get_method_annotations():
+
+            info = dvm.get_cm_method(mi.get_method_idx())
+
+            # Each method_annotation stores an offset to annotation_set_item
+            ann_set_item = dvm.CM.get_obj_by_offset(mi.get_annotations_off())
+
+            # a annotation_set_item has an array of annotation_off_item
+            for aoffitem in ann_set_item.get_annotation_off_item():
+
+                # The annotation_off_item stores the offset to an annotation_item
+                annotation_item = dvm.CM.get_obj_by_offset(aoffitem.get_annotation_off())
+
+                # The annotation_item stores the visibility and a encoded_annotation
+                # this encoded_annotation stores the type IDX, and an array of
+                # annotation_element
+                # these are again name idx and encoded_value's
+
+                encoded_annotation = annotation_item.get_annotation()
+
+                # Print the class type of the annotation
+                # print("@{}".format(dvm.CM.get_type(encoded_annotation.get_type_idx())))
+
+
+                annotation = dvm.CM.get_type(encoded_annotation.get_type_idx())
+
+                if "JavascriptInterface" not in annotation:
+                    continue
+                cls = info[0]
+                if cls not in annot_classes:
+                    annot_classes.append(cls)
+
+for x in caller_classes:
+    print(x)
+print()
+for x in annot_classes:
+    print(x)
+print()
+                    
+for c in caller_classes:
+    if c not in annot_classes:
+        print(f"Annotation not included in class {c}")
+
 
 
 # strings = dx.find_strings("addJavascriptInterface")
