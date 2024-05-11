@@ -146,8 +146,10 @@ for violation in allow_all_hosts:
 
 # Experiment 4: HTTP
 # http = []
+some_http = False
 strings = dx.find_strings("http://")
 for string in strings:
+    some_http = True
     # set of tuples: (class analysis, method analysis)
     xrefs = string.get_xref_from()
     for xref in xrefs:
@@ -158,6 +160,30 @@ for string in strings:
 # print("The following groups use HTTP, not HTTPS!")
 # for violation in http:
 #     print(violation)
+
+some_https = False
+strings = dx.find_strings("https://")
+for string in strings:
+    some_https = True
+    # set of tuples: (class analysis, method analysis)
+    xrefs = string.get_xref_from()
+    for xref in xrefs:
+        class_name = xref[0].name
+        meth_name = xref[1].get_method().get_name()
+    print(f"String: {string.get_value()} \n\tclass: {class_name} \n\tmethod: {meth_name}")
+
+
+if some_http and some_https:
+    print("MIXED USE SSL")
+elif some_http:
+    print("ONLY HTTP USED")
+elif some_https:
+    print("SAFE")
+else:
+    print("No URLs used.")
+
+
+# Experiment 5
 
 
 
