@@ -93,7 +93,7 @@ for class_analysis in dx.get_classes():
         _return = meth.get_information().get('return', None)
         _params = [_p[1] for _p in meth.get_information().get('params', [])]
         _access_flags = meth.get_access_flags_string()
-        
+      
 
         instruct_2_list = []
         instruct_2  = meth.get_instructions()
@@ -125,7 +125,7 @@ for class_analysis in dx.get_classes():
         print(f"instructions our way: {instruct_2}")
         print(f"instruct_2_list: {instruct_2_list}")
         # print(f"instruct_2_list show: {[inst.show() for inst in instruct_2_list]}")
-        
+      
 
         for i in instruct_2_list:
             i_name = i.get_name()
@@ -136,9 +136,9 @@ for class_analysis in dx.get_classes():
                 allow_all_hosts.append([method_analysis.class_name, _name, i_name])
             elif i_name == "sget-object" and 'Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER' in i_output:
                 allow_all_hosts.append([method_analysis.class_name, _name, i_name])
-        
+      
         print()
-            
+          
 print(f"The following groups allow all hosts!")
 for violation in allow_all_hosts:
     print(violation)
@@ -182,9 +182,54 @@ elif some_https:
 else:
     print("No URLs used.")
 
+# Experiment 5: add js interface
+print("\n Add Javascript Interface Experiment")
+for class_analysis in dx.get_classes():
+    for method_analysis in class_analysis.get_methods():
+        if not method_analysis.is_external():
+            # only look through non-developer-written methods, to find addJavaScriptInterface
+            continue
+        meth_name = method_analysis.get_method().get_name()
+        if "addJavascriptInterface" not in meth_name:
+            continue
 
-# Experiment 5
+        print(f"In class {class_analysis.name}: addJavascriptInterface FOUND in these methods:")
+        # method_analysis.show()
+        callers = method_analysis.get_xref_from()
+        for caller in callers:
+            cls = caller[0]
+            meth = caller[1]
+            if cls.is_external():
+                continue
+            print(f"{meth}")
+            # meth.show()
+        print()
 
+# attempt at annotation-related stuff
+for dvm in d:
+    for cls in dvm.get_classes():
+        for field in cls.get_fields():
+            annot = dvm.get_class_manager().get_annotation_item(field.get_field_idx())
+            if annot:
+                print(f"annotations for field {field.get_name()}: {annot}")
+    # for i in range(1,1000):
+    #     try:
+    #         print(f"i = {i}: {d.get_class_manager().get_annotation_item(i).get_annotation()}")
+    #     except:
+    #         pass
+
+
+# strings = dx.find_strings("addJavascriptInterface")
+# for string in strings:
+#     # set of tuples: (class analysis, method analysis)
+#     xrefs = string.get_xref_from()
+#     for xref in xrefs:
+#         class_name = xref[0].name
+#         meth_name = xref[1].get_method().get_name()
+#     print(f"String: {string.get_value()} \n\tclass: {class_name} \n\tmethod: {meth_name}")
+#     print("Method Code:")
+#     xref[1].show()
+#     print()
 
 
 
