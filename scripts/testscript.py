@@ -22,12 +22,25 @@ perms = _a.get_permissions()
 print("\na: " + str(perms))
 
 
+
+print("\n\n _vmx.get_permissions \n")
+
 for meth, perm in _vmx.get_permissions(_a.get_effective_target_sdk_version()):
-    if meth.is_external():
-        continue
+    # if meth.is_external():
+    #     continue
     print(f"Using API method {meth} for permission {perm} used in:")
     for _, m, _ in meth.get_xref_from():
         print(m.full_name)
+
+
+print("\n\n _vmx.get_permission_usage \n")
+
+for perm in perms:
+    for meth in dx.get_permission_usage(perm, a.get_effective_target_sdk_version()):
+        print(f"Using API method {meth} used in:") 
+        for _, m, _ in meth.get_xref_from():
+            print(m.full_name)
+
 
 
 # for _class in _vmx.get_classes():
