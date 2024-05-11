@@ -113,11 +113,12 @@ def _get_javab64_xref(_class, _vmx):
     try:
         _class_analysis = _vmx.get_class_analysis(_class.get_name())
         _xref = _class_analysis.get_xref_from()
+        # should the above be method-based instead?
+        print(type(_xref))
+        exit(0)
         if _xref:
             _xref = [_m[0] for _m in _xref.items()]
     except AttributeError:
-        print("catch")
-        exit(0)
         pass
     return _java_b64, _xref
 
@@ -170,7 +171,7 @@ def _check_ssl_error(_method, _vm, _vmx):
     _custom_on_received_ssl_error = []
 
     if _has_signature(_method, [_on_received_ssl_error]):
-        _classes = [_classes.get_class(_method.get_class_name()) for _classes in _vm]
+        _classes = [_classes.get_class(_method.get_class_name()) for _classes in [_vm]]
         for _class in _classes:
             if _class_extends_class(_class, _webviewclient_classes) or True:
                 _java_b64, _xref = _get_javab64_xref(_class, _vmx)
@@ -221,12 +222,14 @@ def _print_result(_result, _java=True):
             print("App implements {:d} custom TrustManagers".format(len(_result['trustmanager'])))
 
         for _tm in _result['trustmanager']:
+            print(_tm)
+            exit(0)
             _class_name = _tm['class'].get_name()
             print("\tCustom TrustManager is implemented in class {:s}".format(_translate_class_name(_class_name)))
             if _tm['empty']:
                 print("\tImplements naive certificate check. This TrustManager breaks certificate validation!")
-            #for _ref in _tm['xref']:
-            #    print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
+            for _ref in _tm['xref']:
+                print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _java:
                 print("\t\tJavaSource code:")
                 # Decode the base64 string and convert it to UTF-8
@@ -261,8 +264,8 @@ def _print_result(_result, _java=True):
             print("\tCustom HostnameVerifiers is implemented in class {:s}".format(_translate_class_name(_class_name)))
             if _hv['empty']:
                 print("\tImplements naive hostname verification. This HostnameVerifier breaks certificate validation!")
-            #for _ref in _tm['xref']:
-            #    print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
+            for _ref in _tm['xref']:
+                print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _java:
                 print("\t\tJavaSource code:")
                 # Decode the base64 string and convert it to UTF-8
@@ -292,7 +295,7 @@ def _print_result(_result, _java=True):
     for _, result in _result.items():
         for _custom in result:
             _class_name = _translate_class_name(_custom['class'].get_name())
-            if 'xref' in _custom.keys() and _custom['xref'] != None:
+            if _custom['xref'] != None:
                 for _ref in _aa['xref']:
                     print("\t\tReferenced in method {:s}->{:s}".format(_translate_class_name(_ref.get_class_name()), _ref.get_name()))
             if _custom['java_b64']:
@@ -323,8 +326,8 @@ def _xml_result(_a, _result):
 
         for _r in _tm['xref']:
             _rs = SubElement(_t, 'xref')
-            _rs.set('class', _translate_class_name(_r.get_class_name()))
-            _rs.set('method', _r.get_name())
+            _rs.set('class', _translate_class_name(_r.name))
+            _rs.set('method', _r.name)
 
     if len(_result['insecuresocketfactory']):
         for _is in _result['insecuresocketfactory']:
