@@ -14,7 +14,7 @@ import argparse
 
 
 
-a, d, dx = AnalyzeAPK("../apks/GCash.apk")
+a, d, dx = AnalyzeAPK("../apks/mPAY.apk")
 
 print("\n\n------- A obj permission APIs -------\n")
 
@@ -23,26 +23,50 @@ print("\na: " + str(perms))
 
 
 
-print("\n\n _vmx.get_permissions \n")
 
-for meth, perm in dx.get_permissions(a.get_effective_target_sdk_version()):
-    # if meth.is_external():
-    #     continue
-    print(f"Using API method {meth} for permission {perm} used in:")
-    for _, m, _ in meth.get_xref_from():
-        print(m.full_name)
-
-
-print("\n\n _vmx.get_permission_usage \n")
+# THIS IS WHAT WE WANT
+# Experiment 1 part 1
+print("\n\n dx.get_permission_usage \n")
 
 for perm in perms:
     try:
         for meth in dx.get_permission_usage(perm, a.get_effective_target_sdk_version()):
-            print(f"Using API method {meth} used in:") 
+            print(f"\nUsing API method {meth} used in:") 
             for _, m, _ in meth.get_xref_from():
-                print(m.full_name)
+                print(f"{m.full_name}")
     except ValueError:
         print(f"Nope for {perm}")
+
+
+# Experiment 1 part 2
+# Dangerous permission combinations
+danger = [
+    ["android.permission.RECORD_AUDIO", "android.permission.INTERNET"], # (eavesdropping)
+    ["android.permission.ACCESS_FINE_LOCATION", "android.permission.RECEIVE_BOOT_COMPLETED"], # (tracking),
+    ["android.permission.CAMERA", "android.permission.INTERNET"], #(stalking),
+    ["android.permission.SEND_SMS", "android.permission.WRITE_SMS"] #(use phone as spam bot),
+]
+danger_present = [False] * len(danger)
+
+print(danger)
+
+for i, combo in enumerate(danger):
+    if combo[0] in perms and combo[1] in perms:
+        danger_present[i] = True;
+
+print()
+print(danger_present)
+print()
+print(perms)
+print()
+
+for i, x in enumerate(danger_present):
+    if x:
+        print(f"Dangerous Combination Present: {danger[i]}")
+
+
+# Experiment 1 part 3
+# Are the perms requested?
 
 
 
@@ -53,32 +77,43 @@ for perm in perms:
 
         
 
+# a_dec_perms = a.get_declared_permissions()
+# print("\na declared permissions: " + str(a_dec_perms))
 
-
-
-
-
-
-# a_dec_perms = _a.get_declared_permissions()
-# print("\na declared permissions: " + str(a_perms))
-
-# a_dec_perms_details = _a.get_declared_permissions_details()
+# a_dec_perms_details = a.get_declared_permissions_details()
 # print("\na declared permissions details: " + str(a_dec_perms_details))
 
-# a_get_details_permissions = _a.get_details_permissions()
+# a_get_details_permissions = a.get_details_permissions()
 # print("\na get_details_permissions: " + str(a_get_details_permissions ))
 
-# a_get_requested_aosp_permissions = _a.get_requested_aosp_permissions()
+# a_get_requested_aosp_permissions = a.get_requested_aosp_permissions()
 # print("\na get_requested_aosp_permissions: " + str(a_get_requested_aosp_permissions))
 
-# a_get_requested_aosp_permissions_details = _a.get_requested_aosp_permissions_details()
+# a_get_requested_aosp_permissions_details = a.get_requested_aosp_permissions_details()
 # print("\na get_requested_aosp_permissions_details: " + str(a_get_requested_aosp_permissions_details))
 
-# a_get_requested_third_party_permissions = _a.get_requested_third_party_permissions()
+# a_get_requested_third_party_permissions = a.get_requested_third_party_permissions()
 # print("\na get_requested_third_party_permissions:" + str(a_get_requested_third_party_permissions))
 
-# a_get_uses_implied_permission_list = _a.get_uses_implied_permission_list()
+# a_get_uses_implied_permission_list = a.get_uses_implied_permission_list()
 # print("\na get_uses_implied_permission_list: " + str(a_get_uses_implied_permission_list))
+
+
+
+
+# these are API methods that use permissions, but theyre all external
+# print("\n\n dx.get_permissions \n")
+
+# for meth, perm in dx.get_permissions(a.get_effective_target_sdk_version()):
+#     # if meth.is_external():
+#     #     continue
+#     print(f"Using API method {meth} for permission {perm} used in:")
+#     for _, m, _ in meth.get_xref_from():
+#         print(m.full_name)
+
+
+
+
 
 
 
