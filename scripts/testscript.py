@@ -13,8 +13,9 @@ import datetime
 import argparse
 
 
+test_app_name = "GCash"
 
-a, d, dx = AnalyzeAPK("../apks/Money On Mobile.apk")
+a, d, dx = AnalyzeAPK("../apks/" + test_app_name + ".apk")
 
 print("\n\n------- A obj permission APIs -------\n")
 
@@ -79,18 +80,87 @@ for perm in perms:
         print(f"WARNING: Permission {perm} not requested!")
 
 
-
-
-
-
-
-
-# for _class in _vmx.get_classes():
-#     for _method in _class.get_methods():
-#         if (_method.is_external()):
-#             continue
-
+# Experiment 2, 3 4
+allow_all_hosts = []
+print("\n\nSSL Vulnerabilites \n")
+for class_analysis in dx.get_classes():
+    for method_analysis in class_analysis.get_methods():
+        if (method_analysis.is_external()):
+            continue
+        # Get EncodedMethod obj from MethodAnalysis obj
+        meth = method_analysis.get_method()
+        _name = meth.get_name()
+        _return = meth.get_information().get('return', None)
+        _params = [_p[1] for _p in meth.get_information().get('params', [])]
+        _access_flags = meth.get_access_flags_string()
         
+
+        instruct_2_list = []
+        instruct_2  = meth.get_instructions()
+        for inst in instruct_2:
+            instruct_2_list.append(inst)
+
+
+        # this _instructions list ends up with the same contents as
+        # just calling get_instructions on the EncodedMethod obj,
+        # and looping thru
+
+        # _instructions = []
+        # _code = meth.get_code()
+        # if _code:
+        #     _bc = _code.get_bc()
+        #     print(f"BC: ")
+        #     _bc.show()
+        #     for _instr in _bc.get_instructions():
+        #         _instructions.append(_instr)
+
+        print(f"name: {_name}")
+        print(f"return: {_return}")
+        print(f"params: {_params}")
+        print(f"access_flags: {_access_flags}")
+        # if _code:
+        #     print(f"code: {_code}")
+        #     print(f"bc: {_bc}")
+        # print(f"instructions mallo way: {_instructions}")
+        print(f"instructions our way: {instruct_2}")
+        print(f"instruct_2_list: {instruct_2_list}")
+        # print(f"instruct_2_list show: {[inst.show() for inst in instruct_2_list]}")
+        
+
+        for i in instruct_2_list:
+            i_name = i.get_name()
+            i_output = i.get_output()
+            print(f"i_name: {i_name}")
+            # print(f"i_output: {i_output}")
+            if i_name == "new-instance" and i_output.endswith('Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;'):
+                allow_all_hosts.append([method_analysis.class_name, _name, i_name])
+            elif i_name == "sget-object" and 'Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER' in i_output:
+                allow_all_hosts.append([method_analysis.class_name, _name, i_name])
+        
+        print()
+            
+print(f"The following groups allow all hosts!")
+for violation in allow_all_hosts:
+    print(violation)
+
+
+# Experiment 4: HTTP
+# http = []
+strings = dx.find_strings("http://")
+for string in strings:
+    # set of tuples: (class analysis, method analysis)
+    xrefs = string.get_xref_from()
+    for xref in xrefs:
+        class_name = xref[0].name
+        meth_name = xref[1].get_method().get_name()
+    print(f"String: {string.get_value()} \n\tclass: {class_name} \n\tmethod: {meth_name}")
+    # http.append([xref, string])
+# print("The following groups use HTTP, not HTTPS!")
+# for violation in http:
+#     print(violation)
+
+
+
 
 # a_dec_perms = a.get_declared_permissions()
 # print("\na declared permissions: " + str(a_dec_perms))
