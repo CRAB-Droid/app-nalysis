@@ -14,7 +14,7 @@ import argparse
 
 
 
-a, d, dx = AnalyzeAPK("../apks/mPAY.apk")
+a, d, dx = AnalyzeAPK("../apks/Money On Mobile.apk")
 
 print("\n\n------- A obj permission APIs -------\n")
 
@@ -55,9 +55,9 @@ for i, combo in enumerate(danger):
         danger_present[i] = True;
 
 print()
-print(danger_present)
+print(f"danger_present array: {danger_present}")
 print()
-print(perms)
+print(f"perms: {perms}")
 print()
 
 for i, x in enumerate(danger_present):
@@ -67,6 +67,21 @@ for i, x in enumerate(danger_present):
 
 # Experiment 1 part 3
 # Are the perms requested?
+aosp_requested = a.get_requested_aosp_permissions()
+print("\na get_requested_aosp_permissions:\n" + str(aosp_requested))
+third_party_requested = a.get_requested_third_party_permissions()
+print("\na get_requested_third_party_permissions:" + str(third_party_requested))
+
+print("\nUnrequested permissions that the app uses:")
+for perm in perms:
+    if perm not in aosp_requested and \
+       perm not in third_party_requested:
+        print(f"WARNING: Permission {perm} not requested!")
+
+
+
+
+
 
 
 
