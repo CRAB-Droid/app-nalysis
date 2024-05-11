@@ -14,18 +14,18 @@ import argparse
 
 
 
-_a, _vm, _vmx = AnalyzeAPK("../apks/GCash.apk")
+a, d, dx = AnalyzeAPK("../apks/GCash.apk")
 
 print("\n\n------- A obj permission APIs -------\n")
 
-perms = _a.get_permissions()
+perms = a.get_permissions()
 print("\na: " + str(perms))
 
 
 
 print("\n\n _vmx.get_permissions \n")
 
-for meth, perm in _vmx.get_permissions(_a.get_effective_target_sdk_version()):
+for meth, perm in dx.get_permissions(a.get_effective_target_sdk_version()):
     # if meth.is_external():
     #     continue
     print(f"Using API method {meth} for permission {perm} used in:")
