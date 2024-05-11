@@ -147,6 +147,10 @@ for class_analysis in dx.get_classes():
         _check_server_trusted = {'access_flags' : 'public', 'return' : 'void', 'name' : 'checkServerTrusted', 'params' : ['java.security.cert.X509Certificate[]', 'java.lang.String']}
         _trustmanager_interfaces = ['Ljavax/net/ssl/TrustManager;', 'Ljavax/net/ssl/X509TrustManager;']
         _custom_trust_manager = []
+        
+        _on_received_ssl_error = {'access_flags' : 'public', 'return' : 'void', 'name' : 'onReceivedSslError', 'params' : ['android.webkit.WebView', 'android.webkit.SslErrorHandler', 'android.net.http.SslError']}
+        _webviewclient_classes = ['Landroid/webkit/WebViewClient;']
+        _custom_on_received_ssl_error = []
 
         if (_access_flags == _check_server_trusted['access_flags']) \
                 and (_name == _check_server_trusted['name']) \
@@ -158,10 +162,21 @@ for class_analysis in dx.get_classes():
                 if imp in _trustmanager_interfaces:
                     # BAD
                     custom_trust_managers.append([method_analysis.class_name, _name, imp])
+        
+        if (_access_flags == _on_received_ssl_error['access_flags']) \
+                and (_name == _on_received_ssl_error['name']) \
+                and (_return == _on_received_ssl_error['return']) \
+                and (_params == _on_received_ssl_error['params']):
+            
+            custom_error_handlers.append([method_analysis.class_name, _name])
 
 
 print(f"The following groups reimplement trust managers!")
 for violation in custom_trust_managers:
+    print(violation)
+    
+print(f"The following groups reimplement error handlers!")
+for violation in custom_error_handlers:
     print(violation)
 
 print(f"The following groups allow all hosts!")
