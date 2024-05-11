@@ -36,10 +36,13 @@ for meth, perm in dx.get_permissions(a.get_effective_target_sdk_version()):
 print("\n\n _vmx.get_permission_usage \n")
 
 for perm in perms:
-    for meth in dx.get_permission_usage(perm, a.get_effective_target_sdk_version()):
-        print(f"Using API method {meth} used in:") 
-        for _, m, _ in meth.get_xref_from():
-            print(m.full_name)
+    try:
+        for meth in dx.get_permission_usage(perm, a.get_effective_target_sdk_version()):
+            print(f"Using API method {meth} used in:") 
+            for _, m, _ in meth.get_xref_from():
+                print(m.full_name)
+    except ValueError:
+        print(f"Nope for {perm}")
 
 
 
