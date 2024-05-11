@@ -81,7 +81,10 @@ for perm in perms:
 
 
 # Experiment 2, 3 4
-allow_all_hosts = []
+allow_all_hosts = [] # experiment 3
+custom_trust_managers = [] # exp 2 part 1
+custom_error_handlers = [] # exp 2 part 2
+
 print("\n\nSSL Vulnerabilites \n")
 for class_analysis in dx.get_classes():
     for method_analysis in class_analysis.get_methods():
@@ -138,7 +141,29 @@ for class_analysis in dx.get_classes():
                 allow_all_hosts.append([method_analysis.class_name, _name, i_name])
       
         print()
-          
+
+
+        # Experiment 2 part 1: Trust managers
+        _check_server_trusted = {'access_flags' : 'public', 'return' : 'void', 'name' : 'checkServerTrusted', 'params' : ['java.security.cert.X509Certificate[]', 'java.lang.String']}
+        _trustmanager_interfaces = ['Ljavax/net/ssl/TrustManager;', 'Ljavax/net/ssl/X509TrustManager;']
+        _custom_trust_manager = []
+
+        if (_access_flags == _check_server_trusted['access_flags']) \
+                and (_name == _check_server_trusted['name']) \
+                and (_return == _check_server_trusted['return']) \
+                and (_params == _check_server_trusted['params']):
+            
+            imps = class_analysis.implements
+            for imp in imps:
+                if imp in _trustmanager_interfaces:
+                    # BAD
+                    custom_trust_managers.append([method_analysis.class_name, _name, imp])
+
+
+print(f"The following groups reimplement trust managers!")
+for violation in custom_trust_managers:
+    print(violation)
+
 print(f"The following groups allow all hosts!")
 for violation in allow_all_hosts:
     print(violation)
