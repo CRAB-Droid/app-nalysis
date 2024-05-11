@@ -6,6 +6,7 @@
 \usepackage[pdftex,colorlinks=true,citecolor=black,filecolor=black,%
             linkcolor=black,urlcolor=black]{hyperref}
 \usepackage{times}
+\usepackage[numbers]{natbib}
 %\usepackage{listings}
 %\usepackage{fancyvrb}
 %\usepackage{amsmath}
@@ -17,10 +18,9 @@
 %    basicstyle=\ttfamily}
 %\let\code\lstinline
 
-\title{Title of Paper}
-\author{Student Name \\
-\url{student.name@email.wm.edu}}
-\date{}
+\title{CRAB-Droid}
+\author{AJ Arnold, Matthew Berthoud, Justin Cresent, Ada Rigsby}
+
 
 \begin{document}
 
@@ -28,15 +28,18 @@
 
 \input{abstract}
 \input{intro}
-\input{overview}
-\input{design}
+\input{method}
+\input{experiments}
 \input{eval}
-\input{discussion}
-\input{relwork}
+\input{results}
+\input{findings}
 \input{conc}
 
-\bibliographystyle{abbrv}
+\bibliographystyle{plainnat}
 \bibliography{main}
+\cite{10.1145/2382196.2382205}
+\cite{androguard}
+
 
 \end{document}
 
