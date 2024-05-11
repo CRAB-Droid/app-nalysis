@@ -1,18 +1,7 @@
-from androguard.core import dex, apk
-from androguard.decompiler.decompiler import DecompilerDAD
-from androguard.core.analysis.analysis import Analysis
 from androguard.misc import AnalyzeAPK
-from androguard.core.apk import APK
-from androguard.decompiler.decompile import DvClass
-from androguard.core.dex import (
-        TypeMapItem)
+from androguard.core.dex import TypeMapItem
 
-import sys
 import os
-import base64
-import pprint
-import datetime
-import argparse
 
 
 test_app_name = "GCash"
@@ -24,10 +13,6 @@ print("\n\n------- A obj permission APIs -------\n")
 perms = a.get_permissions()
 print("\na: " + str(perms))
 
-
-
-
-# THIS IS WHAT WE WANT
 # Experiment 1 part 1
 print("\n\n dx.get_permission_usage \n")
 
@@ -283,7 +268,6 @@ for dvm in d:
                 # Print the class type of the annotation
                 # print("@{}".format(dvm.CM.get_type(encoded_annotation.get_type_idx())))
 
-
                 annotation = dvm.CM.get_type(encoded_annotation.get_type_idx())
 
                 if "JavascriptInterface" not in annotation:
@@ -302,84 +286,3 @@ print()
 for c in caller_classes:
     if c not in annot_classes:
         print(f"Annotation not included in class {c}")
-
-
-
-# strings = dx.find_strings("addJavascriptInterface")
-# for string in strings:
-#     # set of tuples: (class analysis, method analysis)
-#     xrefs = string.get_xref_from()
-#     for xref in xrefs:
-#         class_name = xref[0].name
-#         meth_name = xref[1].get_method().get_name()
-#     print(f"String: {string.get_value()} \n\tclass: {class_name} \n\tmethod: {meth_name}")
-#     print("Method Code:")
-#     xref[1].show()
-#     print()
-
-
-
-# a_dec_perms = a.get_declared_permissions()
-# print("\na declared permissions: " + str(a_dec_perms))
-
-# a_dec_perms_details = a.get_declared_permissions_details()
-# print("\na declared permissions details: " + str(a_dec_perms_details))
-
-# a_get_details_permissions = a.get_details_permissions()
-# print("\na get_details_permissions: " + str(a_get_details_permissions ))
-
-# a_get_requested_aosp_permissions = a.get_requested_aosp_permissions()
-# print("\na get_requested_aosp_permissions: " + str(a_get_requested_aosp_permissions))
-
-# a_get_requested_aosp_permissions_details = a.get_requested_aosp_permissions_details()
-# print("\na get_requested_aosp_permissions_details: " + str(a_get_requested_aosp_permissions_details))
-
-# a_get_requested_third_party_permissions = a.get_requested_third_party_permissions()
-# print("\na get_requested_third_party_permissions:" + str(a_get_requested_third_party_permissions))
-
-# a_get_uses_implied_permission_list = a.get_uses_implied_permission_list()
-# print("\na get_uses_implied_permission_list: " + str(a_get_uses_implied_permission_list))
-
-
-
-
-# these are API methods that use permissions, but theyre all external
-# print("\n\n dx.get_permissions \n")
-
-# for meth, perm in dx.get_permissions(a.get_effective_target_sdk_version()):
-#     # if meth.is_external():
-#     #     continue
-#     print(f"Using API method {meth} for permission {perm} used in:")
-#     for _, m, _ in meth.get_xref_from():
-#         print(m.full_name)
-
-
-
-
-
-
-
-# print("\n\n------- VM obj permission APIs -------\n")
-
-
-# dex_num = 0
-# for dex in _vm:
-#     print("dex_num: " + str(dex_num))
-    
-#     dex_perms = dex.get_permissions()
-#     print("dex: " + str(dex_perms))
-    
-#     dex_dec_perms = dex.get_declared_permissions()
-#     print("dex declared permissions: " + str(dex_dec_perms))
-    
-#     dex_dec_perms_details = dex.get_declared_permissions_details()
-#     print("dex declared permissions details: " + str(dex_dec_perms_details))
-
-#     dex_perms_details = dex.get_details_permissions()
-#     print("dex permissions details: " + str(dex_perms_details))
-    
-
-
-    # dex_num += 1
-    
-
