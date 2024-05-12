@@ -312,7 +312,7 @@ def run_experiments(apk, a, d, dx):
 def main():
     apks = []
 
-    for f in os.listdir("../Downloads"):
+    for f in os.listdir("../../Downloads"):
         apks.append(f)
 
     for f in os.listdir("./output"):
