@@ -216,11 +216,11 @@ def analyze(f):
 
             
     
-with open("../output_28/main", "r") as f:
+with open("output/main", "r") as f:
     analyze(f)
     
-with open("../output_69/main", "r") as f:
-    analyze(f)
+#with open("../output_69/main", "r") as f:
+#    analyze(f)
 
 
 print(f"\nResults for analysis of {total_apps} apps:")

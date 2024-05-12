@@ -1,0 +1,1203 @@
+
+================ ANALYZING Sky+_5.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING PayPal Zettle_ Point of Sale_7.36.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Bike Itaú_ Bicycle-Sharing_9.3.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/reactnativecommunity/webview/RNCWebViewManager$g;', 'onReceivedSslError']
+
+================ ANALYZING VLC Mobile Remote - PC & Mac_2.9.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING myQ Garage & Access Control_5.219.62292_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/chamberlain/network/framework/di/d$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/chamberlain/network/framework/di/o;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/creosys/cxs/util/o;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/chamberlain/myq/common/x$a;', 'onReceivedSslError']
+['Lcom/chamberlain/myq/features/setup/amazonkey/a$d;', 'onReceivedSslError']
+['Lcom/chamberlain/myq/features/setup/amazonkey/b$c;', 'onReceivedSslError']
+['Lcom/chamberlain/myq/features/setup/amazonkey/c$c;', 'onReceivedSslError']
+['Lcom/chamberlain/myq/features/setup/walmartinhome/a$c;', 'onReceivedSslError']
+['Lcom/chamberlain/myq/features/setup/walmartinhome/f$b;', 'onReceivedSslError']
+['Lmyq/sdk/common/misc/f;', 'onReceivedSslError']
+
+================ ANALYZING Smart Wristband_3.6.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/mob/tools/network/NetworkHelper$SimpleX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcn/sharesdk/framework/d;', 'onReceivedSslError']
+['Lcn/sharesdk/tencent/qq/a;', 'onReceivedSslError']
+['Lcn/sharesdk/tencent/qzone/a;', 'onReceivedSslError']
+
+================ ANALYZING AIO Remote_3.5.9.14_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Amazon Alexa_2.2.486074.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazon/alexa/accessory/internal/http/CompositeX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/amazon/communication/DevoTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/amazon/dee/app/services/network/DefaultHttpClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/amazon/identity/auth/device/endpoint/AbstractPandaRequest$UnsafeSslHttpClient$MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/sun/mail/util/MailSSLSocketFactory$MailTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/jsse/provider/ExportX509TrustManager_5;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/amazon/dee/app/ui/external/ExternalUIWebViewManager$2;', 'onReceivedSslError']
+['Lcom/amazon/dee/app/ui/web/AlexaWebView$WebClient;', 'onReceivedSslError']
+['Lcom/amazon/identity/auth/device/activity/ActorEnrollActivity$3;', 'onReceivedSslError']
+['Lcom/amazon/identity/auth/device/activity/ActorSignUpAndEnrollActivity$3;', 'onReceivedSslError']
+['Lcom/amazon/identity/auth/device/activity/AuthChallengeHandleActivity$3;', 'onReceivedSslError']
+['Lcom/amazon/identity/auth/device/api/MAPAndroidWebViewClient;', 'onReceivedSslError']
+['Lcom/amazon/identity/auth/device/de;', 'onReceivedSslError']
+['Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebViewClient;', 'onReceivedSslError']
+['Lcom/amazon/alexa/cantilever/HelpWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING FordPass™_4.22.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/dynatrace/android/agent/comm/ssl/LocalX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/jsse/provider/ExportX509TrustManager_5;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/cafex/liveassist/TrustAllTrustManager$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/datatheorem/android/trustkit/pinning/OkHttpRootTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/dynatrace/android/agent/comm/ssl/SimpleX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/datatheorem/android/trustkit/pinning/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/fordmps/login/fma/WebViewLoginViewModel$loadWebView$1;', 'onReceivedSslError']
+['Lcom/fordmps/login/fma/FMAWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING SoundSeeder - Synced Music_2.6.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lorg/eclipse/jetty/util/ssl/SslContextFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/openadsdk/core/widget/a/d;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+
+================ ANALYZING Cisco Secure Client-AnyConnect_5.0.00247_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/cisco/anyconnect/vpn/android/service/helpers/uri/CustomTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/cisco/anyconnect/vpn/android/ui/WebViewActivity$CustomWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Meta Spark Player_150.0.0.11.213_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/facebook/acra/util/TrustEveryoneTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING OKOK·International_2.3.22_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/growstarry/kern/mraid/WebView$e;', 'onReceivedSslError']
+
+================ ANALYZING SJCAM Zone_6.1.7_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcn/jiguang/net/SSLTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/hianalytics/mn/no/rs/pq;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/secure/android/common/ssl/SecureX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/secure/android/common/ssl/c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rd/lib/utils/HttpUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rd/net/RdHttpClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rd/net/RdUrlClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jght/sjcam/zone/ui/rduisdk/rd/veuisdk/utils/MyOkHttpImagePipelineConfigFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jght/sjcam/zone/ui/rduisdk/rd/veuisdk/utils/RdHttpClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jght/sjcam/zone/utils/http/SSLSocketClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/xutils/http/app/DefaultParamsBuilder$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcn/jpush/android/ax/a;', 'onReceivedSslError']
+['Lcn/jpush/android/ui/a;', 'onReceivedSslError']
+['Lcn/sharesdk/framework/g;', 'onReceivedSslError']
+['Lcn/sharesdk/tencent/qq/a;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/open/aweme/authorize/ui/BaseWebAuthorizeActivity$AuthWebViewClient;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lorg/jght/sjcam/zone/ui/activity/BrowserActivity$2;', 'onReceivedSslError']
+
+================ ANALYZING iRobot Home_7.1.0-release_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lsdk/pendo/io/p3/n;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING fitpro_2.1.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lxfkj/fitpro/api/NetWorkManager$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/openadsdk/core/widget/a/d;', 'onReceivedSslError']
+['Lcom/mbridge/msdk/mbsignalcommon/base/b;', 'onReceivedSslError']
+
+================ ANALYZING Watch Droid Phone_15.16_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING EZCast – Cast Media to TV_2.14.0.1300-noad_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lb3/a$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/actionsmicro/ezdisplay/helper/b$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lm5/f$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lt3/a$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/thetransactioncompany/jsonrpc2/client/JSONRPC2Session$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Ld6/e$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/ftp/FTPSTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/util/TrustManagerUtils$TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/eclipse/jetty/util/ssl/SslContextFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/actionsmicro/ezdisplay/activity/WebViewerFragment$c;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING LocalCast_ stream to TV_43.0.2.9_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Remote for Lg_10.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/connectsdk/service/webos/WebOSTVServiceSocketClient$TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/wifismart/services/service/webos/SmartSmartWebOSTVServiceSocketClient$TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Remote Control for Roku_1.2.9_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/connectsdk/service/PhilipsAndroidService$7;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/VizioService$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/samsung/SamsungTizenSocketClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/openadsdk/core/widget/a/d;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+
+================ ANALYZING TP-Link Tapo_2.11.23_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lb/e/b/c/a/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tplink/iot/view/notification/b/b$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lb/e/v/c/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tplink/libtpnetwork/IoTNetwork/transport/http/d$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tplink/libtpnetwork/TPCloudNetwork/repository/NBUCloudRepository$d;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tplink/libtpnetwork/cameranetwork/d8/y7$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tplink/libtpnetwork/robotnetwork/a/f/f/r$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/OpenSslX509TrustManagerWrapper$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/FingerprintTrustManagerFactory$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/InsecureTrustManagerFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/tplink/iot/widget/viewgroup/AutoScrolledWebView$c;', 'onReceivedSslError']
+
+================ ANALYZING Canon CameraWindow_1.5.2.21_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING PowerDVD Remote_4.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lio/fabric/sdk/android/services/network/HttpRequest$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Cast to Chromecast - Screen mi_2.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/koushikdutta/async/AsyncSSLSocketWrapper$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING MYPEUGEOT APP_1.37.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/couchbase/lite/internal/replicator/CBLTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/inetpsa/cd2/careasyapps/certificates/DownloaderCertificates$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/inetpsa/cd2/careasyapps/certificates/DownloaderCertificates$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/TrustManagerDecorator;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lorg/apache/cordova/engine/SystemWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING _Mercedes me_2.13.12_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/daimler/mbparkingkit/api/UnsafeHttpClient$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING iDVR-PRO Viewer_ CCTV DVR App_1.7.6_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/itxsecurity/httpapi/proc/NfOkHttpStack$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/itxsecurity/utils/CHttpUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/nviewer/dvrviewer/activities/DVRSetupActivity$SetupWebViewClient;', 'onReceivedSslError']
+['Lcom/nviewer/dvrviewer/activities/SetupActivity$SetupWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Panasonic TV Remote_2.30_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING LEGO® MINDSTORMS® Commander_1.0.8_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/bottlerocketapps/http/a/a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Web Video Cast _ Browser to TV_5.6.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Le4$c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lkn2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Llg0$a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/eclipse/jetty/util/ssl/SslContextFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/openadsdk/core/widget/a/d;', 'onReceivedSslError']
+['Lcom/bytedance/sdk/openadsdk/core/model/l$5;', 'onReceivedSslError']
+['Lcom/instantbits/cast/webvideo/h0;', 'onReceivedSslError']
+['Lcom/mbridge/msdk/mbsignalcommon/base/b;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+
+================ ANALYZING Cardiograph - Heart Rate Meter_4.1.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Wyze - Make Your Home Smarter_2.36.0.96_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/wyze/jasmartkit/http/SSLCustomSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/wyze/jasmartkit/http/SSLCustomSocketFactory$MyX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/yunding/commonkit/okhttp/https/HttpsUtils$DefineTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/yunding/commonkit/okhttp/https/HttpsUtils$MyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/yunding/commonkit/okhttp/https/HttpsUtils$UnSafeTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/loopj/android/http/j$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Xfinity My Account_1.58.13.20220802141245_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/comcast/cim/androidcimaauth/ssl/AllTrustingTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/comcast/cim/cmasl/http/ssl/AllTrustingTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/comcast/cim/androidcimaauth/CimaAuthFragment$1;', 'onReceivedSslError']
+['Lcom/comcast/harness/WebClient;', 'onReceivedSslError']
+['Lcom/comcast/harness/WebClientRequiresApiN;', 'onReceivedSslError']
+
+================ ANALYZING Remote Control For Panasonic_9.2.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/frillapps2/generalremotelib/frags/actualremote/smartremote/adapters/hot/socket/g$e;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/frillapps2/generalremotelib/frags/actualremote/smartremote/f/m/e/e/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/frillapps2/generalremotelib/frags/actualremote/smartremote/i/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/g;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING LogMeIn_4.0.1947_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/logmein/ignition/android/ui/component/WebView4CLS$c;', 'onReceivedSslError']
+
+================ ANALYZING SmartBand_1.3.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lorg/apache/commons/net/ftp/FTPSTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Screen Stream Mirroring_2.8.2-google_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Home Security Camera WardenCam_2.8.14_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/warden/manager/MQTTManager$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Screen Mirroring with All TV_2.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Live Earth Map - Live Camera_4.9_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+
+================ ANALYZING Heart Rate Monitor_0.3.19_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Bird — Ride Electric_4.214.0.7_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Ls66$f;', 'onReceivedSslError']
+
+================ ANALYZING AC Remote For Panasonic_10.0.0.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Ld2/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Le1/j$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lj1/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Universal Remote Control_1.0.34_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lco/leanremote/universalremotecontrol/smarttvremotecontrol/vtdiordna/keystore/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+
+================ ANALYZING Bose Music_6.1.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lo/vbd;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lo/dr8;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING MIFON_ Award Winning Phone Anti Theft Protection_12.70_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/paytm/pgsdk/PaytmSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lmobi/mifon/InstaMojoWebviewActivity$RenderView$1;', 'onReceivedSslError']
+['Lmobi/mifon/login/CCAvenueWebViewActivity$RenderView$1;', 'onReceivedSslError']
+['Lmobi/mifon/login/PaymentWebviewActivity$1;', 'onReceivedSslError']
+
+================ ANALYZING DIRECTV on the Go_5.29.002_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/att/halox/plugin/rm/EasyX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/comscore/android/vce/ai;', 'onReceivedSslError']
+
+================ ANALYZING Radar_ Speed Camera, HUD Speedometer, Radar Detect_1.0.9_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/adjust/sdk/AdjustFactory$1$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+
+================ ANALYZING Smart TV Remote Control_1.55_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcodematics/samsung/smart/tv/remote/control/AppsListSamsung$h;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/AppsListSamsung$l;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/RemoteActivity_Samsung$i$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/RemoteActivity_Samsung$o;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/tv/cast/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/vizio/remote/control/smartcast/RemoteActivity_Vizio$a0;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lg/b/e/e/b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Smart Thermometer_3.0.6_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Remote Control for Sky_Directv_6.1.8_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Ultimate Alexa Voice Assistant_3.4.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/cellrebel/sdk/a/c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/teragence/client/h;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/umlaut/crowd/internal/aa$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/umlaut/crowd/internal/aa;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/umlaut/crowd/internal/mc$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/cellrebel/sdk/workers/g$a$b;', 'onReceivedSslError']
+['Lcom/umlaut/crowd/internal/gm$2;', 'onReceivedSslError']
+['Lcom/umlaut/crowd/internal/ht$10;', 'onReceivedSslError']
+
+================ ANALYZING Yoho Sports_20.36.37_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/lzy/okgo/https/HttpsUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/uthink/ring/weather/YahooWeather$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Remote For LG webOS Smart TV_10.0.0.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lg2/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lh1/j$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lm1/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Speedometer HD_13.6_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/e;', 'onReceivedSslError']
+['Lcom/greedygame/core/ad/web/GGWebView$1;', 'onReceivedSslError']
+
+================ ANALYZING HerobandⅢ_v1.0.0-2025-gf7b02d91b_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/alibaba/mtl/log/d/y;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/ta/a/b/g;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/just/agentweb/WebViewClientDelegate;', 'onReceivedSslError']
+
+================ ANALYZING Smart Home Manager_2.2210.280_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/att/halox/plugin/rm/EasyX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/lookout/networksecurity/probing/e;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/OpenSslX509TrustManagerWrapper$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/FingerprintTrustManagerFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/InsecureTrustManagerFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/att/halox/common/utils/HandleCertIDPwdOauth$b;', 'onReceivedSslError']
+['Lcom/hadoopz/MyDroidLib/webview/WebViewProcesser$3;', 'onReceivedSslError']
+
+================ ANALYZING Universal TV Remote Control_1.1.26_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcodematics/samsung/smart/tv/remote/control/AppsListSamsung$h;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/AppsListSamsung$l;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/RemoteActivity_Samsung$i$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/samsung/smart/tv/remote/control/RemoteActivity_Samsung$o;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/tv/cast/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcodematics/vizio/remote/control/smartcast/RemoteActivity_Vizio$a0;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lp9/b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Grundig Smart Remote_3.36_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Larcelik/android/grundig/remote/CustomClientFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Larcelik/android/grundig/remote/CustomWebsocketModule$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Larcelik/android/grundig/remote/NullX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING CetusPlay - TV Remote Server R_4.8.0-For TV_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING MyPlate Calorie Tracker_3.5.4(4)_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/belladati/httpclientandroidlib/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/ads/internal/view/b/a$g;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Cast to TV - Chromecast, Roku_2.3.1.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lg/a/a/a/f/i/a$c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/inshot/cast/core/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lh/a/a/f$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/inshot/cast/xcast/WebActivity$b;', 'onReceivedSslError']
+['Lcom/inshot/cast/xcast/r2/t0;', 'onReceivedSslError']
+
+================ ANALYZING Quick Cast_3.5.2.400_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/wukongtv/wkcast/h/c$g;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/wukongtv/wkcast/h/i$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jsoup/d/c$e$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/wukongtv/wkcast/browser/WebViewFragment$i;', 'onReceivedSslError']
+
+================ ANALYZING Cast to TV_ Chromecast, Roku_1.5.0.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lee$c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/inshot/cast/core/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lrf0$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/inshot/cast/xcast/web/l0;', 'onReceivedSslError']
+
+================ ANALYZING HiLookVision_3.10.1.0924_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/videogo/ezhybridnativesdk/nativemodules/utils/HttpUtils$FakeX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/videogo/smack/OpenTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/videogo/smack/ServerTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/videogo/universalimageloader/core/download/BaseImageDownloader$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/ftp/FTPSTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/util/TrustManagerUtils$TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Notify for Amazfit & Zepp_15.3.6_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/openalliance/ad/ppskit/mx;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/openalliance/ad/ppskit/na;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/loopj/android/http/MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lo5/f;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/OpenSslX509TrustManagerWrapper$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/FingerprintTrustManagerFactory$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/InsecureTrustManagerFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lrc/n$l;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/huawei/openalliance/ad/ppskit/views/web/f;', 'onReceivedSslError']
+
+================ ANALYZING Jaybird_4.0.11_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Yulu - EVs for Rides & Rentals_4.4.1.4_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/paytm/pgsdk/PaytmSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lcom/payu/custombrowser/PayUSurePayWebViewClient;', 'onReceivedSslError']
+['Lcom/payu/custombrowser/PayUWebViewClient;', 'onReceivedSslError']
+['Lcom/payu/custombrowser/Bank;', 'onReceivedSslError']
+
+================ ANALYZING EZMira_1.8.0.60-noad_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lc/a/j/b/a$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lc/a/p/e$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lc/c/a/e$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/thetransactioncompany/jsonrpc2/client/JSONRPC2Session$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/ftp/FTPSTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/commons/net/util/TrustManagerUtils$TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/eclipse/jetty/util/ssl/SslContextFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Coronalert BE_1.16.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING FITE_6.8_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lyh/e$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lmq/c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jivesoftware/smack/util/TLSUtils$AcceptAllTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lqo/n;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lr5/p0$c;', 'onReceivedSslError']
+
+================ ANALYZING Cable Remote Control Universal_8.4.3_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING AC Remote Control_2.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/wlf/filedownloader/file_download/HttpConnectionHelper$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Remote For Amazon Fire TV_10.0.0.4_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Ld2/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Le1/j$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lj1/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING DailyRoads Voyager_8.0.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING AC Remote For LG Air Condition_10.0.0.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Ld2/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Le1/j$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lj1/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Fastrack Reflex_4.2.3_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lbq;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lce;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Remote for Roku _ Codematics_1.29_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING realme Link_3.0.1011.2005_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/realme/iot/common/widgets/HttpsWebView$WebViewClientWrapper;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lcom/tuya/smart/jsbridge/client/TYWebViewClient;', 'onReceivedSslError']
+['Lcom/heytap/webview/extension/fragment/WebViewClient;', 'onReceivedSslError']
+['Lcom/tuyasmart/stencil/component/webview/webview/TuyaWebViewClient;', 'onReceivedSslError']
+['Lcom/twitter/sdk/android/core/identity/OAuthWebViewClient;', 'onReceivedSslError']
+['Lcom/tuyasmart/stencil/component/webview/CommonWebViewClient;', 'onReceivedSslError']
+['Lcom/rm/base/widget/webview/BaseWebViewClient;', 'onReceivedSslError']
+['Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebViewClient;', 'onReceivedSslError']
+['Lcom/platform/usercenter/sdk/captcha/UCVerifyCaptcha$4;', 'onReceivedSslError']
+['Lcom/platform/usercenter/support/webview/FragmentWebLoadingBase$MyWebViewClient;', 'onReceivedSslError']
+['Lcom/platform/usercenter/ui/UCActivityShowActivity$3;', 'onReceivedSslError']
+['Lcom/platform/usercenter/uws/view/web_client/UwsWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Pacer Pedometer & Step Tracker_p9.10.2_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/loopj/android/http/q$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/tencent/open/utils/HttpUtils$c;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/conn/ssl/d$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Le/h/a/c/b$d;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Withings Health Mate_5.12.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lorg/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/jivesoftware/smack/util/TLSUtils$AcceptAllTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING LED Remote Control_10.0.0.4_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/amazonaws/mobileconnectors/remoteconfiguration/internal/net/AndroidRemoteConfigurationFetcher$TrustAllManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/connectsdk/service/webos/WebOSTVTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Ld2/b$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Le1/j$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lj1/a$b;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/remote/pairing/KeyStoreManager$DynamicTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/android/tv/support/remote/core/TcpClient$6;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/polo/ssl/DummyTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/apache/http/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/bouncycastle/est/jcajce/JcaJceUtils$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Lexmark Print Plugin_2.12.0.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lc/b/c/a/a$a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lc/b/c/a/a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/lexmark/mobile/print/mobileprintcore/sso/d;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lc/b/d/b/a/a/Ab$b;', 'onReceivedSslError']
+['Lc/b/d/b/a/a/rc$b;', 'onReceivedSslError']
+['Lc/b/d/b/a/a/wc$a;', 'onReceivedSslError']
+
+================ ANALYZING Arçelik Akıllı Kumanda_3.36_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Larcelik/android/remote/CustomClientFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Larcelik/android/remote/CustomWebsocketModule$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Larcelik/android/remote/NullX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING Tuya Smart_4.5.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/thingclips/stencil/component/webview/webview/ThingWebViewClient;', 'onReceivedSslError']
+['Lcom/thingclips/stencil/component/webview/CommonWebViewClient;', 'onReceivedSslError']
+['Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebViewClient;', 'onReceivedSslError']
+['Lcom/thingclips/smart/jsbridge/utils/BaseWebViewClient;', 'onReceivedSslError']
+['Lcom/thingclips/smart/jsbridge/client/ThingWebViewClient;', 'onReceivedSslError']
+['Lcom/thingclips/smart/plugin/tunidlwebviewmanager/client/DFWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Radar, Map, Navigation, Head-Up Display, Speed Cam_7.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/adjust/sdk/AdjustFactory$1$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lg/d/a/c/a0/c0/f/c;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+['Lim/delight/android/webview/AdvancedWebView$a;', 'onReceivedSslError']
+
+================ ANALYZING Cast Web Videos to Smart TVs_8.905_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING TV Cast for Chromecast_35.13.25.19_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['La/a/a/f$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/a/a/h/g/c$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lorg/b/b/c$d$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+
+================ ANALYZING PlayTo Chromecast_2.3_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lorg/a/a/h/e/b$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/dayglows/vivid/views/b$12;', 'onReceivedSslError']
+
+================ ANALYZING Thermometer Free_1.6.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/startapp/networkTest/a/a;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/applovin/impl/adview/d;', 'onReceivedSslError']
+['Lcom/unity3d/services/ads/webplayer/WebPlayerView$WebPlayerClient;', 'onReceivedSslError']
+
+================ ANALYZING Notify for Mi Band_15.4.5_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/openalliance/ad/ppskit/nl;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/huawei/openalliance/ad/ppskit/no;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/loopj/android/http/MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lq6/f;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcz/msebera/android/httpclient/conn/ssl/SSLContextBuilder$TrustManagerDelegate;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/OpenSslX509TrustManagerWrapper$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/FingerprintTrustManagerFactory$2;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/netty/handler/ssl/util/InsecureTrustManagerFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lxd/n$m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/huawei/openalliance/ad/ppskit/views/web/f;', 'onReceivedSslError']
+
+================ ANALYZING Brother iPrint&Scan_6.10.0_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/brother/mfc/brprint/v2/dev/setup/WlanSetupUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/brother/mfc/phoenix/http/apache/patched/IgnoreSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/google/api/client/util/SslUtils$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/brother/mfc/brprint/v2/ui/parts/dialog/TeaserPageDialogFragment$2;', 'onReceivedSslError']
+['Lcom/brother/mfc/brprint/v2/ui/webprint/WebBrowserActivity$WebPageViewClient;', 'onReceivedSslError']
+['Lcom/microsoft/services/msa/AuthorizationRequest$OAuthDialog$AuthorizationWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Golf GPS & Scorecard by SwingU_7.6.7_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/freestar/android/ads/HttpMessage$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/freestar/android/ads/NullX509TrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/adsbynimbus/render/web/NimbusWebViewClient;', 'onReceivedSslError']
+['Lcom/applovin/impl/adview/d;', 'onReceivedSslError']
+['Lcom/facebook/internal/WebDialog$DialogWebViewClient;', 'onReceivedSslError']
+['Lcom/twitter/sdk/android/core/identity/OAuthWebViewClient;', 'onReceivedSslError']
+
+================ ANALYZING Bose SoundTouch_27.0.1_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING FunRun_3.2.8_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING T-Cast Android Roku TV Remote_7.9.074_Apkpure.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+['Lcom/bytedance/sdk/openadsdk/core/widget/a/d;', 'onReceivedSslError']
