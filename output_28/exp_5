@@ -1,0 +1,214 @@
+
+================ ANALYZING Sky+_5.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING PayPal Zettle_ Point of Sale_7.36.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/braze/ui/inappmessage/factories/DefaultInAppMessageHtmlViewFactory;
+Lcom/izettle/android/luxcompliance/presentation/LuxComplianceActivity;
+Lcom/izettle/android/qrc/klarna/view/KlarnaView;
+Lcom/braze/ui/inappmessage/factories/DefaultInAppMessageHtmlFullViewFactory;
+
+================ ANALYZING Bike Itaú_ Bicycle-Sharing_9.3.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/braze/ui/c/s/e;
+Lcom/braze/ui/c/s/f;
+Lcom/reactnativecommunity/webview/RNCWebViewManager$f;
+
+================ ANALYZING VLC Mobile Remote - PC & Mac_2.9.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/adcolony/sdk/aw;
+Lcom/google/android/gms/internal/ads/zzcng;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/integralads/avid/library/adcolony/session/internal/jsbridge/AvidWebViewManager;
+
+================ ANALYZING myQ Garage & Access Control_5.219.62292_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/chamberlain/myq/features/motion_events/h;
+Lcom/pierfrancescosoffritti/androidyoutubeplayer/core/player/views/b;
+
+================ ANALYZING Smart Wristband_3.6.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING AIO Remote_3.5.9.14_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbhm;
+Lcom/uxcam/internals/af;
+Lcom/facebook/appevents/AppEventsLogger;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/google/android/gms/internal/ads/zzbiy;
+Lcom/uxcam/internals/ab;
+
+================ ANALYZING Amazon Alexa_2.2.486074.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/amazon/identity/auth/device/activity/ActorSignUpAndEnrollActivity;
+Lcom/amazon/identity/auth/device/AuthPortalUIActivity;
+Lcom/amazon/identity/auth/device/activity/AuthChallengeHandleActivity;
+Lcom/amazon/identity/auth/device/api/MAPAndroidWebViewHelper;
+Lcom/amazon/identity/auth/device/activity/ActorEnrollActivity;
+Lcom/amazon/dee/app/ui/web/AlexaWebView;
+Lcom/amazon/deecomms/oobe/fragments/CVFFragment;
+Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebView;
+Lcom/amazon/identity/auth/device/api/WebViewHelper;
+Lcom/amazon/alexa/cantilever/HelpViewController;
+
+================ ANALYZING FordPass™_4.22.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/fordmps/mobileapp/move/wallbox/WallBoxWebViewClient;
+Lcom/fordmps/mobileapp/move/connectedservice/SubscriptionWebViewClient;
+Lcom/dynatrace/android/agent/Dynatrace;
+Lcom/cafex/liveassist/LiveAssistWebView;
+Lcom/ford/customviews/webviewclient/FordWebViewClient;
+
+================ ANALYZING SoundSeeder - Synced Music_2.6.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/google/android/gms/internal/ads/zzcpi;
+Lcom/bytedance/sdk/openadsdk/c/n;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lcom/ironsource/sdk/controller/x;
+Lcom/adcolony/sdk/c1;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+LP/N;
+Lcom/unity3d/services/core/webview/WebView;
+
+================ ANALYZING Cisco Secure Client-AnyConnect_5.0.00247_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Meta Spark Player_150.0.0.11.213_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+LX/43S;
+
+================ ANALYZING OKOK·International_2.3.22_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbgz;
+Lcom/growstarry/kern/mraid/WebView;
+Lcom/growstarry/kern/view/CFAdWebView;
+Lcom/google/android/gms/internal/ads/zzbil;
+Lcom/growstarry/kern/manager/l;
+
+================ ANALYZING SJCAM Zone_6.1.7_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lorg/jght/sjcam/zone/ui/activity/MallActivity;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lorg/jght/sjcam/zone/ui/activity/MessageActivity;
+
+================ ANALYZING iRobot Home_7.1.0-release_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/gigya/android/sdk/ui/plugin/GigyaWebBridge;
+Lsdk/pendo/io/views/custom/videoplayer/PendoYoutubePlayer;
+Lcom/irobot/home/WebViewFragment;
+Lcom/irobot/home/WebViewFragment$f;
+Lcom/irobot/home/WebViewFragment$c;
+
+================ ANALYZING fitpro_2.1.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcne;
+Lcom/ironsource/sdk/controller/x;
+Lsg/bigo/ads/core/h/b;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/bytedance/sdk/openadsdk/b/n;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/baidu/location/b/n;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lsg/bigo/ads/ad/interstitial/a/a;
+
+================ ANALYZING Watch Droid Phone_15.16_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/rs;
+
+================ ANALYZING EZCast – Cast Media to TV_2.14.0.1300-noad_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/google/android/gms/internal/ads/zzbdx;
+
+================ ANALYZING LocalCast_ stream to TV_43.0.2.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Remote for Lg_10.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbbq;
+Lcom/onesignal/WebViewManager;
+Lcom/google/android/gms/internal/ads/zzbdc;
+
+================ ANALYZING Remote Control for Roku_1.2.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/ironsource/sdk/controller/x;
+Lcom/vungle/warren/ui/view/VungleNativeView;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/bytedance/sdk/openadsdk/c/n;
+Lcom/adcolony/sdk/c1;
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/vungle/warren/ui/view/FullAdWidget;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/google/android/gms/internal/ads/zzcpi;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+
+================ ANALYZING TP-Link Tapo_2.11.23_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/tplink/iot/view/tapocare/BillingFragment;
+Lcom/tplink/iot/view/tapocare/TrialFragment;
+Lcom/tplink/iot/privacypolicy/view/PrivacyPolicyActivity;
+Lcom/tplink/iot/view/feedback/FeedBackWebActivity;
+Lcom/tplink/iot/view/about/AbsCommonWebActivity;
+Lcom/handmark/pulltorefresh/library/extras/PullToRefreshWebView2;
+
+================ ANALYZING Canon CameraWindow_1.5.2.21_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING PowerDVD Remote_4.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Cast to Chromecast - Screen mi_2.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lchromecast/tv/cast/caster/VideoEnabledWebView;
+Lcom/google/android/gms/internal/ads/zzcne;
+Lchromecast/tv/cast/caster/WebViewClient;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+
+================ ANALYZING MYPEUGEOT APP_1.37.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lorg/apache/cordova/engine/SystemWebViewEngine;
+Lcom/psa/mym/activity/AbstractWebViewActivity;
+
+================ ANALYZING _Mercedes me_2.13.12_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/daimler/mm/android/sso/AuthenticatedSSOWebViewActivity;
+Lcom/daimler/mm/android/sso/SSOWebViewActivity;
+
+================ ANALYZING iDVR-PRO Viewer_ CCTV DVR App_1.7.6_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface

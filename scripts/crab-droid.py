@@ -228,32 +228,35 @@ def js_interf_annotations(d):
     annot_classes = []
     # https://github.com/androguard/androguard/issues/949
     for dvm in d:
-        for adi in dvm.map_list.get_item_type(TypeMapItem.ANNOTATIONS_DIRECTORY_ITEM):
-            if adi.get_method_annotations() == []:
-                continue
-            # Each annotations_directory_item contains many method_annotation
-            for mi in adi.get_method_annotations():
-                info = dvm.get_cm_method(mi.get_method_idx())
-                # Each method_annotation stores an offset to annotation_set_item
-                ann_set_item = dvm.CM.get_obj_by_offset(mi.get_annotations_off())
-                # a annotation_set_item has an array of annotation_off_item
-                for aoffitem in ann_set_item.get_annotation_off_item():
-                    # The annotation_off_item stores the offset to an annotation_item
-                    annotation_item = dvm.CM.get_obj_by_offset(aoffitem.get_annotation_off())
-                    # The annotation_item stores the visibility and a encoded_annotation
-                    # this encoded_annotation stores the type IDX, and an array of
-                    # annotation_element
-                    # these are again name idx and encoded_value's
-                    encoded_annotation = annotation_item.get_annotation()
-                    # Print the class type of the annotation
-                    # print("@{}".format(dvm.CM.get_type(encoded_annotation.get_type_idx())))
-                    annotation = dvm.CM.get_type(encoded_annotation.get_type_idx())
+        try:
+            for adi in dvm.map_list.get_item_type(TypeMapItem.ANNOTATIONS_DIRECTORY_ITEM):
+                if adi.get_method_annotations() == []:
+                    continue
+                # Each annotations_directory_item contains many method_annotation
+                for mi in adi.get_method_annotations():
+                    info = dvm.get_cm_method(mi.get_method_idx())
+                    # Each method_annotation stores an offset to annotation_set_item
+                    ann_set_item = dvm.CM.get_obj_by_offset(mi.get_annotations_off())
+                    # a annotation_set_item has an array of annotation_off_item
+                    for aoffitem in ann_set_item.get_annotation_off_item():
+                        # The annotation_off_item stores the offset to an annotation_item
+                        annotation_item = dvm.CM.get_obj_by_offset(aoffitem.get_annotation_off())
+                        # The annotation_item stores the visibility and a encoded_annotation
+                        # this encoded_annotation stores the type IDX, and an array of
+                        # annotation_element
+                        # these are again name idx and encoded_value's
+                        encoded_annotation = annotation_item.get_annotation()
+                        # Print the class type of the annotation
+                        # print("@{}".format(dvm.CM.get_type(encoded_annotation.get_type_idx())))
+                        annotation = dvm.CM.get_type(encoded_annotation.get_type_idx())
 
-                    if "JavascriptInterface" not in annotation:
-                        continue
-                    cls = info[0] # class name
-                    if cls not in annot_classes: # avoid duplicates
-                        annot_classes.append(cls)
+                        if "JavascriptInterface" not in annotation:
+                            continue
+                        cls = info[0] # class name
+                        if cls not in annot_classes: # avoid duplicates
+                            annot_classes.append(cls)
+        except:
+            return annot_classes
     return annot_classes
 
 
@@ -309,8 +312,10 @@ def run_experiments(apk, a, d, dx):
 def main():
     apks = []
 
-    for f in os.listdir("../apks"):
+    for f in os.listdir("../Downloads"):
         apks.append(f)
+    #Debug
+    # apks = apks[28:]
 
     for f in os.listdir("./output"):
         f_to_clear = open("output/" + f, "w")
@@ -318,7 +323,7 @@ def main():
 
     f_out = open("output/main", "w")
     for apk in apks:
-        a, d, dx = AnalyzeAPK("../apks/" + apk)
+        a, d, dx = AnalyzeAPK("../Downloads/" + apk)
         output = run_experiments(apk, a, d, dx)
         f_out.write("\n================ ANALYZING " + apk + " ================\n")
         f_out.write(output)

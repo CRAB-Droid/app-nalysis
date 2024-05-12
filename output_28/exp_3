@@ -1,0 +1,120 @@
+
+================ ANALYZING Sky+_5.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING PayPal Zettle_ Point of Sale_7.36.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Bike Itaú_ Bicycle-Sharing_9.3.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING VLC Mobile Remote - PC & Mac_2.9.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING myQ Garage & Access Control_5.219.62292_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Smart Wristband_3.6.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING AIO Remote_3.5.9.14_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Amazon Alexa_2.2.486074.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/amazon/identity/auth/device/endpoint/AbstractPandaRequest$UnsafeSslHttpClient;', 'newSslSocketFactory', 'sget-object']
+
+================ ANALYZING FordPass™_4.22.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING SoundSeeder - Synced Music_2.6.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cisco Secure Client-AnyConnect_5.0.00247_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+
+================ ANALYZING Meta Spark Player_150.0.0.11.213_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING OKOK·International_2.3.22_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING SJCAM Zone_6.1.7_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+
+================ ANALYZING iRobot Home_7.1.0-release_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING fitpro_2.1.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Watch Droid Phone_15.16_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING EZCast – Cast Media to TV_2.14.0.1300-noad_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING LocalCast_ stream to TV_43.0.2.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote for Lg_10.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Remote Control for Roku_1.2.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING TP-Link Tapo_2.11.23_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Canon CameraWindow_1.5.2.21_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING PowerDVD Remote_4.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cast to Chromecast - Screen mi_2.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/samsung/multiscreen/Channel;', 'getSecureURL', 'sget-object']
+
+================ ANALYZING MYPEUGEOT APP_1.37.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING _Mercedes me_2.13.12_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING iDVR-PRO Viewer_ CCTV DVR App_1.7.6_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/bugsense/trace/CryptoHttpClient;', 'newSslSocketFactory', 'sget-object']
