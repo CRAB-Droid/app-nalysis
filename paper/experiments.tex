@@ -3,8 +3,8 @@
 
     \subsection{Permissions Misuse}
     
-        Many android applications misuse permissions that they
-        allow their application to possess. Often, certain
+        Many Android applications misuse permissions that they
+        allow their applications to possess. Often, certain
         permissions are granted to an app that doesn't use them
         in the first place. This practice is dangerous: it can 
         leave vulnerabilities within the application that should
@@ -34,7 +34,7 @@
         between an application and its users.
 
         All of these developer mistakes constitute permission vulnerabilities
-        within android applications. For our first experiment, we
+        within Android applications. For our first experiment, we
         will be testing these common misuses of permissions. First, 
         the experiment will test whether apps utilize all of the
         permissions that they request. Second, the experiment will 
@@ -45,24 +45,26 @@
         
         Setup: 
         
-        For this experiment, we will scrape the MediaStore documentation
-        for permissions and their associations to specific constants (such 
-        as the CAMERA permission with ACTION\_IMAGE\_CAPTURE). After populating 
-        a dictionary with these associations, we will check whether every permission
-        has a corresponding API call found within the code. If there are no matches,
-        we can assume a permission is being used unnecessarily.
-        
-        We will also use simple string searches within the Manifest file to look 
-        for potentially dangerous permission combinations.
+        For this experiment, we first looked into whether the app abided by the 
+        principle  of least privilege. Out of all permissions that the app asked 
+        for, we checked how many were used and how many were unused. When permissions 
+        were found to be requested, but never used throughout the app, this signified
+        that the app did not follow the principle of least privilege, as unnecessary 
+        permissions were included in the app. 
 
-        Finally, we will check for lines of code with ".requestPermissions" and then
-        the name of each permission. This will veriy that the correct requests are being
-        made for each permission.
+        We also checked to make sure that all permissions that were included in the app
+        were requested, providing transparency about the permissions that the app 
+        utilized. 
+
+        Finally, we checked for dangerous permission combinations in the 
+        applications. We specificially looked for combinations of RECORD\_AUDIO and 
+        INTERNET, ACCESS\_FINE\_LOCATION and RECEIVE\_BOOT\_COMPLETED, CAMERA and 
+        INTERNET, as well as SEND\_SMS and WRITE\_SMS. 
 
     \subsection{Trust Managers and Error Handlers}
 
         Trust Managers are put in place to verify the authenticity of a 
-        remote server. To do this, many android built-in trust managers 
+        remote server. To do this, many Android built-in trust managers 
         are implemented to securely verify a server's certificate.
         However, the built-in X509TrustManager class allows the complete 
         override of the server verification process, potentially endangering
@@ -71,24 +73,23 @@
         Many times, developers will avoid the built-in trust manager in an
         effort to take shortcuts around the correct implementation (whether
         this be for convenience or lack of experience). This practice is often
-        carried out by implementing the checkServerTrusted() and getAcceptedIssuers() 
-        functions in a way that configures the hostname verifier to trust all X.509
-        certificates. By doing this, developers expose their application to danger; 
+        carried out by implementing the checkServerTrusted() function in a way 
+        that configures the hostname verifier to trust all X.509 certificates. 
+        By doing this, developers expose their application to danger; 
         third parties may attempt a Man-in-the-Middle attack on network traffic
         from the application, compromising a user's network data if successful.
 
         TALK ABOUT ERROR HANDLING HERE
 
         This experiment will be testing whether or not an app overrides a built-in
-        trust manager or error handler to forgo either method's intended purpose of
+        trust manager or error handler to forgo methods intended purpose of
         correctly verifying certificates.
 
         Setup:
 
-        We will use simple string searches (through the parsing of class files) in
-        order to see if built-in trust manager and/or error handler methods are being overriden.
-        If they are, we will use more string matching to confirm whether or not the override
-        uses potentially dangerous techniques within.
+        For this experiment, we utilized Androguard and aspects of Mallodroid to
+        check if built-in trust manager or error handler methods, specifically
+        checkServerTrusted() and onReceivedSslError(), were overriden.
 
     \subsection{AllowAllHostnameVerifier}
     
@@ -117,21 +118,21 @@
 
         Setup:
 
-        For this experiment, we will parse class files and perform a string
-        search for "AllowAllHostnameVerifier". This will confirm whether or not
-        a developer is using unsafe coding practices by overriding proper hostname 
-        verification.
+        For this experiment, we made use of Androguard to analyze an app's 
+        method instructions, checking if the AllowAllHostnameVerifier class was ever 
+        implemented. Specifically we looked for AllowAllHostnameVerifier and 
+        SSLSocketFactory\;\-\>ALLOW\_ALL\_HOSTNAME\_VERIFIER, similar to Mallodroid.
 
 
     \subsection{Mixed use SSL}
 
         When an application is connected to the internet, it is not 
         good practice to used both HTTPS and HTTP. HTTPS connections 
-        are more secure since they use SSL (Secure Sockets Layer) to 
+        are more secure since they use Secure Sockets Layer (SSL) to 
         encrypt normal HTTP requests and responses, which consist of 
         only plaintext messages. When HTTP content is loaded by an 
         HTTPS page, attackers have the opportunity to read and/or modify
-        HTTP traffic. This results in a mixed SSL vulnerability.
+        HTTP traffic. This results in a mixed-use SSL vulnerability.
 
         Developers create this vulnerability when they do not ensure 
         that every resource on their page is loaded over HTTPS, and 

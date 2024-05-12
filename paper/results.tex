@@ -1,6 +1,62 @@
 \section{Results}
 \label{sec:discussion}
 
+\begin{enumerate}
+    \item Experiment 1: Permission Misuse
+    
+    90 of the 97 apps contained permissions that were 
+    unused (and thus unnecessarily added). The average number 
+    of unused permissions used within all apps was 6.01
+    , and when only considering apps with at least one 
+    unused permission, this number rises to 6.48.
+
+    62 of the 97 apps were identified to be using a dangerous
+    combination of permissions. The average number of dangerous permission
+    combinations within all apps totaled 1.21, with the number
+    rising to 1.89 when only considering apps with at least one
+    instance of a dangerous permission combination.
+
+    None of the apps requested no permissions.
+
+
+    \item Experiment 2: Trust Managers and Error Handlers
+    
+    XX of the 97 apps contained overriden trust managers.
+    The average number of overridden trust managers within the 
+    apps totaled XXX, with the number rising to XXX when only 
+    considering apps with at least one instance of an overridden trust 
+    manager.
+
+    XX of the 97 apps contained overridden error handlers.
+    The average number of overridden error handlers within the apps
+    totaled XXX, with the number rising when only considering apps
+    with at least one instance of an overriden error handler.
+
+    \item Experiment 3: AllowAllHostnameVerifier
+    
+    20 of the 97 apps contained the AllowAllHostnameVerifier class. 
+    The average number of AllowAllHostnameVerifier uses within all
+    apps totaled to .25, with the number rising to 1.26 when only
+    considering apps with one instance of the class.
+
+    \item Experiment 4: Mixed use SSL
+    
+    90 of the 97 apps contained mixed use SSL. None of the apps 
+    contained only HTTPS or HTTP usage, and 5 of the apps used no 
+    URLs at all. The average number of HTTP URLs within the apps 
+    totaled to 49.51, with this number rising to 52.77 when only 
+    considering apps with at least one HTTP URL being used.
+
+    \item Experiment 5: addJavascriptInterface Method
+    
+    80 of the 97 apps contained improper handling of the addJavascriptInterface
+    method. The average number of javascript vulnerabilites totaled to 
+    3.67 per app, with the number rising to 4.75 when only considering
+    apps with at least one vulnerability of this kind.
+
+
+\end{enumerate}
+
 %Discussion (discuss some of the important simplifying assumptions, and
 %suggest possibilities for future work)
 
