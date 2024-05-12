@@ -1,11 +1,87 @@
 \section{Experiments}
 \label{sec:design}
 
-\begin{enumerate}
-    \item Permissions Misuse Experiment:
-    \item Trust Managers and Error Handlers
-    Experiment: 
-    \item AllowAllHostnameVerifier Experiment:
-    \item Mixed use SSL Experiment: 
-    \item addJavascriptInterface Experiment: 
-\end{enumerate}
+    \subsection{Permissions Misuse}
+    
+        Many android applications misuse permissions that they
+        allow their application to possess. Often, certain
+        permissions are granted to an app that doesn't use them
+        in the first place. This practice is dangerous: it can 
+        leave vulnerabilities within the application that should
+        not be possible based on the actual functionality of the
+        application. For example, it would be easy for a 
+        developer to add functionality to an app that requires a
+        certain permission, and then leave the permission in after
+        reverting their previous changes. 
+        
+        Another common theme seen within applications
+        is the combination of two permissions that can create a 
+        dangerous comibination. For example, a malicious 
+        application with the permission combination of
+        CAMERA and RECORD\_AUDIO would allow the application
+        to have access to a devices camera and microphone, tools
+        that would be able to perform serious invasions of privacy. 
+        Another example could be seen with INTERNET and 
+        ACCESS\_FINE\_LOCATION, which would grant an application the
+        ability to track a device's physical location (and 
+        subsequently serve as a tool for stalking).
+
+        The ability of permissions to allow an application within
+        reach of sensitive data means that users should be prompted
+        whether they wish to allow certain permissions to be enabled.
+        However, many applications do not give users the chance to 
+        make this decision; this choice is a significant breach of trust 
+        between an application and its users.
+
+        All of these developer mistakes constitute permission vulnerabilities
+        within android applications. For our first experiment, we
+        will be testing these common misuses of permissions. First, 
+        the experiment will test whether apps utilize all of the
+        permissions that they request. Second, the experiment will 
+        search for the use of dangerous permission combinations
+        implemented in the app. Finally, the experiment will test whether
+        users are prompted to explicity give their consent to every
+        permission used.
+        
+        Setup:
+
+    \subsection{Trust Managers and Error Handlers}
+
+        Trust Managers are put in place to verify the authenticity of a 
+        remote server. To do this, many android built-in trust managers 
+        are implemented to securely verify a server's certificate.
+        However, the built-in X509TrustManager class allows the complete 
+        override of the server verification process, potentially endangering
+        an application if implemented incorrectly.
+
+        Many times, developers will avoid the built-in trust manager in an
+        effort to take shortcuts around the correct implementation (whether
+        this be for convenience or lack of experience). This practice is often
+        carried out by implementing the checkServerTrusted() and getAcceptedIssuers() 
+        functions in a way that configures the hostname verifier to trust all X.509
+        certificates. By doing this, developers expose their application to danger; 
+        third parties may attempt a Man-in-the-Middle attack on network traffic
+        from the application, compromising a user's network data if successful.
+
+        TALK ABOUT ERROR HANDLING HERE
+
+        This experiment will be testing whether or not an app overrides a built-in
+        trust manager or error handler to forgo either method's intended purpose of
+        correctly verifying certificates.
+
+        Setup:
+
+    \subsection{AllowAllHostnameVerifier}
+    
+        The HostnameVerifier interface within Android Studio is responsible for the 
+        verification of the hostname within the server being connected to, making sure the hostname within
+        the server's certificate matches the one seen in the server the client is attempting
+        to connect to. 
+
+        A vulnerability arises when the developer attempts to shortcut the hostname verification
+        process (similar to Experiment 2), resulting in an ineffective verification process.
+        Specifically, many developers use 
+
+    \subsection{Mixed use SSL}
+
+    \subsection{addJavascriptInterface Method}

@@ -1,17 +1,38 @@
 \section{Introduction}
 
-The Introduction includes references to highly-relevant related work,
-i.e., state of the art for the problem you are trying to solve.
+% The Introduction includes references to highly-relevant related work,
+% i.e., state of the art for the problem you are trying to solve.
 
-Note: when writing \LaTeX, each paragraph should have a line separated
-between it and the separate paragraph. This causes proper indentation
-and makes the document more readable. Do not end paragraphs with
-\verb/\\/.
+% Note: when writing \LaTeX, each paragraph should have a line separated
+% between it and the separate paragraph. This causes proper indentation
+% and makes the document more readable. Do not end paragraphs with
+% \verb/\\/.
 
-The remainder of this paper proceeds as follows.
-Section~\ref{sec:overview} overviews our sample paper.
-Section~\ref{sec:design} describes the design of our sample paper.
-Section~\ref{sec:eval} evaluates our solution.
-Section~\ref{sec:discussion} discusses additional topics.
-Section~\ref{sec:relwork} describes related work. Section~\ref{sec:conc}
-concludes.
+% The remainder of this paper proceeds as follows.
+% Section~\ref{sec:overview} overviews our sample paper.
+% Section~\ref{sec:design} describes the design of our sample paper.
+% Section~\ref{sec:eval} evaluates our solution.
+% Section~\ref{sec:discussion} discusses additional topics.
+% Section~\ref{sec:relwork} describes related work. Section~\ref{sec:conc}
+% concludes.
+
+Currently, Android is the most used smartphone operating system in the world, with a market share of 48\% and over 400,000 applications (apps) available in the Google Play Market \cite{10.1145/2382196.2382205}. The Google Play
+Market is also mostly open and unrestricted, allotting developers more freedom, but many times at the cost of security. 
+The ability to identify vulnerablities within Android applications is vital to the safety of users and their information. Showcasing these vulnerabilities then
+helps to educate developers to carry-out best security practices when creating an app and to take vulnerable apps off the app store to be secured. This project investigates a variety of Android applications and vulnerabilities that potentially 
+exist within them. 
+
+With technolgocial enhancements to smartphone devices over the past two decades, user have been downloading more and more apps to their phones. This rise of phone apps results in a greater chance for users to download malicious ones 
+that may contain malware, such as trojans \cite{10.1145/1653662.1653691}. This spike has also lead to many new developers to enter the ever expanding market, with many potential bad security practices in apps along with them. For reasons mentioned previously, 
+it is important to identify these vulnerabilities in order to educate developers and protect users. 
+
+For this project, we analyzed a set of 100 Android apps from the Google Play Store. We then established 7 research questions to hypothesize about pontential vulnerabilites we believed we would find in the apps. We organized them into three domains: permission misuse, 
+SSL API misue, and interface vulnerabilites. These domains were chosen to cover a broad attack vector of the android applications such as the use of permissions that may violate user privacy, the use of SSL APIs that may not be secure, and the use of interfaces that may be vulnerable to attacks.
+Five experiments were then developed and tested on our set of apps. 
+
+The five experiments were tested on each app as follows: test apps for whether they use all the permissions they request and if they use any dangerous combinations of them, examine for an overide on trust mangers or error handlers, 
+test for implementation of the AllowAllHostnameVerifier class, see if apps contain mixed use of HTTP and HTTPS (mixed SSL), and finally test apps for incorrect use of the addJavascriptInterface method.
+
+Using the Androguard library \cite{androguard} and referencing Mallodroid \cite{10.1145/2382196.2382205}, we completed a thorough analysis of the apps. The results showed ... %TODO add results
+
+Overall, the significance of this project is seen in its use of static analysis and its applications into the discipline of Android mobile app security. This practice has the potential to be utilized in real-world applications to help secure the Google Play Store and protect users from malicious apps. 
