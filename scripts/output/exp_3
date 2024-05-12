@@ -1,0 +1,418 @@
+
+================ ANALYZING Sky+_5.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING PayPal Zettle_ Point of Sale_7.36.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Bike Itaú_ Bicycle-Sharing_9.3.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING VLC Mobile Remote - PC & Mac_2.9.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING myQ Garage & Access Control_5.219.62292_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Smart Wristband_3.6.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING AIO Remote_3.5.9.14_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Amazon Alexa_2.2.486074.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/amazon/identity/auth/device/endpoint/AbstractPandaRequest$UnsafeSslHttpClient;', 'newSslSocketFactory', 'sget-object']
+
+================ ANALYZING FordPass™_4.22.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING SoundSeeder - Synced Music_2.6.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cisco Secure Client-AnyConnect_5.0.00247_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+
+================ ANALYZING Meta Spark Player_150.0.0.11.213_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING OKOK·International_2.3.22_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING SJCAM Zone_6.1.7_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+
+================ ANALYZING iRobot Home_7.1.0-release_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING fitpro_2.1.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Watch Droid Phone_15.16_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING EZCast – Cast Media to TV_2.14.0.1300-noad_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING LocalCast_ stream to TV_43.0.2.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote for Lg_10.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Remote Control for Roku_1.2.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING TP-Link Tapo_2.11.23_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Canon CameraWindow_1.5.2.21_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING PowerDVD Remote_4.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cast to Chromecast - Screen mi_2.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/samsung/multiscreen/Channel;', 'getSecureURL', 'sget-object']
+
+================ ANALYZING MYPEUGEOT APP_1.37.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING _Mercedes me_2.13.12_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING iDVR-PRO Viewer_ CCTV DVR App_1.7.6_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/bugsense/trace/CryptoHttpClient;', 'newSslSocketFactory', 'sget-object']
+
+================ ANALYZING Panasonic TV Remote_2.30_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING LEGO® MINDSTORMS® Commander_1.0.8_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Web Video Cast _ Browser to TV_5.6.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cardiograph - Heart Rate Meter_4.1.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Wyze - Make Your Home Smarter_2.36.0.96_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/loopj/android/http/j;', 'b', 'sget-object']
+
+================ ANALYZING Xfinity My Account_1.58.13.20220802141245_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote Control For Panasonic_9.2.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING LogMeIn_4.0.1947_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING SmartBand_1.3.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Screen Stream Mirroring_2.8.2-google_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Home Security Camera WardenCam_2.8.14_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Screen Mirroring with All TV_2.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Live Earth Map - Live Camera_4.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Heart Rate Monitor_0.3.19_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Bird — Ride Electric_4.214.0.7_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING AC Remote For Panasonic_10.0.0.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Universal Remote Control_1.0.34_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Bose Music_6.1.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING MIFON_ Award Winning Phone Anti Theft Protection_12.70_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING DIRECTV on the Go_5.29.002_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Radar_ Speed Camera, HUD Speedometer, Radar Detect_1.0.9_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Smart TV Remote Control_1.55_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Smart Thermometer_3.0.6_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote Control for Sky_Directv_6.1.8_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Ultimate Alexa Voice Assistant_3.4.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/amazon/identity/auth/device/endpoint/AbstractHTTPSRequest;', 'a', 'new-instance']
+
+================ ANALYZING Yoho Sports_20.36.37_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote For LG webOS Smart TV_10.0.0.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Speedometer HD_13.6_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING HerobandⅢ_v1.0.0-2025-gf7b02d91b_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Smart Home Manager_2.2210.280_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Universal TV Remote Control_1.1.26_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Grundig Smart Remote_3.36_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING CetusPlay - TV Remote Server R_4.8.0-For TV_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/c/a/a/h;', 'a', 'sget-object']
+
+================ ANALYZING MyPlate Calorie Tracker_3.5.4(4)_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cast to TV - Chromecast, Roku_2.3.1.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Quick Cast_3.5.2.400_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cast to TV_ Chromecast, Roku_1.5.0.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING HiLookVision_3.10.1.0924_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lase;', 'a', 'new-instance']
+['Lcom/hikvision/hikconnect/push/http/HttpHelper;', '<clinit>', 'new-instance']
+['Larq;', '<init>', 'new-instance']
+['Lapu$a;', 'a', 'new-instance']
+
+================ ANALYZING Notify for Amazfit & Zepp_15.3.6_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Jaybird_4.0.11_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Yulu - EVs for Rides & Rentals_4.4.1.4_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING EZMira_1.8.0.60-noad_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Coronalert BE_1.16.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING FITE_6.8_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lvi/c;', 'C', 'sget-object']
+
+================ ANALYZING Cable Remote Control Universal_8.4.3_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING AC Remote Control_2.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING Remote For Amazon Fire TV_10.0.0.4_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING DailyRoads Voyager_8.0.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING AC Remote For LG Air Condition_10.0.0.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Fastrack Reflex_4.2.3_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Remote for Roku _ Codematics_1.29_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING realme Link_3.0.1011.2005_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Pacer Pedometer & Step Tracker_p9.10.2_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Withings Health Mate_5.12.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;', '<clinit>', 'new-instance']
+['Lorg/apache/http/conn/ssl/SSLSocketFactory;', '<clinit>', 'new-instance']
+
+================ ANALYZING LED Remote Control_10.0.0.4_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Lexmark Print Plugin_2.12.0.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Arçelik Akıllı Kumanda_3.36_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Tuya Smart_4.5.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Radar, Map, Navigation, Head-Up Display, Speed Cam_7.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Cast Web Videos to Smart TVs_8.905_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING TV Cast for Chromecast_35.13.25.19_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/google/api/client/http/apache/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+
+================ ANALYZING PlayTo Chromecast_2.3_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Thermometer Free_1.6.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Notify for Mi Band_15.4.5_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Brother iPrint&Scan_6.10.0_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/brother/mfc/phoenix/http/apache/patched/ApacheHttpTransport$Builder;', 'doNotValidateCertificate', 'sget-object']
+['Lcom/brother/mfc/phoenix/http/apache/patched/IgnoreSSLSocketFactory;', 'create', 'sget-object']
+
+================ ANALYZING Golf GPS & Scorecard by SwingU_7.6.7_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING Bose SoundTouch_27.0.1_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING FunRun_3.2.8_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier
+
+================ ANALYZING T-Cast Android Roku TV Remote_7.9.074_Apkpure.apk ================
+
+Experiment 3: AllowAllHostnameVerifier

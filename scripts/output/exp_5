@@ -1,0 +1,768 @@
+
+================ ANALYZING Sky+_5.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING PayPal Zettle_ Point of Sale_7.36.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/braze/ui/inappmessage/factories/DefaultInAppMessageHtmlFullViewFactory;
+Lcom/izettle/android/luxcompliance/presentation/LuxComplianceActivity;
+Lcom/braze/ui/inappmessage/factories/DefaultInAppMessageHtmlViewFactory;
+Lcom/izettle/android/qrc/klarna/view/KlarnaView;
+
+================ ANALYZING Bike Itaú_ Bicycle-Sharing_9.3.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/reactnativecommunity/webview/RNCWebViewManager$f;
+Lcom/braze/ui/c/s/f;
+Lcom/braze/ui/c/s/e;
+
+================ ANALYZING VLC Mobile Remote - PC & Mac_2.9.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/adcolony/sdk/aw;
+Lcom/google/android/gms/internal/ads/zzcng;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/integralads/avid/library/adcolony/session/internal/jsbridge/AvidWebViewManager;
+
+================ ANALYZING myQ Garage & Access Control_5.219.62292_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/pierfrancescosoffritti/androidyoutubeplayer/core/player/views/b;
+Lcom/chamberlain/myq/features/motion_events/h;
+
+================ ANALYZING Smart Wristband_3.6.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING AIO Remote_3.5.9.14_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbhm;
+Lcom/google/android/gms/internal/ads/zzbiy;
+Lcom/facebook/appevents/AppEventsLogger;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/uxcam/internals/af;
+Lcom/uxcam/internals/ab;
+
+================ ANALYZING Amazon Alexa_2.2.486074.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/amazon/identity/auth/device/activity/ActorSignUpAndEnrollActivity;
+Lcom/amazon/identity/auth/device/api/WebViewHelper;
+Lcom/amazon/dee/app/ui/web/AlexaWebView;
+Lcom/amazon/alexa/cantilever/HelpViewController;
+Lcom/amazon/identity/auth/device/AuthPortalUIActivity;
+Lcom/amazon/identity/auth/device/activity/AuthChallengeHandleActivity;
+Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebView;
+Lcom/amazon/identity/auth/device/activity/ActorEnrollActivity;
+Lcom/amazon/deecomms/oobe/fragments/CVFFragment;
+Lcom/amazon/identity/auth/device/api/MAPAndroidWebViewHelper;
+
+================ ANALYZING FordPass™_4.22.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/dynatrace/android/agent/Dynatrace;
+Lcom/fordmps/mobileapp/move/connectedservice/SubscriptionWebViewClient;
+Lcom/cafex/liveassist/LiveAssistWebView;
+Lcom/ford/customviews/webviewclient/FordWebViewClient;
+Lcom/fordmps/mobileapp/move/wallbox/WallBoxWebViewClient;
+
+================ ANALYZING SoundSeeder - Synced Music_2.6.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lcom/adcolony/sdk/c1;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/ironsource/sdk/controller/x;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/google/android/gms/internal/ads/zzcpi;
+Lcom/amazon/device/ads/DTBAdView;
+LP/N;
+Lcom/bytedance/sdk/openadsdk/c/n;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+
+================ ANALYZING Cisco Secure Client-AnyConnect_5.0.00247_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Meta Spark Player_150.0.0.11.213_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+LX/43S;
+
+================ ANALYZING OKOK·International_2.3.22_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbgz;
+Lcom/growstarry/kern/mraid/WebView;
+Lcom/growstarry/kern/view/CFAdWebView;
+Lcom/google/android/gms/internal/ads/zzbil;
+Lcom/growstarry/kern/manager/l;
+
+================ ANALYZING SJCAM Zone_6.1.7_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lorg/jght/sjcam/zone/ui/activity/MessageActivity;
+Lorg/jght/sjcam/zone/ui/activity/MallActivity;
+
+================ ANALYZING iRobot Home_7.1.0-release_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/irobot/home/WebViewFragment;
+Lcom/gigya/android/sdk/ui/plugin/GigyaWebBridge;
+Lsdk/pendo/io/views/custom/videoplayer/PendoYoutubePlayer;
+Lcom/irobot/home/WebViewFragment$c;
+Lcom/irobot/home/WebViewFragment$f;
+
+================ ANALYZING fitpro_2.1.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcne;
+Lcom/ironsource/sdk/controller/x;
+Lsg/bigo/ads/core/h/b;
+Lcom/bytedance/sdk/openadsdk/b/n;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/baidu/location/b/n;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lbolts/WebViewAppLinkResolver$2;
+Lsg/bigo/ads/ad/interstitial/a/a;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+
+================ ANALYZING Watch Droid Phone_15.16_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/rs;
+
+================ ANALYZING EZCast – Cast Media to TV_2.14.0.1300-noad_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/google/android/gms/internal/ads/zzbdx;
+
+================ ANALYZING LocalCast_ stream to TV_43.0.2.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Remote for Lg_10.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbbq;
+Lcom/onesignal/WebViewManager;
+Lcom/google/android/gms/internal/ads/zzbdc;
+
+================ ANALYZING Remote Control for Roku_1.2.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/adcolony/sdk/c1;
+Lcom/vungle/warren/ui/view/FullAdWidget;
+Lcom/ironsource/sdk/controller/x;
+Lcom/google/android/gms/internal/ads/zzcpi;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/vungle/warren/ui/view/VungleNativeView;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/bytedance/sdk/openadsdk/c/n;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+
+================ ANALYZING TP-Link Tapo_2.11.23_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/tplink/iot/privacypolicy/view/PrivacyPolicyActivity;
+Lcom/tplink/iot/view/tapocare/TrialFragment;
+Lcom/tplink/iot/view/tapocare/BillingFragment;
+Lcom/handmark/pulltorefresh/library/extras/PullToRefreshWebView2;
+Lcom/tplink/iot/view/about/AbsCommonWebActivity;
+Lcom/tplink/iot/view/feedback/FeedBackWebActivity;
+
+================ ANALYZING Canon CameraWindow_1.5.2.21_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING PowerDVD Remote_4.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Cast to Chromecast - Screen mi_2.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lchromecast/tv/cast/caster/VideoEnabledWebView;
+Lcom/google/android/gms/internal/ads/zzcne;
+Lchromecast/tv/cast/caster/WebViewClient;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+
+================ ANALYZING MYPEUGEOT APP_1.37.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lorg/apache/cordova/engine/SystemWebViewEngine;
+Lcom/psa/mym/activity/AbstractWebViewActivity;
+
+================ ANALYZING _Mercedes me_2.13.12_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/daimler/mm/android/sso/AuthenticatedSSOWebViewActivity;
+Lcom/daimler/mm/android/sso/SSOWebViewActivity;
+
+================ ANALYZING iDVR-PRO Viewer_ CCTV DVR App_1.7.6_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Panasonic TV Remote_2.30_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING LEGO® MINDSTORMS® Commander_1.0.8_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Web Video Cast _ Browser to TV_5.6.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/inmobi/media/q;
+Lcom/vungle/warren/ui/view/VungleBannerView;
+Lcom/bytedance/sdk/component/adexpress/d/e;
+Lcom/vungle/warren/ui/view/FullAdWidget;
+Lcom/ironsource/sdk/controller/x;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lcom/yahoo/ads/webview/YASAdsMRAIDWebView;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/google/android/gms/internal/ads/zzcni;
+Lcom/bytedance/sdk/openadsdk/c/h;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/yahoo/ads/webview/YASAdsWebView;
+
+================ ANALYZING Cardiograph - Heart Rate Meter_4.1.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcnk;
+Lcom/adcolony/sdk/w0;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzt;
+
+================ ANALYZING Wyze - Make Your Home Smarter_2.36.0.96_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/hualai/plugin/camera/humiture/HumitureWebView;
+Lcom/appboy/ui/inappmessage/factories/AppboyHtmlFullViewFactory;
+Lcom/wyze/shop/page/web/WyzeStoreSearchWebActivity;
+Lcom/wyze/camplus/WyzeCamPlusPage;
+Lcom/wyze/shop/page/WyzeStoreDetailActivity;
+Lcom/wyze/sweeprobot/activity/web/VenusReWebActivity;
+Lcom/wyze/sweeprobot/activity/setting/faq/VenusFAQActivity;
+Lcom/wyze/platformkit/component/camername/WpkShareDeviceGuidActivity;
+Lcom/wyze/shop/page/WyzeStoreMainPage;
+Lcom/wyze/shop/page/web/WyzeStoreCheckoutActivity;
+Lcom/wyze/platformkit/component/WpkWebActivity;
+Lcom/wyze/shop/page/web/WyzeStoreCartWebActivity;
+Lcom/pierfrancescosoffritti/youtubeplayer/player/b;
+Lcom/hualai/home/service/ai/WyzePersonDetectionEnablePage;
+Lcom/andon/floorlamp/floor/ui/bind/FloorLampBindEndActivity;
+Lcom/wyze/shop/page/WyzeShopWebActivity;
+Lcom/appboy/ui/inappmessage/factories/AppboyHtmlViewFactory;
+Lcom/wyze/hms/WyzeHmsPage;
+Lcom/wyze/shop/page/web/WyzeStoreProductInfoWebActivity;
+
+================ ANALYZING Xfinity My Account_1.58.13.20220802141245_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/comcast/harness/ui/HarnessWebView;
+Lcom/google/android/gms/internal/zzaor;
+Lcom/appdynamics/eumagent/runtime/InstrumentationCallbacks;
+Lcom/google/android/gms/internal/zzaqe;
+
+================ ANALYZING Remote Control For Panasonic_9.2.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbdz;
+Lcom/google/android/gms/internal/ads/zzbfl;
+
+================ ANALYZING LogMeIn_4.0.1947_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/logmein/ignition/android/ui/component/WebView4CLS;
+
+================ ANALYZING SmartBand_1.3.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Screen Stream Mirroring_2.8.2-google_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/google/android/gms/internal/ads/zzcni;
+
+================ ANALYZING Home Security Camera WardenCam_2.8.14_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbem;
+Lcom/google/android/gms/internal/ads/zzbfy;
+
+================ ANALYZING Screen Mirroring with All TV_2.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/ironsource/sdk/controller/WebController;
+Lcom/google/android/gms/internal/ads/nu;
+Lcom/ironsource/sdk/ISNAdView/ISNAdView;
+
+================ ANALYZING Live Earth Map - Live Camera_4.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/google/android/gms/internal/ads/zzcni;
+
+================ ANALYZING Heart Rate Monitor_0.3.19_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzari;
+Lcom/google/android/gms/internal/ads/zzass;
+
+================ ANALYZING Bird — Ride Electric_4.214.0.7_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+LuK0;
+LtK0;
+LEa5;
+LmP5;
+
+================ ANALYZING AC Remote For Panasonic_10.0.0.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/google/android/gms/internal/ads/zzcmb;
+
+================ ANALYZING Universal Remote Control_1.0.34_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/qg;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+
+================ ANALYZING Bose Music_6.1.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/gigya/android/sdk/ui/plugin/GigyaWebBridge;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+
+================ ANALYZING MIFON_ Award Winning Phone Anti Theft Protection_12.70_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/paytm/pgsdk/PaytmWebView;
+Lcom/google/android/gms/internal/zzakz;
+Lcom/facebook/appevents/AppEventsLogger;
+Lmobi/mifon/login/PaymentWebviewActivity;
+Lmobi/mifon/InstaMojoWebviewActivity$RenderView;
+Lbolts/WebViewAppLinkResolver$2;
+Lmobi/mifon/login/CCAvenueWebViewActivity$RenderView;
+
+================ ANALYZING DIRECTV on the Go_5.29.002_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/zzakz;
+Ltv/freewheel/hybrid/renderers/html/MRAIDWebView;
+Ltv/freewheel/renderers/html/MRAIDWebView;
+Lcom/comscore/android/vce/aa;
+Lcom/att/halox/common/utils/HandleCertIDPwdOauth;
+Lcom/comscore/android/vce/am$7;
+Lcom/morega/qew/router/ui/fragments/WebViewBuilder;
+
+================ ANALYZING Radar_ Speed Camera, HUD Speedometer, Radar Detect_1.0.9_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/unity3d/services/core/webview/WebView;
+Ladmost/adserver/ads/AdMostBannerAd;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lh/k/r3;
+Ladmost/adserver/core/AdMostInterstitialAdActivity;
+Lcom/inmobi/media/m;
+Lcom/google/android/gms/internal/ads/zzbdz;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/fyber/inneractive/sdk/player/f/b;
+Lcom/google/android/gms/internal/ads/zzbfl;
+
+================ ANALYZING Smart TV Remote Control_1.55_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/x8;
+Lcom/google/android/gms/internal/ads/qs;
+Lcom/google/android/gms/internal/ads/bu;
+
+================ ANALYZING Smart Thermometer_3.0.6_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/zzqt;
+
+================ ANALYZING Remote Control for Sky_Directv_6.1.8_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/h2;
+Lo3/i30;
+
+================ ANALYZING Ultimate Alexa Voice Assistant_3.4.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/umlaut/crowd/internal/gm;
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/cellrebel/sdk/youtube/player/e;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/umlaut/crowd/internal/ht;
+
+================ ANALYZING Yoho Sports_20.36.37_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbhn;
+Lcom/google/android/gms/internal/ads/zzbiz;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+
+================ ANALYZING Remote For LG webOS Smart TV_10.0.0.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/google/android/gms/internal/ads/zzcmb;
+
+================ ANALYZING Speedometer HD_13.6_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcnk;
+Lcom/adcolony/sdk/w0;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzt;
+
+================ ANALYZING HerobandⅢ_v1.0.0-2025-gf7b02d91b_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/just/agentweb/AgentWebView;
+Lcom/tencent/bugly/crashreport/CrashReport$a;
+Lcom/just/agentweb/JsInterfaceHolderImpl;
+
+================ ANALYZING Smart Home Manager_2.2210.280_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/att/shm/fragments/speedtest/SpeedTestProgressFragment;
+Lcom/quantummetric/instrument/bv;
+Lcom/att/halox/common/utils/HandleCertIDPwdOauth;
+
+================ ANALYZING Universal TV Remote Control_1.1.26_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lu3/c;
+Lcom/google/android/gms/internal/ads/pt0;
+
+================ ANALYZING Grundig Smart Remote_3.36_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING CetusPlay - TV Remote Server R_4.8.0-For TV_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING MyPlate Calorie Tracker_3.5.4(4)_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/ads/internal/view/b/a;
+Lcom/facebook/ads/internal/view/n;
+Lcom/google/android/gms/internal/ads/zzbfa;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/google/android/gms/internal/ads/zzbgm;
+
+================ ANALYZING Cast to TV - Chromecast, Roku_2.3.1.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/inshot/cast/xcast/r2/z0;
+Lg/d/a/d;
+Lcom/google/android/gms/ads/d0/a/b0;
+Lcom/inshot/cast/xcast/service/browser/m;
+Lcom/google/android/gms/internal/ads/ln0;
+
+================ ANALYZING Quick Cast_3.5.2.400_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/wukongtv/wkcast/browser/JSMaster;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/google/android/gms/internal/ads/rt0;
+
+================ ANALYZING Cast to TV_ Chromecast, Roku_1.5.0.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/evgenii/jsevaluator/d;
+Lcom/google/android/gms/internal/ads/zzciu;
+Lcom/inshot/cast/xcast/web/s0;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzt;
+
+================ ANALYZING HiLookVision_3.10.1.0924_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/react/views/webview/ReactWebViewManager$ReactWebView;
+Lcom/hikvision/hikconnect/devicemgt/config/LocalDeviceConfigActivity$a;
+Lcom/tencent/bugly/crashreport/CrashReport$1;
+Lcom/hikvision/hikconnect/devicelist/HikDeviceConfigActivity$a;
+Lcom/videogo/widget/WebViewEx;
+
+================ ANALYZING Notify for Amazfit & Zepp_15.3.6_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/huawei/opendevice/open/BaseWebActivity;
+Lcom/huawei/opendevice/open/InjectableBaseWebActivity;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/mc/miband1/ui/emojipicker/EmojiPickerWebActivity;
+Lcom/huawei/openalliance/ad/ppskit/views/PPSWebView;
+Lcom/huawei/openalliance/ad/ppskit/po;
+
+================ ANALYZING Jaybird_4.0.11_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+
+================ ANALYZING Yulu - EVs for Rides & Rentals_4.4.1.4_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lzihjx/chmha;
+Lcom/payu/custombrowser/b;
+Lcom/payu/gpay/GPayResponseActivity;
+Lcom/paytm/pgsdk/easypay/clients/EasypayWebViewClient;
+Lcom/paytm/pgsdk/PaytmWebView;
+Lcom/moengage/inapp/internal/HtmlViewEngine$createWebView$1;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+
+================ ANALYZING EZMira_1.8.0.60-noad_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzbdx;
+Lcom/salesfrontier/h5plugin/WebView;
+
+================ ANALYZING Coronalert BE_1.16.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING FITE_6.8_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/zopim/android/sdk/api/WebBinder;
+
+================ ANALYZING Cable Remote Control Universal_8.4.3_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/pt0;
+Lb2/c;
+
+================ ANALYZING AC Remote Control_2.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+
+================ ANALYZING Remote For Amazon Fire TV_10.0.0.4_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+
+================ ANALYZING DailyRoads Voyager_8.0.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/mr0;
+Lf5/p0;
+
+================ ANALYZING AC Remote For LG Air Condition_10.0.0.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/google/android/gms/internal/ads/zzcmb;
+
+================ ANALYZING Fastrack Reflex_4.2.3_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/isport/fastrack/views/acitvities/TroubleshootActivity;
+Lcom/isport/fastrack/views/acitvities/LeaderboardWebActivity;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/isport/fastrack/views/acitvities/PaymentTestWebviewActivity;
+
+================ ANALYZING Remote for Roku _ Codematics_1.29_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/x8;
+Lcom/google/android/gms/internal/ads/bu;
+Lcom/google/android/gms/internal/ads/qs;
+
+================ ANALYZING realme Link_3.0.1011.2005_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/facebook/react/views/webview/ReactWebViewManager$ReactWebView;
+Lcom/realme/link/store/shop/ShopWebFragment;
+Lcom/realme/link/webview/BridgeWebViewActivity;
+Lcom/tuya/smart/jsbridge/runtime/ContainerInstance;
+Lcom/realme/link/store/discover/DiscoverWebActivity;
+Lcom/rm/store/web/EchatActivty;
+Lcom/rm/base/widget/webview/VideoEnabledWebView;
+Lcom/lifesense/weidong/lswebview/activity/WebViewActivity;
+Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebView;
+Lcom/platform/usercenter/support/webview/FragmentWebLoadingBase;
+Lcom/platform/usercenter/ui/UCActivityShowActivity;
+Lcom/platform/usercenter/tokenToSession/SyncCookieWebViewClient;
+Lcom/heytap/statistics/h5/H5StatSupportUtil;
+Lcom/realme/link/webview/WebViewActivity;
+Lcom/heytap/webview/extension/adapter/webview/NativeWebViewImpl;
+Lcom/realme/link/settings/ProtocolWebActivity;
+Lbolts/WebViewAppLinkResolver$2;
+Lcom/realme/iot/common/mvp/SpWebViewActivity;
+Lcom/lifesense/weidong/lswebview/webview/engine/SystemWebViewEngine;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/tuyasmart/stencil/component/webview/webview/TuyaWebView;
+Lcom/tuya/smart/jsbridge/dsbridge/DWebView;
+Lcom/heytap/webview/extension/adapter/webview/BrowserWebViewImpl;
+
+================ ANALYZING Pacer Pedometer & Step Tracker_p9.10.2_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/kg;
+Lcc/pacer/androidapp/ui/group/ChatActivity;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzz;
+Lcc/pacer/androidapp/ui/coach/controllers/CoachActivityB;
+Lcc/pacer/androidapp/ui/coach/controllers/CoachActivity;
+Lcom/inmobi/media/q;
+Lcc/pacer/androidapp/ui/web/BaseWebActivity;
+Lcc/pacer/androidapp/ui/prome/controllers/insights/InsightsFragment;
+
+================ ANALYZING Withings Health Mate_5.12.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/huawei/hms/hihealth/activity/HealthKitWebViewActivity;
+
+================ ANALYZING LED Remote Control_10.0.0.4_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+
+================ ANALYZING Lexmark Print Plugin_2.12.0.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Arçelik Akıllı Kumanda_3.36_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Tuya Smart_4.5.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/thingclips/smart/plugin/tunidlwebviewmanager/view/DiffLayerWebView;
+Lcom/thingclips/smart/jsbridge/runtime/ContainerInstance;
+Lcom/thingclips/smart/jsbridge/dsbridge/DWebView;
+Lcom/gzl/smart/gzlminiapp/widget/view/MiniWidgetWebView;
+Lcom/gzl/smart/gzlminiapp/webview/web/GZLWebView;
+Lcom/reactnativecommunity/webview/RNCWebViewManager$RNCWebView;
+Lcom/facebook/react/views/webview/ReactWebViewManager$ReactWebView;
+Lcom/thingclips/stencil/component/webview/webview/ThingWebView;
+
+================ ANALYZING Radar, Map, Navigation, Head-Up Display, Speed Cam_7.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Ladmost/adserver/core/AdMostInterstitialAdActivity;
+Lcom/inmobi/media/m;
+Ladmost/adserver/ads/AdMostBannerAd;
+Lcom/amazon/device/ads/ViewManager;
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/bytedance/sdk/openadsdk/core/nativeexpress/NativeExpressView;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lg/i/r3;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/ironsource/sdk/controller/WebController;
+Lcom/google/android/gms/internal/ads/zzbdz;
+Lcom/ironsource/sdk/ISNAdView/ISNAdView;
+Lcom/google/android/gms/internal/ads/zzbfl;
+Lg/d/a/c/b0/k;
+
+================ ANALYZING Cast Web Videos to Smart TVs_8.905_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING TV Cast for Chromecast_35.13.25.19_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/zzako;
+Lcom/c/a/g;
+
+================ ANALYZING PlayTo Chromecast_2.3_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/ra;
+Lcom/google/android/gms/internal/ads/sl;
+
+================ ANALYZING Thermometer Free_1.6.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/unity3d/services/ads/webplayer/WebPlayerView;
+Lcom/google/android/gms/internal/ads/zzari;
+Lcom/inmobi/rendering/RenderView;
+Lcom/ironsource/sdk/controller/WebController;
+Lcom/unity3d/services/core/webview/WebView;
+Lcom/yandex/mobile/ads/impl/d;
+Lcom/yandex/mobile/ads/impl/ju;
+Lcom/tapjoy/TJAdUnitJSBridge;
+Lcom/startapp/sdk/ads/banner/bannerstandard/BannerStandard;
+Lcom/google/android/gms/internal/ads/zzass;
+Lcom/amazon/device/ads/ViewManager;
+Lcom/startapp/sdk/adsbase/adinformation/AdInformationObject;
+Lcom/adcolony/sdk/m0;
+Lcom/startapp/sdk/ads/splash/SplashHtml;
+Lcom/integralads/avid/library/inmobi/session/internal/jsbridge/AvidWebViewManager;
+Lcom/ironsource/sdk/ISNAdView/ISNAdView;
+Lcom/yandex/mobile/ads/impl/ab;
+Lcom/startapp/sdk/ads/a/c;
+
+================ ANALYZING Notify for Mi Band_15.4.5_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/huawei/opendevice/open/InjectableBaseWebActivity;
+Lcom/huawei/openalliance/ad/ppskit/views/web/c;
+Lcom/huawei/opendevice/open/BaseWebActivity;
+Lcom/mc/miband1/ui/emojipicker/EmojiPickerWebActivity;
+Lcom/google/android/gms/internal/ads/zzcmb;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzaa;
+Lcom/huawei/openalliance/ad/ppskit/qb;
+Lcom/huawei/openalliance/ad/ppskit/views/PPSWebView;
+
+================ ANALYZING Brother iPrint&Scan_6.10.0_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/brother/mfc/brprint/v2/ui/cloudservice/utils/evernote/EvernotePrePreviewActivity;
+
+================ ANALYZING Golf GPS & Scorecard by SwingU_7.6.7_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/freestar/android/ads/VPAIDPlayer;
+Lsxs/activities/you/upgrade/WebViewUpgradeActivity$3;
+Lcom/amazon/device/ads/DTBAdView;
+Lcom/facebook/appevents/AppEventsLoggerImpl;
+Lcom/tapjoy/TJAdUnitJSBridge;
+Lcom/google/android/gms/internal/ads/zzbdx;
+Lcom/adcolony/sdk/n0;
+Lcom/adsbynimbus/render/web/NimbusWebView;
+Lbolts/WebViewAppLinkResolver$2;
+
+================ ANALYZING Bose SoundTouch_27.0.1_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/bose/soundtouch/android/main/d$e;
+
+================ ANALYZING FunRun_3.2.8_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING T-Cast Android Roku TV Remote_7.9.074_Apkpure.apk ================
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/ads/zzcne;
+Lcom/bytedance/sdk/component/widget/SSWebView;
+Lcom/bytedance/sdk/openadsdk/c/m;
+Lcom/google/android/gms/ads/nonagon/signalgeneration/zzv;
+Lcom/bytedance/sdk/component/adexpress/d/e;
