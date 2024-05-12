@@ -40,7 +40,7 @@ print(danger)
 
 for i, combo in enumerate(danger):
     if combo[0] in perms and combo[1] in perms:
-        danger_present[i] = True;
+        danger_present[i] = True
 
 print()
 print(f"danger_present array: {danger_present}")
