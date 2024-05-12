@@ -4,36 +4,40 @@ from androguard.core.dex import TypeMapItem
 import os
 
 
-def output_to_string(perm, override, allow, http, js_interf):
+def output_to_string(perm, trust_managers, error_handlers, allow_all, http, js_interf):
     output = ""
 
     # Experiment 1
     output += "\n" + str("Experiment 1: Permissions Misuse") + "\n"
-
     # unused permissions
     used = perm[0][0]
     unused = perm[0][1]
-
     output += "\n" + str("Used Permissions") + "\n"
     for p in used:
         output += str(p) + "\n"
     output += "\n" + str("Unused Permissions") + "\n"
     for p in unused:
         output += str(p) + "\n"
-    
     # dangerous combinations
     for p in perm[1]: 
         output += str(p) + "\n"
-    
     # unrequested permissions
     for p in perm[2]:
         output += str(p) + "\n"
 
     # Experiment 2
-    output += str() + "\n"
-    
+    output += "\n" + str("Experiment 2: Trust Managers and Error Handlers") + "\n"
+    output += "\n" + str("Overridden Trust Managers") + "\n"
+    for m in trust_managers:
+        output += str(m) + "\n"
+    output += "\n" + str("Overridden Error Handlers") + "\n"
+    for m in trust_managers:
+        output += str(m) + "\n"
+
     # Experiment 3
-    output += str() + "\n"
+    output += "\n" + str("Experiment 3: AllowAllHostnameVerifier") + "\n"
+    for m in allow_all:
+        output += str(m) + "\n"
 
     # Experiment 4
     output += "\n" + str("Experiment 4: Mixed Use SSL") + "\n"
@@ -45,11 +49,11 @@ def output_to_string(perm, override, allow, http, js_interf):
     output += "\n" + str("Experiment 5: addJavascriptInterface") + "\n"
     for item in js_interf:
         output += str(item) + "\n"
-
-    output += str() + "\n"
     
     return output
 
+
+# Experiment 1
 
 def perm_usage(perms, a, dx):
     output = [[],[]] # used, unused
@@ -108,12 +112,68 @@ def permission_experiment(a, dx):
     return output
 
 
-def override_experiment():
-    return []
+# Experiments 2 & 3
+
+# https://github.com/sfahl/mallodroid
+def _has_signature(_method, _signatures):
+    _name = _method.get_name()
+    _return = _method.get_information().get('return', None)
+    _params = [_p[1] for _p in _method.get_information().get('params', [])]
+    _access_flags = _method.get_access_flags_string()
+
+    for _signature in _signatures:
+        if (_access_flags == _signature['access_flags']) \
+                and (_name == _signature['name']) \
+                and (_return == _signature['return']) \
+                and (_params == _signature['params']):
+                    return True
+    return False
 
 
-def allow_experiment():
-    return []
+def trust_managers(class_analysis, method_analysis):
+    check_server_trusted = [{'access_flags' : 'public', 'return' : 'void', 'name' : 'checkServerTrusted', 'params' : ['java.security.cert.X509Certificate[]', 'java.lang.String']}]
+    trustmanager_interfaces = ['Ljavax/net/ssl/TrustManager;', 'Ljavax/net/ssl/X509TrustManager;']
+    custom_trust_managers = []
+    meth = method_analysis.get_method()
+    
+    if _has_signature(meth, check_server_trusted):
+        imps = class_analysis.implements
+        for imp in imps:
+            if imp in trustmanager_interfaces:
+                custom_trust_managers.append([method_analysis.class_name, meth.get_name(), imp])
+    return custom_trust_managers
+    
+    
+def error_handlers(method_analysis):
+    on_received_ssl_error = [{'access_flags' : 'public', 'return' : 'void', 'name' : 'onReceivedSslError', 'params' : ['android.webkit.WebView', 'android.webkit.SslErrorHandler', 'android.net.http.SslError']}]
+    custom_error_handlers = []
+    meth = method_analysis.get_method()
+    
+    if _has_signature(meth, on_received_ssl_error): 
+        custom_error_handlers.append([method_analysis.class_name, meth.get_name()])
+    return custom_error_handlers
+
+
+def allow_all(method_analysis):
+    output = []
+    meth = method_analysis.get_method()
+    meth_name = meth.get_name()
+
+    instructions = []
+    instruc = meth.get_instructions()
+    for i in instruc:
+        instructions.append(i)
+
+    for i in instructions:
+        i_name = i.get_name()
+        i_output = i.get_output()
+        if i_name == "new-instance" and i_output.endswith('Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;'):
+            output.append([method_analysis.class_name, meth_name, i_name])
+        elif i_name == "sget-object" and 'Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER' in i_output:
+            output.append([method_analysis.class_name, meth_name, i_name])
+
+    return output
+
 
 # Experiment 4
 
@@ -146,6 +206,7 @@ def http_experiment(dx):
         status = "NO URLS USED (SAFE)"
 
     return [status, http_instances]
+
 
 # Experiment 5
 
@@ -210,27 +271,25 @@ def js_interf_experiment(caller_classes, annot_classes):
 
 
 def run_experiments(a, d, dx):
-    # Experiments 1 through 4
-    perm = permission_experiment(a, dx)
-    override = []
-    allow = []
-    http = http_experiment(dx)
-    # Experiment 5
+    perm = permission_experiment(a, dx) # Experiment 1
+    custom_trust_managers = [] # Experiment 2 Part 1
+    custom_error_handlers = [] # Experiment 2 Part 2
+    allow_all_hosts = [] # Experiment 3
+    http = http_experiment(dx) # Experiment 4
     js_interf_annot = js_interf_annotations(d)
-    js_interf_methods = []
+    js_interf_methods = [] # Experiment 5
     
     for class_analysis in dx.get_classes():
         for method_analysis in class_analysis.get_methods():
             if not method_analysis.is_external():
-                # Experiments 2 & 3
-                override += override_experiment()
-                allow += allow_experiment()
+                allow_all_hosts += allow_all(method_analysis)
+                custom_trust_managers += trust_managers(class_analysis, method_analysis)
+                custom_error_handlers += error_handlers(method_analysis)
             else:
-                # Experiment 5
                 js_interf_methods += js_interf_method(method_analysis)
     js_interf = js_interf_experiment(js_interf_methods, js_interf_annot)
 
-    return output_to_string(perm, override, allow, http, js_interf)
+    return output_to_string(perm, custom_trust_managers, custom_error_handlers, allow_all_hosts, http, js_interf)
 
 
 def main():
