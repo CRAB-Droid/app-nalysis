@@ -9,28 +9,27 @@ def output_to_string(perm, trust_managers, error_handlers, allow_all, http, js_i
 
     # Experiment 1
     output += "\n" + str("Experiment 1: Permissions Misuse") + "\n"
-    # unused permissions
     used = perm[0][0]
     unused = perm[0][1]
-    output += "\n" + str("Used Permissions") + "\n"
+    output += "\n" + str("Used Permissions:") + "\n"
     for p in used:
         output += str(p) + "\n"
-    output += "\n" + str("Unused Permissions") + "\n"
+    output += "\n" + str("Unused Permissions:") + "\n"
     for p in unused:
         output += str(p) + "\n"
-    # dangerous combinations
+    output += "\n" + str("Dangerous Combinations:") + "\n"
     for p in perm[1]: 
         output += str(p) + "\n"
-    # unrequested permissions
+    output += "\n" + str("Unrequested Permissions:") + "\n"
     for p in perm[2]:
         output += str(p) + "\n"
 
     # Experiment 2
     output += "\n" + str("Experiment 2: Trust Managers and Error Handlers") + "\n"
-    output += "\n" + str("Overridden Trust Managers") + "\n"
+    output += "\n" + str("Overridden Trust Managers:") + "\n"
     for m in trust_managers:
         output += str(m) + "\n"
-    output += "\n" + str("Overridden Error Handlers") + "\n"
+    output += "\n" + str("Overridden Error Handlers:") + "\n"
     for m in trust_managers:
         output += str(m) + "\n"
 
@@ -196,14 +195,15 @@ def http_experiment(dx):
     http_found = (http_instances != [])
     https_found = (https_instances != [])
 
+    status = "App uses "
     if http_found and https_found:
-        status = "MIXED USE SSL (VULNERABLE)"
+        status += "MIXED USE SSL (VULNERABLE)"
     elif http_found:
-        status = "ONLY HTTP USED (VULNERABLE)"
+        status += "ONLY HTTP (VULNERABLE)"
     elif https_found:
-        status = "ONLY HTTPS USED (SAFE)"
+        status += "ONLY HTTPS (SAFE)"
     else:
-        status = "NO URLS USED (SAFE)"
+        status += "NO URLS (SAFE)"
 
     return [status, http_instances]
 
@@ -293,13 +293,18 @@ def run_experiments(a, d, dx):
 
 
 def main():
-    # open output file
-    # loop thru apks
-    test_app_name = "GCash"
-    a, d, dx = AnalyzeAPK("../apks/" + test_app_name + ".apk")
-    output = run_experiments(a, d, dx)
-    print(output)
-    # close output file
+    apks = []
+    d = "../apks"
+    for f in os.listdir(d):
+        apks.append(f)
+
+    f_out = open("out.txt", "w")
+    for apk in apks:
+        a, d, dx = AnalyzeAPK("../apks/" + apk)
+        output = run_experiments(a, d, dx)
+        f_out.write("\n================ ANALYZING " + apk + " ================\n")
+        f_out.write(output)
+    f_out.close()
 
 
 if __name__ == "__main__":
