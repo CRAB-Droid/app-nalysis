@@ -1,0 +1,42 @@
+
+Results for analysis of 97 apps:
+
+================ Experiment 1 Results ================
+
+apps with unused perms: 89
+avg number of unused permissions = 7.371134020618556
+avg for apps that had at least 1 = 8.03370786516854
+apps with dangerous perm combinations: 62
+avg number of dangerous combos = 1.2061855670103092
+avg for apps that had at least 1 = 1.8870967741935485
+apps with unrequested perms: 0
+
+================ Experiment 2 Results ================
+
+apps with overridden trust managers: 66
+avg number of overridden trust managers = 3.0618556701030926
+avg for apps that had at least 1 = 4.5
+apps with overridden error handlers: 51
+avg number of overridden error handlers = 1.3402061855670102
+avg for apps that had at least 1 = 2.549019607843137
+
+================ Experiment 3 Results ================
+
+apps with AllowAllHostnameVerifier = 20
+avg number of AllowAllHostnameVerifier = 0.24742268041237114
+avg for apps that had at least 1 = 1.263157894736842
+
+================ Experiment 4 Results ================
+
+apps with Mixed Use SSL = 90
+no apps used only HTTP
+no apps used only HTTPS
+apps with No URLs used = 5
+avg number of HTTP URLs = 49.50515463917526
+avg for apps that had at least 1 = 52.76923076923077
+
+================ Experiment 5 Results ================
+
+apps with improper JS interface handling = 80
+avg number of JS vulnerabilities = 3.865979381443299
+avg for apps that had at least 1 = 4.746835443037975

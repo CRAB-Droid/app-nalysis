@@ -267,7 +267,7 @@ print(f"avg for apps that had at least 1 = {perms/apps}")
 print(f"apps with overridden error handlers: {has_overridden_error}")
 perms = 0
 apps = 0
-for k, v in trust_by_app.items():
+for k, v in error_by_app.items():
     perms += v
     apps += 1
     # print(str(v) + (' '*(8-len(str(v)))) + k)
