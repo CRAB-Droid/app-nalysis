@@ -5,16 +5,45 @@
 %goes into the Introduction)~\cite{dsd13}.
 \subsection{Analysis of Results}
 
+NEEDS to be more specific.\\
+
+Through our experiments, we see that the majority of applications
+(out of the 97 we analyzed) contain vulnerabilities within their
+code. This indicates improper security practices are at play for 
+most of the apps we analyzed.
+
+When considering our sample size as representative of all 
+applications on the Google Play store, the rate at which 
+vulnerabilites are found is quite alarming. Many applications
+available on the market, according to our study, have a significant 
+chance of containing a vulnerability that allows for a third-party 
+malicious attack.
+
 \subsection{Future Work}
-If we were to continue this research in the future, we would want to explore some of the following areas. 
+If we were to continue this research in the future, we would 
+want to explore some of the following areas. 
 
-First and foremost, we would like to have more though experiments. Our experiments currently utilize the Androguard library in order to parse the apk files 
-and find simple string matches. One example is from experiment two, where we search for overridden built-in methods. This experiment is fairly simplistic 
-and could be expanded upon into something where the method internals are also automatically checked to view if they are forgoing original intended use, making the user vulnerable.
+First and foremost, we would like to have more thorough experiments. 
+Our experiments currently utilize the Androguard library in 
+order to parse the apk files and find simple string matches. 
+One example is from experiment two, where we search for 
+overridden built-in methods. This experiment is fairly simplistic
+and could be expanded upon into something where the method 
+internals are also automatically checked to view if they are 
+forgoing original intended use, making the user vulnerable.
 
-Additionally, we would like to expand our set of Android applications to test on. If we were able to test on a larger set of apps, this would allow us to draw more accurate 
-conclusions and notice more common trends in regards to vulnerabilities. This would allow us to develop a more comprehensive tool and experiments. 
+Additionally, we would like to expand our set of Android 
+applications to test on. If we were able to test on a larger 
+set of apps, this would allow us to draw more accurate 
+conclusions and notice more common trends in regards to 
+vulnerabilities. This would allow us to develop a more 
+comprehensive tool and experiments. 
 
-Finally, instead of just utilizing static analysis, breaking into the domain of dynamic analysis could prove to be beneficial in seeing how these vulnerabilities can be exploited in real time. 
-This would give us a chance to see how our predictions of vulnerabilities holds in a test environment of the application running. The results could prove valuable to enforce our findings and 
-potentially find more vulnerabilities that were not found in static analysis. 
+Finally, instead of just utilizing static analysis, breaking 
+into the domain of dynamic analysis could prove to be beneficial 
+in seeing how these vulnerabilities can be exploited in real time. 
+This would give us a chance to see how our predictions of 
+vulnerabilities holds in a test environment of the application 
+running. The results could prove valuable to enforce our 
+findings and potentially find more vulnerabilities that were 
+not found in static analysis. 

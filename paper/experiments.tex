@@ -35,11 +35,11 @@
 
         All of these developer mistakes constitute permission vulnerabilities
         within Android applications. For our first experiment, we
-        will be testing these common misuses of permissions. First, 
-        the experiment will test whether apps utilize all of the
-        permissions that they request. Second, the experiment will 
-        search for the use of dangerous permission combinations
-        implemented in the app. Finally, the experiment will test whether
+        tested these common misuses of permissions. First, 
+        the experiment tests whether apps utilize all of the
+        permissions that they request. Second, the experiment 
+        searches for the use of dangerous permission combinations
+        implemented in the app. Finally, the experiment tests whether
         users are prompted to explicity give their consent to every
         permission used.
         
@@ -47,17 +47,21 @@
         
         For this experiment, we first looked into whether the app abided by the 
         principle  of least privilege. Out of all permissions that the app asked 
-        for, we checked how many were used and how many were unused. When permissions 
+        for, we checked how many were used and how many were unused. We used 
+        Androguard's get\_permissions() method on our apps' associated APK 
+        objects to find the overall permsions, and the get\_permission\_usage() method on 
+        the Analysis objects to evaluate if the permissions were actually used.  When permissions 
         were found to be requested, but never used throughout the app, this signified
         that the app did not follow the principle of least privilege, as unnecessary 
         permissions were included in the app. 
 
         We also checked to make sure that all permissions that were included in the app
         were requested, providing transparency about the permissions that the app 
-        utilized. 
+        utilized. In order to check this, we focused on the apps' Androguard Analysis objects, 
+        calling multiple methods related to permission requests. 
 
-        Finally, we checked for dangerous permission combinations in the 
-        applications. We specificially looked for combinations of RECORD\_AUDIO and 
+        Finally, we checked for dangerous permission combinations in the applications. 
+        We specificially looked for combinations of RECORD\_AUDIO and 
         INTERNET, ACCESS\_FINE\_LOCATION and RECEIVE\_BOOT\_COMPLETED, CAMERA and 
         INTERNET, as well as SEND\_SMS and WRITE\_SMS. 
 
@@ -81,15 +85,16 @@
 
         TALK ABOUT ERROR HANDLING HERE
 
-        This experiment will be testing whether or not an app overrides a built-in
+        This experiment tests whether or not an app overrides a built-in
         trust manager or error handler to forgo methods intended purpose of
         correctly verifying certificates.
 
         Setup:
 
-        For this experiment, we utilized Androguard and aspects of Mallodroid to
-        check if built-in trust manager or error handler methods, specifically
-        checkServerTrusted() and onReceivedSslError(), were overriden.
+        For this experiment, we utilized Androguard's ClassAnalysis and 
+        MethodAnalysis classes, and aspects of Mallodroid to
+        check if built-in trust manager or error handler methods were overridden. 
+        We focused on the checkServerTrusted() and onReceivedSslError() methods. 
 
     \subsection{AllowAllHostnameVerifier}
     
@@ -112,16 +117,16 @@
         a legitimate server and trick the application into sending 
         sensitive data to it.
 
-        This experiment will test whether or not an application 
+        This experiment tests whether or not an application 
         implements the AllowAllHostnameVerifier class, which allows 
         all hostnames to be accepted for a certificate.
 
         Setup:
 
         For this experiment, we made use of Androguard to analyze an app's 
-        method instructions, checking if the AllowAllHostnameVerifier class was ever 
-        implemented. Specifically we looked for AllowAllHostnameVerifier and 
-        SSLSocketFactory\;\-\>ALLOW\_ALL\_HOSTNAME\_VERIFIER, similar to Mallodroid.
+        method instructions, checking if the AllowAllHostnameVerifier class 
+        was ever implemented. Specifically we looked for AllowAllHostnameVerifier and 
+        SLSocketFactory\;\-\>ALLOW\_ALL\_HOSTNAME\_VERIFIER, similar to Mallodroid.
 
 
     \subsection{Mixed use SSL}
@@ -144,17 +149,19 @@
         is the potential for an attacker to perform a Man-in-the-Middle 
         attack.
 
-        In this experiment, we will test whether or not an application is 
-        using a mixture of HTTP and HTTPS protocal when loading content.
+        In this experiment, we test whether or not an application is 
+        using a mixture of HTTP and HTTPS protocol when loading content.
 
         Setup:
 
-        For this experiment, we will parse through class files to locate
-        instances where the developer is using certain libraries (such as 
-        "HttpURLConnection"), and whether or not said libraries are configured
-        to use HTTPS consistently. This will involve string searches for 
-        "http://" and "https://" to see whether an app is only using HTTP (or
-        if it is mixed use).
+        For this experiment, we used Androguard to parse through the apps' 
+        files, locating instances of the strings "http://" and "https://". 
+        More specifically, we utilized the find\_strings() method on the Androguard 
+        Analysis object associated with each app. If "http://" was found in an app, but not "https://", this signified 
+        that the app only used HTTP, which is not secure. If both were found, 
+        this signified mixed-use SSL. Lastly, if "http://" was never found, but 
+        the app was found to include URLs, the app likely only uses 
+        HTTPS connections.
 
     \subsection{addJavascriptInterface Method}
 
@@ -165,8 +172,8 @@
         but presents a significant security threat if a developer is not 
         using the interface only where necessary. 
 
-        The vulnerability arises when a malicious 3rd-party seeks to use 
-        the webview as a bridge into the users system. If a webview were to
+        The vulnerability arises when a malicious third party seeks to use 
+        the webview as a bridge into the user's system. If a webview were to
         contain untrusted content, an attacker could use it to manipulate the
         host application in unintended ways. This is done by injecting JavaScript 
         into a user's system and running the malicious code.
@@ -174,13 +181,15 @@
         By using the @JavascriptInterface annotation, developers can use the interface
         only where necessary and avoid allowing untrusted content within webviews.
 
-        This experiment will test whether or not the application is being exposed to
+        This experiment tests whether or not the application is being exposed to
         potentially dangerous outside sources, depending on if the application is
         using a webview.
 
-        Setup
-
-        For this experiment, we will use keyword searches to locate instances of 
-        the addJavascriptInterface() method. If it is successfully found, we will 
-        subsequently search for the use of the @JavascriptInterface annotation, confirming
-        whether or not the developer is using the method responsibly.
+        Setup:
+        
+        For this experiment, we first utilized Androguard's MethodAnalysis class to check if the apps 
+        implemented the addJavascriptInterface() method. If this method was found to 
+        be used, we then checked if the @JavascriptInterface annotation was included 
+        for methods within the same class as the addJavascriptInterface method, confirming whether or not 
+        the developer used the method responsibly. To check if the annotation was included, we called 
+        various annotation related methods on the apps' DalvikVMFormat objects.

@@ -1,7 +1,7 @@
 \section{Methodology}
 \label{sec:overview} 
 
-This section outlines the methodology we will use for our experiments.
+This section outlines the methodology we will use for our five experiments.
 We will use a set of ninety-seven applications during testing, using
 automated experiments to analyze each and every one. Finally, the results
 of these experiments will be analyzed for any true and/or false vulnerabilites
@@ -27,9 +27,8 @@ Android applications. It takes raw Android Packages (.apk) files and breaks
 them down, making them easier to analyze. The capabilities of the library make it
 a great tool for testing the existence of vulnerabilites within applications.
 
-After our script finished, we then manually reviewed our results to identify
-trends with the applications.
-
+After our script finished, we then developed another script to parse through the output files and identify
+trends within the applications.
 
 \subsection{Results Generation}
 
@@ -41,7 +40,6 @@ Often, false positives can be found within our tests; our script
 identifies potential vulnerable patterns, but it does not guarentee
 that each individual finding is a true positive. In this way, our script
 generates many false positives.
-
 
 %Overview of Approach (a nice and accessible ``English'' description of
 %your approach). Don't forget a niche high-level figure. Our sample
