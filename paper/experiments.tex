@@ -43,7 +43,21 @@
         users are prompted to explicity give their consent to every
         permission used.
         
-        Setup:
+        Setup: 
+        
+        For this experiment, we will scrape the MediaStore documentation
+        for permissions and their associations to specific constants (such 
+        as the CAMERA permission with ACTION\_IMAGE\_CAPTURE). After populating 
+        a dictionary with these associations, we will check whether every permission
+        has a corresponding API call found within the code. If there are no matches,
+        we can assume a permission is being used unnecessarily.
+        
+        We will also use simple string searches within the Manifest file to look 
+        for potentially dangerous permission combinations.
+
+        Finally, we will check for lines of code with ".requestPermissions" and then
+        the name of each permission. This will veriy that the correct requests are being
+        made for each permission.
 
     \subsection{Trust Managers and Error Handlers}
 
@@ -71,17 +85,101 @@
 
         Setup:
 
+        We will use simple string searches (through the parsing of class files) in
+        order to see if built-in trust manager and/or error handler methods are being overriden.
+        If they are, we will use more string matching to confirm whether or not the override
+        uses potentially dangerous techniques within.
+
     \subsection{AllowAllHostnameVerifier}
     
         The HostnameVerifier interface within Android Studio is responsible for the 
-        verification of the hostname within the server being connected to, making sure the hostname within
-        the server's certificate matches the one seen in the server the client is attempting
-        to connect to. 
+        verification of the hostname within the server being connected to, making 
+        sure the hostname within the server's certificate matches the one 
+        seen in the server the client is attempting to connect to. 
 
-        A vulnerability arises when the developer attempts to shortcut the hostname verification
-        process (similar to Experiment 2), resulting in an ineffective verification process.
-        Specifically, many developers use 
+        A vulnerability arises when the developer attempts to shortcut the 
+        hostname verification process (similar to Experiment 2), resulting 
+        in an ineffective verification process. Specifically, many 
+        developers use the AllowAllHostnameVerifier class; this class 
+        essentially turns hostname verification off (by allowing all 
+        hostnames) and instructs the process to never throw an SSL 
+        Exception.
+
+        This vulnerability, similar to avoiding trust managers, creates 
+        the opportunity for a Man-in-the-Middle attack. If the host 
+        cannot be verified, a third-party has the opportunity to impersonate
+        a legitimate server and trick the application into sending 
+        sensitive data to it.
+
+        This experiment will test whether or not an application 
+        implements the AllowAllHostnameVerifier class, which allows 
+        all hostnames to be accepted for a certificate.
+
+        Setup:
+
+        For this experiment, we will parse class files and perform a string
+        search for "AllowAllHostnameVerifier". This will confirm whether or not
+        a developer is using unsafe coding practices by overriding proper hostname 
+        verification.
+
 
     \subsection{Mixed use SSL}
 
+        When an application is connected to the internet, it is not 
+        good practice to used both HTTPS and HTTP. HTTPS connections 
+        are more secure since they use SSL (Secure Sockets Layer) to 
+        encrypt normal HTTP requests and responses, which consist of 
+        only plaintext messages. When HTTP content is loaded by an 
+        HTTPS page, attackers have the opportunity to read and/or modify
+        HTTP traffic. This results in a mixed SSL vulnerability.
+
+        Developers create this vulnerability when they do not ensure 
+        that every resource on their page is loaded over HTTPS, and 
+        this can prove tricky; modern websites often load several 
+        different resources from various places, making it hard to 
+        keep track of where HTTPS and HTTP is used. Many times, the 
+        solution (for a developer) is to simply place an "s" within 
+        "http://" to apply SSl to it. The consequence of this vulnerability 
+        is the potential for an attacker to perform a Man-in-the-Middle 
+        attack.
+
+        In this experiment, we will test whether or not an application is 
+        using a mixture of HTTP and HTTPS protocal when loading content.
+
+        Setup:
+
+        For this experiment, we will parse through class files to locate
+        instances where the developer is using certain libraries (such as 
+        "HttpURLConnection"), and whether or not said libraries are configured
+        to use HTTPS consistently. This will involve string searches for 
+        "http://" and "https://" to see whether an app is only using HTTP (or
+        if it is mixed use).
+
     \subsection{addJavascriptInterface Method}
+
+        Many applications use WebViews as a way to display web pages as a 
+        part of their activity layout. The addJavascriptInterface method 
+        is subsequently used to inject a supplied Java object into a WebView. 
+        This process allows JavaScript to control the host application, 
+        but presents a significant security threat if a developer is not 
+        using the interface only where necessary. 
+
+        The vulnerability arises when a malicious 3rd-party seeks to use 
+        the webview as a bridge into the users system. If a webview were to
+        contain untrusted content, an attacker could use it to manipulate the
+        host application in unintended ways. This is done by injecting JavaScript 
+        into a user's system and running the malicious code.
+        
+        By using the @JavascriptInterface annotation, developers can use the interface
+        only where necessary and avoid allowing untrusted content within webviews.
+
+        This experiment will test whether or not the application is being exposed to
+        potentially dangerous outside sources, depending on if the application is
+        using a webview.
+
+        Setup
+
+        For this experiment, we will use keyword searches to locate instances of 
+        the addJavascriptInterface() method. If it is successfully found, we will 
+        subsequently search for the use of the @JavascriptInterface annotation, confirming
+        whether or not the developer is using the method responsibly.
