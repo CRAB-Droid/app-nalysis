@@ -67,6 +67,8 @@ for perm in perms:
         print(f"WARNING: Permission {perm} not requested!")
 
 
+exit(0)
+
 # Experiment 2, 3 4
 allow_all_hosts = [] # experiment 3
 custom_trust_managers = [] # exp 2 part 1

@@ -1,0 +1,934 @@
+
+================ ANALYZING OxigenWallet.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; completeWakefulIntent (Landroid/content/Intent;)Z
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; startWakefulService (Landroid/content/Context; Landroid/content/Intent;)Landroid/content/ComponentName;
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->setVideoURI(Landroid/net/Uri;)V>
+	in app method:      Lcom/oxigen/oxigenwallet/common/MetaDataVideoView; onCreate (Landroid/os/Bundle;)V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->start()V>
+	in app method:      Lcom/oxigen/oxigenwallet/common/aa; onPrepared (Landroid/media/MediaPlayer;)V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/media/MediaPlayer;->stop()V>
+	in app method:      Lcom/oxigen/oxigenwallet/common/MetaDataAudioView; c ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/media/MediaPlayer;->pause()V>
+	in app method:      Lcom/oxigen/oxigenwallet/common/MetaDataAudioView; d ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/media/MediaPlayer;->start()V>
+	in app method:      Lcom/oxigen/oxigenwallet/common/MetaDataAudioView; e ()V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/c/a/r; d (Lcom/c/a/d;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/c/a/v; onReceive (Landroid/content/Context; Landroid/content/Intent;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/oxigen/oxigenwallet/netone/cb; a (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/ads/conversiontracking/r; d (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatGingerbread; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat; getNetworkInfoFromBroadcast (Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Lcom/appsflyer/AppsFlyerLib; n (Landroid/content/Context;)Ljava/lang/String;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Lcom/appsflyer/AppsFlyerLib; n (Landroid/content/Context;)Ljava/lang/String;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatJellyBean; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/a/a/a/a/h; b ()Z
+android.permission.GET_ACCOUNTS
+	USED by API method: <analysis.MethodAnalysis Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;>
+	in app method:      Lcom/oxigen/oxigenwallet/PersonalDetail; f ()V
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;>
+	in app method:      Lcom/a/a/a/a/a/c; a (Ljava/lang/Object;)V
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/a/a/a/a/a/c; a (Ljava/lang/Object;)V
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/oxigen/oxigenwallet/EnterPin; f ()[Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/oxigen/oxigenwallet/SetPassword; d ()[Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/oxigen/oxigenwallet/SignUp; g ()[Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/a/a/a/a/a/c; a (Ljava/lang/Object;)V
+
+Unused Permissions:
+android.hardware.camera
+android.permission.READ_SMS
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.RECEIVE_SMS
+com.oxigen.oxigenwallet.permission.C2D_MESSAGE
+com.google.android.c2dm.permission.RECEIVE
+android.permission.READ_EXTERNAL_STORAGE
+
+Dangerous Combinations:
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/oxigen/oxigenwallet/common/d;', 'b', 'sget-object']
+['Lcom/oxigen/oxigenwallet/common/d;', 'c', 'sget-object']
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Lcom/google/ads/conversiontracking/InstallReceiver;', 'onReceive', 'http://hostname/']
+['Lcom/google/ads/conversiontracking/r;', 'a', 'http://hostname/?']
+['Lcom/google/android/gms/internal/ap;', '<clinit>', 'http://plus.google.com/']
+['Lcom/google/ads/conversiontracking/ah;', '<clinit>', 'http://plus.google.com/']
+['Lcom/oxigen/oxigenwallet/giftcards/SavedGiftCardDetails;', 'a', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/sendmoney/SocialConnect;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/sendmoney/SelectFriend;', 'e', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/giftairtime/GiftSelectFriend;', 'e', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/airtime/AskSelectFriend;', 'e', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/common/d;', 'c', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/reciever/ActivateSocailChannels;', 'c', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/Dashboard;', 'c', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/common/d;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/common/l;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/common/s;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/giftcards/GiftCard_TabHost;', 'c', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/c/c;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/sendmoney/SocialConnectSpread;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/reciever/ActivateChannel;', 'b', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/giftcards/BuyGiftCards;', 'a', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/oxigen/oxigenwallet/giftcards/GiftMenu;', 'a', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING mPAY.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Lcom/google/android/gms/internal/oq; a (J)V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroid/support/v4/content/ab; a (Landroid/content/Context; Landroid/content/Intent;)Landroid/content/ComponentName;
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Lcom/google/android/gms/internal/oq; a ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroid/support/v4/content/ab; a (Landroid/content/Intent;)Z
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V>
+	in app method:      Lcom/google/android/gms/internal/oq; a (Landroid/os/WorkSource;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/ik; a (Landroid/content/Context; Landroid/net/ConnectivityManager; Landroid/content/pm/PackageManager;)I
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/ik; a (Landroid/content/Context; Landroid/content/pm/PackageManager;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lth/co/ais/mpay/ConnectivityChangeReceiver; a (Landroid/content/Context;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/tagmanager/dm; a ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/bumptech/glide/d/f; a (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/analytics/internal/k; f ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/ik; a (Landroid/content/Context; Landroid/content/pm/PackageManager;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/qb; b ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lio/fabric/sdk/android/services/common/CommonUtils; n (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/palomar/util/WebViewUtil; b (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/analytics/internal/l; b ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Lcom/google/android/gms/internal/ik; a (Landroid/content/Context; Landroid/content/pm/PackageManager;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Lcom/rabbitcard/d; f (Landroid/content/Context;)Ljava/lang/String;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Lcom/rabbitcard/d; f (Landroid/content/Context;)Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;>
+	in app method:      Lcom/rabbitcard/d; c (Landroid/content/Context;)Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;>
+	in app method:      Lcom/rabbitcard/d; d (Landroid/content/Context;)Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/rabbitcard/d; e (Landroid/content/Context;)Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lio/fabric/sdk/android/services/common/IdManager; k ()Ljava/lang/String;
+
+Unused Permissions:
+android.permission.CAMERA
+android.permission.WRITE_EXTERNAL_STORAGE
+org.simalliance.openmobileapi.SMARTCARD
+android.permission.READ_CONTACTS
+com.palomar.mpay.permission.C2D_MESSAGE
+com.google.android.c2dm.permission.RECEIVE
+android.permission.READ_EXTERNAL_STORAGE
+
+Dangerous Combinations:
+Dangerous Combination: ['android.permission.CAMERA', 'android.permission.INTERNET']
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/palomar/util/k;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rabbitcard/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/palomar/util/k;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rabbitcard/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/rabbitcard/a;', 'a', 'sget-object']
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Lth/co/ais/mpay/m;', 'p', 'http://']
+['Lcom/palomar/mpay/GcmIntentService;', 'a', 'http://']
+['Lth/co/ais/mpay/a/c;', 'b', 'http://192.168.10.134:3000']
+['Lth/co/ais/mpay/a/b;', 'b', 'http://192.168.10.207:3000']
+['Lth/co/ais/mpay/a/a;', 'b', 'http://dev.ptsd2556.com']
+['Lcom/google/android/gms/tagmanager/av;', 'a', 'http://hostname/?']
+['Lcom/facebook/messenger/MessengerUtils;', 'openMessengerInPlayStore', 'http://play.google.com/store/apps/details?id=com.facebook.orca']
+['Lcom/google/android/gms/common/internal/aq;', '<clinit>', 'http://plus.google.com/']
+['Lth/co/ais/mpay/a/a;', 'd', 'http://smartmobile.rabbit.co.th:9009/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/c;', 'd', 'http://smartmobile.rabbit.co.th:9009/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/f;', 'd', 'http://smartmobile.rabbit.co.th:9009/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/b;', 'd', 'http://smartmobile.rabbit.co.th:9009/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/e;', 'd', 'http://smartmobile.rabbit.co.th:9009/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/a;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/f;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/b;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/d;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/e;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/a/c;', 'e', 'http://smartmobile.rabbit.co.th:9010/mobileclient_db/mobile_portal.aspx']
+['Lth/co/ais/mpay/ui/SettingsActivity;', 'onClick', 'http://www.ais.co.th/mpay/']
+['Lcom/google/android/gms/analytics/internal/bh;', '<clinit>', 'http://www.google-analytics.com']
+['Lcom/google/android/gms/internal/ik;', '<init>', 'http://www.google.com']
+['Lth/co/ais/mpay/a/f;', 'c', 'http://www.nikomart.com/mpay/ws.asp']
+['Lcom/rabbitcard/a;', 'a', 'http://www.nikomart.com/mpay/ws.asp']
+['Lcom/rabbitcard/a;', 'a', 'http://www.nikomart.com/mpay/ws.asp']
+['Lth/co/ais/mpay/ui/SettingsActivity;', 'onClick', 'http://www.youtube.com/user/mPAYMarcom?feature=watch']
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/gms/internal/le;
+Lcom/ccpp/my2c2psdk/cores/OTPActivity;
+
+================ ANALYZING Arnold-Berthoud-Cresent-Rigsby.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroidx/core/app/JobIntentService$CompatWorkEnqueuer; serviceProcessingStarted ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Lcom/google/android/gms/stats/WakeLock; zzd (I)V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroidx/core/app/JobIntentService$CompatWorkEnqueuer; serviceProcessingFinished ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroidx/legacy/content/WakefulBroadcastReceiver; completeWakefulIntent (Landroid/content/Intent;)Z
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroidx/core/app/JobIntentService$CompatWorkEnqueuer; serviceProcessingFinished ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroidx/core/app/JobIntentService$CompatWorkEnqueuer; serviceProcessingStarted ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroidx/legacy/content/WakefulBroadcastReceiver; startWakefulService (Landroid/content/Context; Landroid/content/Intent;)Landroid/content/ComponentName;
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroidx/core/app/JobIntentService$CompatWorkEnqueuer; enqueueWork (Landroid/content/Intent;)V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire()V>
+	in app method:      Lcom/google/android/gms/stats/WakeLock; acquire (J)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Landroidx/core/net/ConnectivityManagerCompat$Api16Impl; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Landroidx/core/net/ConnectivityManagerCompat; getNetworkInfoFromBroadcast (Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lio/grpc/android/AndroidChannelBuilder$AndroidChannel$NetworkReceiver; onReceive (Landroid/content/Context; Landroid/content/Intent;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/firebase/firestore/remote/AndroidConnectivityMonitor; isConnected ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/measurement/internal/zzfw; zzu ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/measurement/internal/zzkc; zzc ()Z
+
+Unused Permissions:
+android.permission.CAMERA
+com.google.android.providers.gsf.permission.READ_GSERVICES
+com.example.mariokarttournamentorganizer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+com.google.android.gms.permission.AD_ID
+android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+android.permission.ACCESS_ADSERVICES_AD_ID
+com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+
+Dangerous Combinations:
+Dangerous Combination: ['android.permission.CAMERA', 'android.permission.INTERNET']
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+Experiment 3: AllowAllHostnameVerifier
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Landroidx/browser/customtabs/CustomTabsClient;', 'getPackageName', 'http://']
+['Landroidx/core/text/util/LinkifyCompat;', 'addLinks', 'http://']
+['Lcom/google/android/gms/internal/firebase-auth-api/zzaec;', 'zza', 'http://']
+['Lcom/google/firebase/auth/FirebaseAuth;', 'setCustomAuthDomain', 'http://']
+['Lcom/google/android/gms/internal/firebase-auth-api/zzaec;', 'zza', 'http://[']
+['Lcom/google/android/gms/internal/firebase-auth-api/zzags;', '<init>', 'http://localhost']
+['Lcom/google/android/gms/internal/firebase-auth-api/zzaej;', '<init>', 'http://localhost']
+['Lcom/google/android/material/search/SearchBar;', 'validateAttributes', 'http://schemas.android.com/apk/res-auto']
+['Lcom/google/android/material/chip/ChipDrawable;', 'loadFromAttributes', 'http://schemas.android.com/apk/res-auto']
+['Landroidx/core/content/pm/ShortcutXmlParser;', 'getAttributeValue', 'http://schemas.android.com/apk/res/android']
+['Lcom/google/android/material/chip/Chip;', 'validateAttributes', 'http://schemas.android.com/apk/res/android']
+['Landroidx/core/content/res/TypedArrayUtils;', 'hasAttribute', 'http://schemas.android.com/apk/res/android']
+
+Experiment 5: addJavascriptInterface
+Lcom/google/android/recaptcha/internal/zzez;
+
+================ ANALYZING Money On Mobile.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; completeWakefulIntent (Landroid/content/Intent;)Z
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; startWakefulService (Landroid/content/Context; Landroid/content/Intent;)Landroid/content/ComponentName;
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->setVideoPath(Ljava/lang/String;)V>
+	in app method:      Lcom/google/android/gms/internal/dt; cq ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->stopPlayback()V>
+	in app method:      Lcom/google/android/gms/internal/dt; destroy ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->pause()V>
+	in app method:      Lcom/google/android/gms/internal/dt; pause ()V
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/widget/VideoView;->start()V>
+	in app method:      Lcom/google/android/gms/internal/dt; play ()V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat; getNetworkInfoFromBroadcast (Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/fv; a (Landroid/content/Context; Landroid/net/ConnectivityManager; Landroid/content/pm/PackageManager;)I
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatGingerbread; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/tagmanager/co; qd ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/tagmanager/db; ea ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lio/fabric/sdk/android/services/common/CommonUtils; canTryConnection (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/analytics/h; ea ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/fv; <init> (Landroid/content/Context;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/mom/app/utils/ConnectionUtil; checkConnectivity (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/fv; <init> (Landroid/content/Context;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatJellyBean; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Lcom/google/android/gms/internal/fv; <init> (Landroid/content/Context;)V
+android.permission.USE_CREDENTIALS
+	USED by API method: <analysis.MethodAnalysis Landroid/accounts/AccountManager;->invalidateAuthToken(Ljava/lang/String; Ljava/lang/String;)V>
+	in app method:      Lcom/google/android/gms/auth/GoogleAuthUtil; invalidateToken (Landroid/content/Context; Ljava/lang/String;)V
+
+Unused Permissions:
+com.google.android.psf.perroviders.gmission.READ_GSERVICES
+com.mom.app.permission.C2D_MESSAGE
+com.google.android.c2dm.permission.RECEIVE
+
+Dangerous Combinations:
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lio/fabric/sdk/android/services/network/HttpRequest$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lio/fabric/sdk/android/services/network/HttpRequest$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Experiment 3: AllowAllHostnameVerifier
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Lorg/mswipe/sdk/network/HttpLoader;', 'httpRequest', 'http://']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/RelianceEnergy/billEnquiry.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/RelianceEnergy/billEnquiry.ashx']
+['Lcom/mom/app/Helpz;', 'GetBillAmountDataRelianceEnergy', 'http://180.179.67.72/RelianceEnergy/billEnquiry.ashx?CANumber=']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/bestpayments/billInquiry.ashx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/bestpayments/billInquiry.ashx']
+['Lcom/mom/app/Helpz;', 'GetBillAmountDataBestPayments', 'http://180.179.67.72/bestpayments/billInquiry.ashx?AccountNumber=']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsAuthentication', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/GetIMPSUserStatus']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomConfirmPaymentProcessByRefund', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/RefundPaymentByIPIN']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsCustomerRegistration', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/RegisterCustomer']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'resetIPIN', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/ResetIPIN']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomConfirmPaymentBundlingProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/SubmitPaymentBundled']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomConfirmPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/SubmitPaymentByIPIN']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'tpinMomPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/checkVallidTpin']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'tpinMomPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/checkVallidTpin']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsBeneficiaryDetails', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getBeneficiaryDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getIMPSBeneficiaryList', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getBeneficiaryList']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomConfirmProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getConfirmPaymentDetails']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsMomConfirmProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getConfirmPaymentDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsCheckKYC', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getConsumerKYCLimitandStatus']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'registerIMPSCustomer', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getConsumerStatus']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsAddBeneficiary', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getCreateBeneficiary']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getIMPSBankName', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getIFSCBanks']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getIMPSBranchName', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getIFSCBranchByBankStateAndCityName']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getIMPSCityName', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getIFSCCityByBankNameAndStateName']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getIMPSStateName', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getIFSCStatesByBankName']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsRefundDetails', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getRefundDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomIMPSServiceCharge', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getServiceCharge']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getSubmitPaymentDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsMomPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getSubmitPaymentDetails']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsMomPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getSubmitPaymentDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'impsPaymentProcess', 'http://180.179.67.72/imps_appapi/IMPSService.asmx/getSubmitPaymentDetails']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/mgl/billInquiry.aspx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getBillAmount', 'http://180.179.67.72/mgl/billInquiry.aspx']
+['Lcom/mom/app/Helpz;', 'GetBillAmountDataMahaNagarGas', 'http://180.179.67.72/mgl/billInquiry.aspx?CANumber=']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'bookComplaint', 'http://180.179.67.72/nokiaservice/BookComplaint.aspx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'bookComplaint', 'http://180.179.67.72/nokiaservice/BookComplaint.aspx']
+['Lcom/mom/app/Helpz;', 'GetRMNDetails', 'http://180.179.67.72/nokiaservice/DetailsByUserRMNCompID.aspx?UserRMN=']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getComplaintType', 'http://180.179.67.72/nokiaservice/GetComplaintTypes.aspx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getComplaintType', 'http://180.179.67.72/nokiaservice/GetComplaintTypes.aspx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'checkPlatform', 'http://180.179.67.72/nokiaservice/GetUserDetailsByRMN.aspx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'checkPlatform', 'http://180.179.67.72/nokiaservice/GetUserDetailsByRMN.aspx']
+['Lcom/mom/app/activity/ForgotPasswordActivity;', 'checkPlatformAndLogin', 'http://180.179.67.72/nokiaservice/GetUserDetailsByRMN.aspx?UserRMN=']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getTransactionHistory', 'http://180.179.67.72/nokiaservice/Lastfivetransactions.aspx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getTransactionHistory', 'http://180.179.67.72/nokiaservice/Lastfivetransactions.aspx']
+['Lcom/mom/app/Helpz;', 'GetHistoryUrl', 'http://180.179.67.72/nokiaservice/Lastfivetransactions.aspx?UserID=']
+['Lcom/mom/app/Helpz;', 'Get_OperatorID', 'http://180.179.67.72/nokiaservice/getOperatorIdByOperatorName.aspx?OperatorName=']
+['Lcom/mom/app/Helpz;', 'GetAllOperatorsMobile', 'http://180.179.67.72/nokiaservice/getProductByProductType.aspx?OperatorType=1']
+['Lcom/mom/app/Helpz;', 'GetAllOperatorsDTH', 'http://180.179.67.72/nokiaservice/getProductByProductType.aspx?OperatorType=2']
+['Lcom/mom/app/Helpz;', 'GetAllOperatorsBill', 'http://180.179.67.72/nokiaservice/getProductByProductType.aspx?OperatorType=3']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsBeneficiaryDetails', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsCustomerRegistration', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'registerIMPSCustomer', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsAddBeneficiary', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsVerifyProcess', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getIMPSStateName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getIMPSCityName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'registerIMPSCustomer', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getIMPSStateName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getIMPSBeneficiaryList', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getIMPSCityName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsConfirmPayment', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsPaymentProcess', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsAuthentication', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsCustomerRegistration', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getIMPSBankName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsBeneficiaryDetails', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsAddBeneficiary', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsVerifyPayment', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getIMPSBranchName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getIMPSBranchName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'impsCheckKYC', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getIMPSBeneficiaryList', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getIMPSBankName', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'impsCheckKYC', 'http://api.pbx.momappworld.com/PbxIMPSApp.ashx']
+['Lcom/google/android/gms/tagmanager/ay;', 'w', 'http://hostname/?']
+['Lcom/google/android/gms/analytics/Tracker;', 'setCampaignParamsOnNextHit', 'http://hostname/?']
+['Lcom/mom/app/activity/BaseActivity;', 'showScreen', 'http://mombus.money-on-mobile.net/']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'changePinTest', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'changePin', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'changePin', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'changePinTest', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx']
+['Lcom/mom/app/Helpz;', 'GetChangeMPinUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/ChangeM_Pin']
+['Lcom/mom/app/Helpz;', 'GetChangeTPinUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/ChangeT_Pin']
+['Lcom/mom/app/Helpz;', 'GetCheckValidateTPinUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/checkVallidTpin']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'verifyTPin', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/checkVallidTpin']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'verifyTPin', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/checkVallidTpin']
+['Lcom/mom/app/MSwipeAndroidSDKListActivity1;', 'AccountBalPost', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getBalanceByCustomerId']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getBalance', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getBalanceByCustomerId']
+['Lcom/mom/app/Helpz;', 'GetBalanceAmount', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getBalanceByCustomerId']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getBalance', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getBalanceByCustomerId']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'login', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getLoggedIn']
+['Lcom/mom/app/Helpz;', 'GetLoginUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getLoggedIn']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'login', 'http://msvc.money-on-mobile.net/WebServiceV3Client.asmx/getLoggedIn']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'rechargeDTH', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoDTHRechargeV2']
+['Lcom/mom/app/Helpz;', 'GetDTHRechargeUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoDTHRechargeV2']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'rechargeDTH', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoDTHRechargeV2']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'giftVoucher', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoFlipKart']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'giftVoucher', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoFlipKart']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'rechargeMobile', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoMobRecharge']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'rechargeMobile', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoMobRecharge']
+['Lcom/mom/app/Helpz;', 'GetMobileRechargeUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/DoMobRecharge']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'balanceTransfer', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBalanceTransfer']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'balanceTransfer', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBalanceTransfer']
+['Lcom/mom/app/CreditSaleView;', 'LoadTransferPost', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBalanceTransfer']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'payBill', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBillPayment']
+['Lcom/mom/app/Helpz;', 'GetBillPaymentUrl', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBillPayment']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'payBill', 'http://msvc.money-on-mobile.net/WebServiceV3Trans.asmx/doBillPayment']
+['Lcom/google/android/gms/internal/jo;', '<clinit>', 'http://plus.google.com/']
+['Lcom/google/android/gms/plus/PlusOneButton;', 'getAnnotation', 'http://schemas.android.com/apk/lib/com.google.android.gms.plus']
+['Lcom/google/android/gms/plus/PlusOneButton;', 'getSize', 'http://schemas.android.com/apk/lib/com.google.android.gms.plus']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'signUpCustomerRegistration', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/CustomerRegistration']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'signStringomerRegistration', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/CustomerRegistration']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'signStringomerRegistration', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/CustomerRegistration']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'signUpCustomerRegistration', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/CustomerRegistration']
+['Lcom/mom/app/activity/SignupActivity$GetLoginTaskCustomerRegistration;', 'onPostExecute', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/CustomerRegistration']
+['Lcom/mom/app/activity/SignupActivity$GetLoginTask;', 'onPostExecute', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/Encrypt']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'signUpEncryptData', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/Encrypt']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'signUpEncryptData', 'http://utilities.money-on-mobile.net/android_userservice/userservice.asmx/Encrypt']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getAllOperators', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/ListOfOperators']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getAllOperators', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/ListOfOperators']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'getForgotPassword', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/getForgotPassword']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'getForgotPassword', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/getForgotPassword']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'passwordCountDetails', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/getPasswordCount']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'passwordCountDetails', 'http://utilities.money-on-mobile.net/createuser/retailercreation.asmx/getPasswordCount']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'licPayment', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getOperatorNames', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'utilityPayBill', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getTransactionHistory', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'rechargeDTH', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'lic', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'checkLic', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'login', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'licPayment', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'balanceTransfer', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'getBalance', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'rechargeMobile', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'changePassword', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'lic', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/model/pbxpl/PBXPLDataExImpl;', 'payBill', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx']
+['Lcom/mom/app/activity/LoginActivity$GetLoginTaskCheckLIC;', 'onPostExecute', 'http://utilities.money-on-mobile.net/lic_service/PbxMobApp.ashx?Service=ISLIC&userID=']
+['Lcom/mom/app/model/mompl/MoMPLDataExImpl;', 'payURequest', 'http://utilities.money-on-mobile.net/payu_serviceapp/Service1.asmx/PayuReqest']
+['Lcom/mom/app/model/b2cpl/B2CPLDataExImpl;', 'payURequest', 'http://utilities.money-on-mobile.net/payu_serviceapp/Service1.asmx/PayuReqest']
+['Lcom/mom/app/activity/WebViewActivity;', 'onCreate', 'http://utilities.money-on-mobile.net/payu_web/UpdateWallet.aspx?Name=']
+['Lcom/mom/app/gcm/GcmUtil;', 'sendRegistrationIdToBackend', 'http://v7-dot-momone-gateway.appspot.com/register']
+['Lcom/google/android/gms/analytics/ag;', 'a', 'http://www.google-analytics.com/collect']
+['Lcom/google/android/gms/analytics/h;', 'a', 'http://www.google-analytics.com/collect']
+['Lcom/google/android/gms/internal/fv;', '<init>', 'http://www.google.com']
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING vulnerable-app.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+
+Unused Permissions:
+
+Dangerous Combinations:
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+Experiment 3: AllowAllHostnameVerifier
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Landroid/support/v4/text/util/LinkifyCompat;', 'addLinks', 'http://']
+['Landroid/support/v4/content/res/TypedArrayUtils;', 'hasAttribute', 'http://schemas.android.com/apk/res/android']
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING Zuum.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->release()V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; completeWakefulIntent (Landroid/content/Intent;)Z
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/os/PowerManager$WakeLock;->acquire(J)V>
+	in app method:      Landroid/support/v4/content/WakefulBroadcastReceiver; startWakefulService (Landroid/content/Context; Landroid/content/Intent;)Landroid/content/ComponentName;
+android.permission.WAKE_LOCK
+	USED by API method: <analysis.MethodAnalysis Landroid/media/MediaPlayer;->start()V>
+	in app method:      Lcom/google/zxing/client/android/BeepManager; playBeepSoundAndVibrate ()V
+android.permission.ACCESS_COARSE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V>
+	in app method:      Lcom/flurry/sdk/jj; a (Ljava/lang/String;)V
+android.permission.ACCESS_COARSE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;>
+	in app method:      Lcom/flurry/sdk/jj; b (Ljava/lang/String;)Landroid/location/Location;
+android.permission.ACCESS_COARSE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/flurry/sdk/jj; h ()V
+android.permission.ACCESS_WIFI_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/wifi/WifiManager;->enableNetwork(I Z)Z>
+	in app method:      Lcom/google/zxing/client/android/wifi/WifiConfigManager; updateNetwork (Landroid/net/wifi/WifiManager; Landroid/net/wifi/WifiConfiguration;)V
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/m4u/vivozuum/util/android/AndroidUtil; verificaConectividadeComInternet (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/flurry/sdk/jl; a (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatGingerbread; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/flurry/sdk/jl; d ()Lcom/flurry/sdk/jl$a;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat; getNetworkInfoFromBroadcast (Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatJellyBean; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/wifi/WifiManager;->enableNetwork(I Z)Z>
+	in app method:      Lcom/google/zxing/client/android/wifi/WifiConfigManager; updateNetwork (Landroid/net/wifi/WifiManager; Landroid/net/wifi/WifiConfiguration;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V>
+	in app method:      Lcom/flurry/sdk/jj; a (Ljava/lang/String;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;>
+	in app method:      Lcom/flurry/sdk/jj; b (Ljava/lang/String;)Landroid/location/Location;
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/flurry/sdk/jj; h ()V
+android.permission.GET_TASKS
+	USED by API method: <analysis.MethodAnalysis Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;>
+	in app method:      Lcom/google/android/gms/internal/zzmy; zzj (Landroid/content/Context; I)Ljava/lang/String;
+android.permission.GET_TASKS
+	USED by API method: <analysis.MethodAnalysis Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;>
+	in app method:      Lcom/m4u/vivozuum/util/android/AndroidUtil; aplicacaoEstaEmBackground (Landroid/content/Context;)Z
+
+Unused Permissions:
+android.permission.CAMERA
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.FLASHLIGHT
+android.permission.CHANGE_WIFI_STATE
+android.permission.GET_ACCOUNTS
+com.google.android.c2dm.permission.RECEIVE
+
+Dangerous Combinations:
+Dangerous Combination: ['android.permission.CAMERA', 'android.permission.INTERNET']
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/m4u/vivozuum/comunicacao/https/ComunicacaoHttps$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/m4u/vivozuum/comunicacao/https/ComunicacaoHttps$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/m4u/vivozuum/comunicacao/https/ComunicacaoHttps;', 'criaConexaoHttp', 'new-instance']
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Lcom/google/zxing/client/result/URIParsedResult;', 'massageURI', 'http://']
+['Lcom/flurry/sdk/lt;', 'a', 'http://']
+['Lcom/google/zxing/client/android/LocaleManager;', 'isBookSearchUrl', 'http://books.google.']
+['Lcom/google/zxing/client/android/result/ResultHandler;', 'openBookSearch', 'http://books.google.']
+['Lcom/google/zxing/client/android/book/BrowseBookListener;', 'onItemClick', 'http://books.google.']
+['Lcom/flurry/sdk/iy;', '<clinit>', 'http://data.flurry.com/aap.do']
+['Lcom/google/zxing/client/android/LocaleManager;', 'isBookSearchUrl', 'http://google.com/books']
+['Lcom/google/zxing/client/android/result/ResultHandler;', 'getDirections', 'http://maps.google.']
+['Lcom/google/android/gms/common/internal/zzn;', '<clinit>', 'http://plus.google.com/']
+['Lcom/google/zxing/client/android/CaptureActivity;', 'onResume', 'http://www.google']
+['Lcom/google/zxing/client/android/result/supplement/BookResultInfoRetriever;', 'retrieveSupplementalInfo', 'http://www.google.']
+['Lcom/google/zxing/client/android/result/supplement/ProductResultInfoRetriever;', 'retrieveSupplementalInfo', 'http://www.google.']
+['Lcom/google/zxing/client/android/result/ResultHandler;', 'openProductSearch', 'http://www.google.']
+['Lcom/google/zxing/client/android/book/SearchBookContentsActivity$NetworkTask;', 'doInBackground', 'http://www.google.com/books?id=']
+['Lcom/google/zxing/client/android/book/SearchBookContentsActivity$NetworkTask;', 'doInBackground', 'http://www.google.com/books?vid=isbn']
+['Lcom/google/zxing/client/android/CaptureActivity;', '<clinit>', 'http://zxing.appspot.com/scan']
+
+Experiment 5: addJavascriptInterface
+
+================ ANALYZING GCash.apk ================
+
+Experiment 1: Permissions Misuse
+
+Used Permissions:
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Lcom/mixpanel/android/mpmetrics/SystemInformation; isWifiConnected ()Ljava/lang/Boolean;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat; getNetworkInfoFromBroadcast (Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/NetworkConnectionManager; isNetworkAlive ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatGingerbread; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/mixpanel/android/util/HttpService; isOnline (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/google/android/gms/internal/ci; a (Landroid/content/Context; Landroid/net/ConnectivityManager; Landroid/content/pm/PackageManager;)I
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;>
+	in app method:      Lcom/amobee/richmedia/controller/OrmmaNetworkController; getNetwork ()Ljava/lang/String;
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z>
+	in app method:      Landroid/support/v4/net/ConnectivityManagerCompatJellyBean; isActiveNetworkMetered (Landroid/net/ConnectivityManager;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/NetworkConnectionManager; isNetworkAvailable ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/CheckNetworkConnection; isMobileNetworkEnabled (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/CheckNetworkConnection; isWifiEnabled (Landroid/content/Context;)Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/NetworkConnectionManager; isWifiNetworkEnabled ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/NetworkConnectionManager; isMobileNetworkEnabled ()Z
+android.permission.ACCESS_NETWORK_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;>
+	in app method:      Lcom/globe/gcash/android/utility/CheckNetworkConnection; isNetworkAvailable (Landroid/content/Context;)Z
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener;)V>
+	in app method:      Lcom/amobee/richmedia/controller/listeners/LocListener; start ()V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener;)V>
+	in app method:      Lcom/globe/gcash/android/fragment/geolocator/LocatorTabsFragment; getLocation (Ljava/lang/String; Landroid/location/LocationListener;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/globe/gcash/android/fragment/geolocator/LocatorTabsFragment; onDestroy ()V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/globe/gcash/android/fragment/geolocator/LocatorTabsFragment$3; onStatusChanged (Ljava/lang/String; I Landroid/os/Bundle;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/amobee/richmedia/controller/listeners/LocListener; stop ()V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V>
+	in app method:      Lcom/globe/gcash/android/fragment/geolocator/LocatorTabsFragment$3; onProviderDisabled (Ljava/lang/String;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getProvider(Ljava/lang/String;)Landroid/location/LocationProvider;>
+	in app method:      Lcom/amobee/richmedia/controller/OrmmaLocationController; <init> (Lcom/amobee/richmedia/view/AmobeeView; Landroid/content/Context;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getProvider(Ljava/lang/String;)Landroid/location/LocationProvider;>
+	in app method:      Lcom/amobee/richmedia/controller/OrmmaLocationController; <init> (Lcom/amobee/richmedia/view/AmobeeView; Landroid/content/Context;)V
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getProviders(Z)Ljava/util/List;>
+	in app method:      Lcom/amobee/richmedia/controller/OrmmaLocationController; getLocation ()Ljava/lang/String;
+android.permission.ACCESS_FINE_LOCATION
+	USED by API method: <analysis.MethodAnalysis Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;>
+	in app method:      Lcom/amobee/richmedia/controller/OrmmaLocationController; getLocation ()Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/globe/gcash/android/utility/TelephonyManagerUtils; <init> (Lcom/google/inject/Provider;)V
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/amobee/adsdk/Parameters; setImei (Ljava/lang/Boolean; Ljava/lang/Boolean;)V
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;>
+	in app method:      Lcom/globe/gcash/android/utility/GCashUtils; generateSessionId (Landroid/app/Activity;)Ljava/lang/String;
+android.permission.READ_PHONE_STATE
+	USED by API method: <analysis.MethodAnalysis Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;>
+	in app method:      Lcom/globe/gcash/android/utility/TelephonyManagerUtils; identifyMobileNumber ()Ljava/lang/String;
+
+Unused Permissions:
+android.permission.READ_SMS
+android.permission.SEND_SMS
+android.permission.WRITE_EXTERNAL_STORAGE
+com.google.android.providers.gsf.permission.READ_GSERVICES
+android.permission.RECEIVE_SMS
+com.globe.gcash.android.permission.MAPS_RECEIVE
+
+Dangerous Combinations:
+
+Unrequested Permissions:
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/globe/gcash/android/activity/login/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/HttpRestServiceUtils$MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/CustomSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$DefaultTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/globe/gcash/android/activity/login/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/HttpRestServiceUtils$MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/CustomSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$DefaultTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Experiment 3: AllowAllHostnameVerifier
+['Lcom/globe/gcash/android/utility/HttpRestServiceUtils;', 'getNewHttpClient', 'sget-object']
+
+Experiment 4: Mixed Use SSL
+App uses MIXED USE SSL (VULNERABLE)
+['Lorg/kxml2/wap/wml/Wml;', '<clinit>', 'http://']
+['Lorg/kxml2/wap/wv/WV;', '<clinit>', 'http://']
+['Lcom/google/zxing/client/result/URIParsedResult;', 'massageURI', 'http://']
+['Lcom/globe/library/Area51Api;', '<init>', 'http://128.199.178.95']
+['Lcom/mixpanel/android/mpmetrics/MPConfig;', '<init>', 'http://api.mixpanel.com/engage']
+['Lcom/mixpanel/android/mpmetrics/MPConfig;', '<init>', 'http://api.mixpanel.com/track?ip=1']
+['Lcom/mixpanel/android/mpmetrics/MPConfig;', '<init>', 'http://decide.mixpanel.com/decide']
+['Lcom/globe/library/Area51Api;', '<init>', 'http://gcashapp.globe.com.ph']
+['Lcom/globe/library/Area51Api;', 'getUrl', 'http://gcashapp.globe.com.ph']
+['Lcom/globe/gcash/android/activity/dashboard/DashboardViewPagerActivity;', 'onCreate', 'http://globeprod.amobee.com/upsteed/wap/adrequest']
+['Lcom/google/android/gms/internal/ce$1;', 'run', 'http://googleads.g.doubleclick.net']
+['Lcom/globe/gcash/android/facebook/BrowseFacebookFriendsListActivity$GetFbUserTask;', 'doInBackground', 'http://graph.facebook.com/']
+['Lcom/google/android/gms/internal/cy;', 'shouldInterceptRequest', 'http://media.admob.com/mraid/v1/mraid_app_banner.js']
+['Lcom/google/android/gms/internal/cy;', 'shouldInterceptRequest', 'http://media.admob.com/mraid/v1/mraid_app_expanded_banner.js']
+['Lcom/google/android/gms/internal/cy;', 'shouldInterceptRequest', 'http://media.admob.com/mraid/v1/mraid_app_interstitial.js']
+['Lcom/google/android/gms/internal/dn;', '<clinit>', 'http://plus.google.com/']
+['Lcom/google/android/gms/plus/PlusOneButton;', 'getAnnotation', 'http://schemas.android.com/apk/lib/com.google.android.gms.plus']
+['Lcom/google/android/gms/plus/PlusOneButton;', 'getSize', 'http://schemas.android.com/apk/lib/com.google.android.gms.plus']
+['Lorg/ksoap2/serialization/MarshalBase64;', 'register', 'http://schemas.xmlsoap.org/soap/encoding/']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://schemas.xmlsoap.org/soap/encoding/']
+['Lorg/ksoap2/SoapFault;', 'write', 'http://schemas.xmlsoap.org/soap/envelope/']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://schemas.xmlsoap.org/soap/envelope/']
+['Lorg/ksoap2/SoapFault;', 'parse', 'http://schemas.xmlsoap.org/soap/envelope/']
+['Lorg/kxml2/wap/wml/Wml;', '<clinit>', 'http://www.']
+['Lcom/globe/gcash/android/activity/AboutActivity;', 'onClickWeb', 'http://www.globe.com.ph/Gcash']
+['Lcom/globe/gcash/android/activity/amex/AmexPostpaidActivity;', 'onClickLearnMore', 'http://www.globe.com.ph/help/gcash/amex/charge-bill-service']
+['Lcom/globe/gcash/android/activity/amex/AmexMyShoppingBoxActivity;', 'onClickFaq', 'http://www.globe.com.ph/help/gcash/amex/msb']
+['Lcom/google/android/gms/internal/ci;', '<init>', 'http://www.google.com']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/1999/XMLSchema']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/1999/XMLSchema-instance']
+['Lorg/kxml2/wap/WbxmlParser;', 'getNamespace', 'http://www.w3.org/2000/xmlns/']
+['Lorg/kxml2/io/KXmlParser;', 'getNamespace', 'http://www.w3.org/2000/xmlns/']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/2001/12/soap-encoding']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/2001/12/soap-envelope']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/2001/XMLSchema']
+['Lorg/ksoap2/SoapEnvelope;', '<init>', 'http://www.w3.org/2001/XMLSchema-instance']
+['Lorg/kxml2/io/KXmlSerializer;', 'setOutput', 'http://www.w3.org/XML/1998/namespace']
+['Lorg/kxml2/wap/WbxmlParser;', 'getNamespace', 'http://www.w3.org/XML/1998/namespace']
+['Lorg/kxml2/io/KXmlParser;', 'getNamespace', 'http://www.w3.org/XML/1998/namespace']
+['Lorg/ksoap2/serialization/MarshalHashtable;', 'register', 'http://xml.apache.org/xml-soap']
+['Lorg/kxml2/io/KXmlParser;', 'isProp', 'http://xmlpull.org/v1/doc/']
+['Lorg/kxml2/io/KXmlSerializer;', 'setFeature', 'http://xmlpull.org/v1/doc/features.html#indent-output']
+['Lorg/kxml2/io/KXmlSerializer;', 'getFeature', 'http://xmlpull.org/v1/doc/features.html#indent-output']
+['Lorg/kxml2/io/KXmlParser;', 'getFeature', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE;', 'call', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/kxml2/io/KXmlParser;', 'setFeature', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/kxml2/wap/WbxmlParser;', 'getFeature', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/kxml2/wap/WbxmlParser;', 'setFeature', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/ksoap2/transport/Transport;', 'parseResponse', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/xmlpull/v1/XmlPullParserFactory;', 'isNamespaceAware', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/xmlpull/v1/XmlPullParserFactory;', 'setNamespaceAware', 'http://xmlpull.org/v1/doc/features.html#process-namespaces']
+['Lorg/xmlpull/v1/XmlPullParserFactory;', 'isValidating', 'http://xmlpull.org/v1/doc/features.html#validation']
+['Lorg/xmlpull/v1/XmlPullParserFactory;', 'setValidating', 'http://xmlpull.org/v1/doc/features.html#validation']
+['Lorg/kxml2/kdom/Document;', 'parse', 'http://xmlpull.org/v1/doc/properties.html#xmldecl-standalone']
+
+Experiment 5: addJavascriptInterface
+Lcom/amobee/richmedia/view/AmobeeView;

@@ -1,0 +1,80 @@
+
+================ ANALYZING OxigenWallet.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING mPAY.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/palomar/util/k;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rabbitcard/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/palomar/util/k;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/rabbitcard/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/m;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+================ ANALYZING Arnold-Berthoud-Cresent-Rigsby.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Money On Mobile.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lio/fabric/sdk/android/services/network/HttpRequest$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lio/fabric/sdk/android/services/network/HttpRequest$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lio/fabric/sdk/android/services/network/PinningTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+================ ANALYZING vulnerable-app.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+
+Overridden Error Handlers:
+
+================ ANALYZING Zuum.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/m4u/vivozuum/comunicacao/https/ComunicacaoHttps$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/m4u/vivozuum/comunicacao/https/ComunicacaoHttps$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+================ ANALYZING GCash.apk ================
+
+Experiment 2: Trust Managers and Error Handlers
+
+Overridden Trust Managers:
+['Lcom/globe/gcash/android/activity/login/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/HttpRestServiceUtils$MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/CustomSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$DefaultTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+
+Overridden Error Handlers:
+['Lcom/globe/gcash/android/activity/login/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/HttpRestServiceUtils$MySSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/android/utility/UrlConnectionUtil$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/CustomSSLSocketFactory$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$1;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']
+['Lcom/globe/gcash/soap/server/GCashHttpTransportSE$DefaultTrustManager;', 'checkServerTrusted', 'Ljavax/net/ssl/X509TrustManager;']

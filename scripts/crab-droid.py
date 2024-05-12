@@ -4,52 +4,66 @@ from androguard.core.dex import TypeMapItem
 import os
 
 
-def output_to_string(perm, trust_managers, error_handlers, allow_all, http, js_interf):
-    output = ""
+def output_to_string(apk, perm, trust_managers, error_handlers, allow_all, http, js_interf):
 
     # Experiment 1
-    output += "\n" + str("Experiment 1: Permissions Misuse") + "\n"
+    output1 = "\n" + str("Experiment 1: Permissions Misuse") + "\n"
     used = perm[0][0]
     unused = perm[0][1]
-    output += "\n" + str("Used Permissions:") + "\n"
+    output1 += "\n" + str("Used Permissions:") + "\n"
     for p in used:
-        output += str(p) + "\n"
-    output += "\n" + str("Unused Permissions:") + "\n"
+        output1 += str(p) + "\n"
+    output1 += "\n" + str("Unused Permissions:") + "\n"
     for p in unused:
-        output += str(p) + "\n"
-    output += "\n" + str("Dangerous Combinations:") + "\n"
+        output1 += str(p) + "\n"
+    output1 += "\n" + str("Dangerous Combinations:") + "\n"
     for p in perm[1]: 
-        output += str(p) + "\n"
-    output += "\n" + str("Unrequested Permissions:") + "\n"
+        output1 += str(p) + "\n"
+    output1 += "\n" + str("Unrequested Permissions:") + "\n"
     for p in perm[2]:
-        output += str(p) + "\n"
+        output1 += str(p) + "\n"
+    with open("output/exp_1", "a") as f:
+        f.write("\n================ ANALYZING " + apk + " ================\n")
+        f.write(output1)
 
     # Experiment 2
-    output += "\n" + str("Experiment 2: Trust Managers and Error Handlers") + "\n"
-    output += "\n" + str("Overridden Trust Managers:") + "\n"
+    output2 = "\n" + str("Experiment 2: Trust Managers and Error Handlers") + "\n"
+    output2 += "\n" + str("Overridden Trust Managers:") + "\n"
     for m in trust_managers:
-        output += str(m) + "\n"
-    output += "\n" + str("Overridden Error Handlers:") + "\n"
+        output2 += str(m) + "\n"
+    output2 += "\n" + str("Overridden Error Handlers:") + "\n"
     for m in trust_managers:
-        output += str(m) + "\n"
+        output2 += str(m) + "\n"
+    with open("output/exp_2", "a") as f:
+        f.write("\n================ ANALYZING " + apk + " ================\n")
+        f.write(output2)
 
     # Experiment 3
-    output += "\n" + str("Experiment 3: AllowAllHostnameVerifier") + "\n"
+    output3 = "\n" + str("Experiment 3: AllowAllHostnameVerifier") + "\n"
     for m in allow_all:
-        output += str(m) + "\n"
+        output3 += str(m) + "\n"
+    with open("output/exp_3", "a") as f:
+        f.write("\n================ ANALYZING " + apk + " ================\n")
+        f.write(output3)
 
     # Experiment 4
-    output += "\n" + str("Experiment 4: Mixed Use SSL") + "\n"
-    output += str(http[0]) + "\n"
+    output4 = "\n" + str("Experiment 4: Mixed Use SSL") + "\n"
+    output4 += str(http[0]) + "\n"
     for http in http[1]:
-        output += str(http) + "\n"
+        output4 += str(http) + "\n"
+    with open("output/exp_4", "a") as f:
+        f.write("\n================ ANALYZING " + apk + " ================\n")
+        f.write(output4)
         
     # Experiment 5   
-    output += "\n" + str("Experiment 5: addJavascriptInterface") + "\n"
+    output5 = "\n" + str("Experiment 5: addJavascriptInterface") + "\n"
     for item in js_interf:
-        output += str(item) + "\n"
-    
-    return output
+        output5 += str(item) + "\n"
+    with open("output/exp_5", "a") as f:
+        f.write("\n================ ANALYZING " + apk + " ================\n")
+        f.write(output5)
+        
+    return output1 + output2 + output3 + output4 + output5
 
 
 # Experiment 1
@@ -270,7 +284,7 @@ def js_interf_experiment(caller_classes, annot_classes):
     return output 
 
 
-def run_experiments(a, d, dx):
+def run_experiments(apk, a, d, dx):
     perm = permission_experiment(a, dx) # Experiment 1
     custom_trust_managers = [] # Experiment 2 Part 1
     custom_error_handlers = [] # Experiment 2 Part 2
@@ -289,19 +303,23 @@ def run_experiments(a, d, dx):
                 js_interf_methods += js_interf_method(method_analysis)
     js_interf = js_interf_experiment(js_interf_methods, js_interf_annot)
 
-    return output_to_string(perm, custom_trust_managers, custom_error_handlers, allow_all_hosts, http, js_interf)
+    return output_to_string(apk, perm, custom_trust_managers, custom_error_handlers, allow_all_hosts, http, js_interf)
 
 
 def main():
     apks = []
-    d = "../apks"
-    for f in os.listdir(d):
+
+    for f in os.listdir("../apks"):
         apks.append(f)
 
-    f_out = open("out.txt", "w")
+    for f in os.listdir("./output"):
+        f_to_clear = open("output/" + f, "w")
+        f_to_clear.close()
+
+    f_out = open("output/main", "w")
     for apk in apks:
         a, d, dx = AnalyzeAPK("../apks/" + apk)
-        output = run_experiments(a, d, dx)
+        output = run_experiments(apk, a, d, dx)
         f_out.write("\n================ ANALYZING " + apk + " ================\n")
         f_out.write(output)
     f_out.close()
