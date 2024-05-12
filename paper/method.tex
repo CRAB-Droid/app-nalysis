@@ -33,13 +33,14 @@ trends with the applications.
 
 \subsection{Results Generation}
 
-Our script outputs results into a text file for us to analyze. It gives us 
-data and statistics related to vulnerabilites within the apps. 
+Our initial script (that scrapes the Android Packages) outputs results into a text file, 
+which is subsequently analyzed by another script. The purpose of the second script is to
+collect and organize our findings by displaying different trends and statistics.
 
 Often, false positives can be found within our tests; our script 
 identifies potential vulnerable patterns, but it does not guarentee
-that each individual finding is a true positive. In this way, our script also generates
-many false positives.
+that each individual finding is a true positive. In this way, our script
+generates many false positives.
 
 
 %Overview of Approach (a nice and accessible ``English'' description of
