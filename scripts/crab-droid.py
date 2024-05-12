@@ -32,7 +32,7 @@ def output_to_string(apk, perm, trust_managers, error_handlers, allow_all, http,
     for m in trust_managers:
         output2 += str(m) + "\n"
     output2 += "\n" + str("Overridden Error Handlers:") + "\n"
-    for m in trust_managers:
+    for m in error_handlers:
         output2 += str(m) + "\n"
     with open("output/exp_2", "a") as f:
         f.write("\n================ ANALYZING " + apk + " ================\n")
@@ -314,8 +314,6 @@ def main():
 
     for f in os.listdir("../Downloads"):
         apks.append(f)
-    #Debug
-    # apks = apks[28:]
 
     for f in os.listdir("./output"):
         f_to_clear = open("output/" + f, "w")
@@ -323,7 +321,7 @@ def main():
 
     f_out = open("output/main", "w")
     for apk in apks:
-        a, d, dx = AnalyzeAPK("../Downloads/" + apk)
+        a, d, dx = AnalyzeAPK("../../Downloads/" + apk)
         output = run_experiments(apk, a, d, dx)
         f_out.write("\n================ ANALYZING " + apk + " ================\n")
         f_out.write(output)
