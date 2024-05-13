@@ -4,9 +4,7 @@
 %Related Work (``somewhat related'' work goes here; directly related work
 %goes into the Introduction)~\cite{dsd13}.
 \subsection{Analysis of Results}
-
-NEEDS to be more specific.\\
-\begin{table}[!h]
+\begin{table}[h!]
     \centering
     \begin{tabular}{| m{4cm} | m{0.75cm}| m{0.75cm} | m{0.75cm} |} \hline
         Vulnerability & $\#$ of Apps & Avg. $\#$ & Avg. $\#$ min. 1\\ \hline
@@ -52,7 +50,6 @@ Since the experiment looks for reimplementation of trust managers and error hand
 if the developer rewrites one of these important methods, 
 it's crucial for them to do so in a safe way. 
 That involves actually checking for the security of a connection.
-Our script marked all apps that reimplement trust managers as positive. 
 
 
 \textbf{Experiment 3}
@@ -67,7 +64,7 @@ can be false positives if there exist strings that contain "http://" but never a
 project, it is difficult to identify these false positives, as we do not have knowledge of the application's network structure and therefore what would be within the scope of a local, secure environment. 
 
 \textbf{Experiment 5}
-For the addJavascriptInterface Method experiment, false positives can occur if the addJavascriptInterface method is implemented without any @JavascriptInterface annotations in the class, but the developer 
+For the addJavascriptInterface() Method experiment, false positives can occur if the addJavascriptInterface() method is implemented without any @JavascriptInterface annotations in the class, but the developer 
 trusts the source of the content being used within the webview. Once again, it is difficult to identify this type of false positive for this project, as we do not know which webviews are trusted by the developer. 
 
 \subsection{Future Work}
