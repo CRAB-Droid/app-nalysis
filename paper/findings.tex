@@ -6,8 +6,7 @@
 \subsection{Analysis of Results}
 
 NEEDS to be more specific.\\
-
-\begin{table}
+\begin{table}[!h]
     \centering
     \begin{tabular}{| m{4cm} | m{0.75cm}| m{0.75cm} | m{0.75cm} |} \hline
         Vulnerability & $\#$ of Apps & Avg. $\#$ & Avg. $\#$ min. 1\\ \hline
@@ -35,6 +34,38 @@ vulnerabilites are found is quite alarming. Many applications
 available on the market, according to our study, have a significant 
 chance of containing a vulnerability that allows for a third-party 
 malicious attack.
+
+For evaluating our results, we chose to invesitgate how each experiment potentially would produce false positives. Analyzing each and the results they produced, 
+we discuss our approximate percentages of how many of the apps may also produce false positives. 
+
+Exp 1
+False positives within the permissions experiment are not exactly an issue. Unused permissions would have a 100\% true positive rate (granted the Androguard library works as intended). 
+This is due to the fact that all unsued permissions are a potentially vulnerable exploit that can always be avoided with developers checking and seeing what permissions are actually needed within the app. 
+Dangerous permission 
+
+Exp 2
+%False positives can arise for this experiment in situations where a safely implemented override occurs (i.e. a developer creates a new, safe trust manager or error handler). 
+%It is also possible when a developer fully trusts a remote server, and feels they do not have to undergo the verification of a certificate.
+For this experiment 
+
+Exp 3
+False positives for the AllowAllHostnameVerifier experiment may arise if an instance of the AllowAllHostnameVerifier 
+class is found within an app, but is located in dead code. Manually verifying if an instance of a vulnerability is located 
+in dead code, however, is not in the scope of this project. 
+We assume that anytime this class is found to be implemented, the hostname verification process is not being carried out properly. 
+
+
+
+%False positives also may include situations where this verifier is located in dead code or commented out.
+
+Exp 4
+%False positives can arise in this experiment in situations where HTTP content being loaded by an HTTPS page is known and trusted by a developer.IFF on this 
+%Another chance for a false positive arises when the script finds "http://" in dead code. 
+
+Exp 5
+%False positives can occur in this experiment in situations where the addJavascriptInterface method is implemented (without any @JavascriptInterface annotations in the class), but the developer trusts the source of the content being used within the webview.
+
+
 
 \subsection{Future Work}
 If we were to continue this research in the future, we would 

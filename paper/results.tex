@@ -10,16 +10,13 @@
     and when only considering apps with at least one 
     unused permission, this number rises to 6.48.
 
-    62 of the 97 apps were identified to be using a dangerous
+    62 of the 97 apps were identified to be using a potentially dangerous
     combination of permissions. The average number of dangerous permission
     combinations within all apps totaled 1.21, with the number
     rising to 1.89 when only considering apps with at least one
     instance of a dangerous permission combination.
 
     All of the apps requested every permission they included, as is expected by Android applications. 
-
-    False positives can arise for this experiment in situations where XXXX....
-    Are there false positives for this??
 
     \item Experiment 2: Trust Managers and Error Handlers
     
@@ -34,18 +31,12 @@
     totaled 1.34, with the number rising to 2.55 when only considering apps
     with at least one instance of an overriden error handler.
 
-    False positives can arise for this experiment in situations where a safely implemented override occurs (i.e. a developer creates a new, safe trust manager or error handler). It is also possible when a developer fully trusts a remote server, and feels they do not have to undergo the verification of a certificate.
-
     \item Experiment 3: AllowAllHostnameVerifier
     
     20 of the 97 apps contained the AllowAllHostnameVerifier class. 
     The average number of AllowAllHostnameVerifier uses within all
     apps totaled to 0.25, with the number rising to 1.26 when only
     considering apps with at least one instance of the class.
-
-    False positives can arise in this experiment in situations where the developer trusts the host of a server being connected to, bypassing the need to check their authenticity.
-
-    False positives also may include situations where this verifier is located in dead code or commented out.
 
     \item Experiment 4: Mixed use SSL
     
@@ -55,18 +46,12 @@
     totaled to 49.51, with this number rising to 52.77 when only 
     considering apps with at least one HTTP URL being used.
 
-    False positives can arise in this experiment in situations where HTTP content being loaded by an HTTPS page is known and trusted by a developer.IFF on this 
-          
-    Another chance for a false positive arises when the script finds "http://" in dead code. 
-
     \item Experiment 5: addJavascriptInterface Method
     
     80 of the 97 apps contained improper handling of the addJavascriptInterface
     method. The average number of javascript vulnerabilites totaled to 
     3.67 per app, with the number rising to 4.75 when only considering
     apps with at least one vulnerability of this kind.
-
-    False positives can occur in this experiment in situations where the addJavascriptInterface method is implemented (without any @JavascriptInterface annotations in the class), but the developer trusts the source of the content being used within the webview.
 
 \end{enumerate}
 
