@@ -11,7 +11,7 @@
         Unused Permissions & 90 & 6.01 & 6.48\\ \hline
         Dangerous Permission Combinations & 62 & 1.21 & 1.89\\ \hline            
         Unrequested Permissions & 0 & 0 & 0\\ \hline
-        Overridden Trust Manager & 60 & 3.06 & 4.50\\ \hline
+        Overridden Trust Manager & 66 & 3.06 & 4.50\\ \hline
         Overridden Error Handler & 51  & 1.34 & 2.55\\ \hline
         Allow All Hostname Verifier & 20 & 0.25 & 1.26\\ \hline
         Mixed-Use SSL& 90 & 49.51 & 52.77 \\ \hline
@@ -50,6 +50,23 @@ Since the experiment looks for reimplementation of trust managers and error hand
 if the developer rewrites one of these important methods, 
 it's crucial for them to do so in a safe way. 
 That involves actually checking for the security of a connection.
+
+In order to check the validity of a positive, we selected a random
+sample of 10 apps that supposedly contained overridden trust managers,
+and 10 apps that supposedly contained overridden error handlers.
+From these 10 apps each, we selected one instance of the vulnerability
+to investigate further.
+We then manually checked the smali code of each vulnerability's file location
+ to see if the
+overridden methods were implemented in a safe way.
+
+For trust managers, 4 out of the 10 apps contained an unsafe implementation.
+This indicates a false positive rate of 60\% for trust managers.
+For error handlers, 1 out of the 10 apps contained an unsafe implementation.
+This indicates a false positive rate of 90\% for error handlers.
+
+These are high false positive rates, which indicate that the experiment
+is not as accurate as we would desire.
 
 
 \textbf{Experiment 3}
