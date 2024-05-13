@@ -7,6 +7,23 @@
 
 NEEDS to be more specific.\\
 
+\begin{table}
+    \centering
+    \begin{tabular}{| m{4cm} | m{0.75cm}| m{0.75cm} | m{0.75cm} |} \hline
+        Vulnerability & $\#$ of Apps & Avg. $\#$ & Avg. $\#$ min. 1\\ \hline
+        Unused Permissions & 90 & 6.01 & 6.48\\ \hline
+        Dangerous Permission Combinations & 62 & 1.21 & 1.89\\ \hline            
+        Unrequested Permissions & 0 & 0 & 0\\ \hline
+        Overridden Trust Manager & 60 & 3.06 & 4.50\\ \hline
+        Overridden Error Handler & 51  & 1.34 & 2.55\\ \hline
+        Allow All Hostname Verifier & 20 & 0.25 & 1.26\\ \hline
+        Mixed-Use SSL& 90 & 49.51 & 52.77 \\ \hline
+        Improper Handling of addJavascriptInterface & 80 & 3.67 & 4.75 \\ \hline
+    \end{tabular}
+    \caption{Shows the number of apps that each vulnerability was found in, the average number of instances found of each vulnerability overall, and the average number of instances in apps where at least one instance was found.}
+    \label{tab:my_label}
+\end{table}
+
 Through our experiments, we see that the majority of applications
 (out of the 97 we analyzed) contain vulnerabilities within their
 code. This indicates improper security practices are at play for 

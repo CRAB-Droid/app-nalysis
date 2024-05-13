@@ -83,7 +83,7 @@
         third parties may attempt a Man-in-the-Middle attack on network traffic
         from the application, compromising a user's network data if successful.
 
-        TALK ABOUT ERROR HANDLING HERE
+        Hand-in-hand with avoiding the proper trust manager, many developers also seek to override built-in error handlers for various reasons. When a possibly dangerous error is thrown during the certificate verification process, the developer instructs the system to follow their code to handle it; this is often used in a way that simply disregards any errors thrown, a dangerous shortcut to the problem.
 
         This experiment tests whether or not an app overrides a built-in
         trust manager or error handler to forgo methods intended purpose of
